@@ -1,17 +1,25 @@
-interface CardProps {
+type CardProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 
 export default function Card({
   children,
   className = "",
 }: CardProps) {
   return (
-    <div
-      className={`border border-white/10 bg-white/[0.02] p-10 transition-all duration-500 hover:border-[var(--vs-accent)]/40 hover:bg-white/[0.04] ${className}`}
+    <article
+      className={[
+        "rounded-[32px]",
+        "border border-white/10",
+        "bg-[var(--vs-surface)]",
+        "transition-all duration-500",
+        "hover:border-[var(--vs-accent)]/50",
+        "hover:-translate-y-1",
+        className,
+      ].join(" ")}
     >
       {children}
-    </div>
+    </article>
   );
 }

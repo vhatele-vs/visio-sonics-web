@@ -26,10 +26,7 @@ export default function CTA() {
               Schedule a Consultation
             </Button>
 
-            <Button
-              href="/projects"
-              variant="secondary"
-            >
+            <Button href="/projects" variant="outline">
               Explore Projects
             </Button>
           </div>

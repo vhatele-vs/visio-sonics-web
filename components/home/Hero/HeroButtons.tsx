@@ -10,7 +10,7 @@ export default function HeroButtons() {
 
       <Button
         href={heroContent.secondaryButton.href}
-        variant="secondary"
+        variant="outline"
       >
         {heroContent.secondaryButton.label} →
       </Button>

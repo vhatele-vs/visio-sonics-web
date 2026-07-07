@@ -1,7 +1,5 @@
-import { ReactNode } from "react";
-
 type SectionProps = {
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
 };
 
@@ -10,7 +8,12 @@ export default function Section({
   className = "",
 }: SectionProps) {
   return (
-    <section className={`section ${className}`}>
+    <section
+      className={[
+        "relative py-24 lg:py-32",
+        className,
+      ].join(" ")}
+    >
       {children}
     </section>
   );
