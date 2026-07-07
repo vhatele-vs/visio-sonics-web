@@ -1,0 +1,25 @@
+:root {
+  /* Font sizes */
+  --vs-text-xs: 0.75rem;
+  --vs-text-sm: 0.875rem;
+  --vs-text-base: 1rem;
+  --vs-text-lg: 1.125rem;
+  --vs-text-xl: 1.25rem;
+  --vs-text-2xl: 1.5rem;
+  --vs-text-3xl: 1.875rem;
+  --vs-text-4xl: 2.25rem;
+  --vs-text-5xl: 3rem;
+  --vs-text-6xl: 3.75rem;
+
+  /* Line heights */
+  --vs-leading-tight: 1.1;
+  --vs-leading-snug: 1.25;
+  --vs-leading-normal: 1.5;
+  --vs-leading-relaxed: 1.75;
+
+  /* Letter spacing */
+  --vs-tracking-tight: -0.02em;
+  --vs-tracking-normal: 0em;
+  --vs-tracking-wide: 0.05em;
+  --vs-tracking-wider: 0.15em;
+}

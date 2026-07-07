@@ -1,0 +1,29 @@
+import Script from "next/script";
+
+import Header from "@/components/navigation/Header";
+import Footer from "@/components/home/Footer";
+import { organizationSchema } from "@/app/structuredData";
+
+export default function SiteLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <>
+      <Script
+        id="org-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema),
+        }}
+      />
+
+      <Header />
+
+      <main>{children}</main>
+
+      <Footer />
+    </>
+  );
+}

@@ -1,0 +1,29 @@
+:root {
+  /* Heading System */
+  --vs-h1-size: var(--vs-text-6xl);
+  --vs-h1-line: var(--vs-leading-tight);
+  --vs-h1-tracking: var(--vs-tracking-tight);
+
+  --vs-h2-size: var(--vs-text-5xl);
+  --vs-h2-line: var(--vs-leading-tight);
+  --vs-h2-tracking: var(--vs-tracking-tight);
+
+  --vs-h3-size: var(--vs-text-4xl);
+  --vs-h3-line: var(--vs-leading-snug);
+  --vs-h3-tracking: var(--vs-tracking-normal);
+
+  --vs-h4-size: var(--vs-text-3xl);
+  --vs-h4-line: var(--vs-leading-snug);
+
+  /* Body System */
+  --vs-body-size: var(--vs-text-base);
+  --vs-body-line: var(--vs-leading-normal);
+
+  --vs-body-sm-size: var(--vs-text-sm);
+  --vs-body-sm-line: var(--vs-leading-normal);
+
+  /* UI System */
+  --vs-ui-size: var(--vs-text-sm);
+  --vs-ui-line: var(--vs-leading-normal);
+  --vs-ui-tracking: var(--vs-tracking-wider);
+}

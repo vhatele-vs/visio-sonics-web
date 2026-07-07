@@ -1,0 +1,116 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+@import "../styles/typography.css";
+/* ==========================================================
+   VISIO SONICS DESIGN SYSTEM
+   ========================================================== */
+
+:root {
+  /* Brand Colours */
+  --vs-background: #050505;
+  --vs-surface: #101010;
+  --vs-surface-2: #181818;
+
+  --vs-text: #ffffff;
+  --vs-text-muted: #9ca3af;
+
+  --vs-accent: #d97706;
+  --vs-accent-hover: #f59e0b;
+
+  --vs-border: rgba(255,255,255,.08);
+
+  /* Layout */
+  --container-width: 1280px;
+
+  /* Spacing */
+  --section-padding: 8rem;
+
+  /* Radius */
+  --radius: 18px;
+
+  /* Shadows */
+  --shadow-soft: 0 20px 60px rgba(0,0,0,.35);
+
+  /* Transition */
+  --transition: 250ms ease;
+}
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body {
+  background: var(--vs-bg);
+  color: var(--vs-text);
+  font-family: system-ui, sans-serif;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  cursor:pointer;
+  border:none;
+  background:none;
+}
+
+/* ==========================================================
+   GLOBAL LAYOUT
+   ========================================================== */
+
+.container{
+  width:min(92%, var(--container-width));
+  margin-inline:auto;
+}
+
+.section{
+  padding-block:var(--section-padding);
+}
+
+/* ==========================================================
+   TYPOGRAPHY
+   ========================================================== */
+
+h1,
+h2,
+h3,
+h4{
+  font-weight:300;
+  line-height:1.1;
+}
+
+p{
+  color:var(--vs-text-muted);
+  line-height:1.8;
+}
+
+/* ==========================================================
+   SELECTION
+   ========================================================== */
+
+::selection{
+  background:var(--vs-accent);
+  color:white;
+}
