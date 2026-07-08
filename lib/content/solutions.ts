@@ -11,7 +11,7 @@ const hero: SolutionHero = {
   title: "Engineering Extraordinary Environments",
   description:
     "Technology designed to disappear into architecture, creating extraordinary spaces that are intuitive, elegant, and timeless.",
-  image: "/images/solutions/hero.png",
+  image: "/images/solutions/hero.jpg",
 };
 
 const featured: Solution = {

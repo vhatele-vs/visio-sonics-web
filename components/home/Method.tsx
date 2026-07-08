@@ -33,7 +33,10 @@ const steps = [
 
 export default function Method() {
   return (
-    <Section className="bg-black">
+    <Section
+  id="method"
+  className="bg-black"
+>
 
       <Container>
 

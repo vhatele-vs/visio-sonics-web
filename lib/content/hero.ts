@@ -16,7 +16,7 @@ export const heroContent = {
 
   secondaryButton: {
     label: "Discover Our Process",
-    href: "/#method",
+    href: "#method"
   },
 
  metrics: [

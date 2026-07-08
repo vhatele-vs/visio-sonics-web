@@ -9,13 +9,13 @@ export default function Logo() {
       className="flex items-center"
     >
       <Image
-  src="/branding/visio-sonics-logo.png"
-  alt="Visio Sonics"
-  width={260}
-  height={70}
-  priority
-  className="h-auto w-[220px] lg:w-[260px]"
-/>
+        src="/branding/visio-sonics-logo.svg"
+        alt="Visio Sonics"
+        width={300}
+        height={101}
+        priority
+        className="w-[220px] h-auto lg:w-[260px]"
+      />
     </Link>
   );
 }

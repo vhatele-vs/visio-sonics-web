@@ -42,7 +42,7 @@ export default function Philosophy() {
             <div className="relative overflow-hidden rounded-3xl">
 
               <Image
-                src="/images/philosophy.png"
+                src="/images/philosophy.jpg"
                 alt="Luxury architectural interior"
                 width={900}
                 height={1100}
