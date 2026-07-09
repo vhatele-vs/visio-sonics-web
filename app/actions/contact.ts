@@ -37,7 +37,7 @@ ${message}
     });
 
     return { success: true };
-  } catch (error) {
+  } catch {
     return { success: false, error: "Email failed to send" };
   }
 }

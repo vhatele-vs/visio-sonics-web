@@ -7,7 +7,7 @@ export default function ContactPage() {
         </p>
 
         <h1 className="mb-6 text-5xl font-light">
-          Let's Begin the Conversation
+          Let&apos;s Begin the Conversation
         </h1>
 
         <p className="max-w-2xl text-lg text-[var(--vs-text-muted)]">

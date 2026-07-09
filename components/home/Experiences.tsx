@@ -1,62 +1,56 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Heading from "@/components/ui/Heading";
 
-import ExperienceCard from "./ExperienceCard";
-
-const experiences = [
-  {
-    image: "/images/experience-living.png",
-    title: "Intelligent Living",
-    description:
-      "Lighting, climate, shading and automation working together to create a home that responds naturally to the people who live in it.",
-  },
-  {
-    image: "/images/experience-cinema.png",
-    title: "Cinematic Entertainment",
-    description:
-      "Private cinemas and media environments engineered to deliver extraordinary sound and picture without compromising architectural beauty.",
-  },
-  {
-    image: "/images/experience-workspace.png",
-    title: "Connected Workspaces",
-    description:
-      "Meeting rooms, collaboration spaces and intelligent commercial environments designed for productivity, simplicity and reliability.",
-  },
-  {
-    image: "/images/experience-wellness.png",
-    title: "Wellness & Security",
-    description:
-      "Invisible technology that protects, comforts and enhances everyday life through integrated security, lighting and environmental control.",
-  },
-];
+import { experiences } from "@/lib/content/experiences";
 
 export default function Experiences() {
   return (
-    <Section className="bg-[#0B0B0B]">
-
+    <Section className="bg-black">
       <Container>
-
         <Heading
           eyebrow="CURATED EXPERIENCES"
-          title="Technology designed around the moments that matter."
+          title="Technology designed around the way you live."
         />
 
-        <div className="mt-20 grid gap-16 md:grid-cols-2">
-
+        <div className="mt-20 grid gap-8 lg:grid-cols-3">
           {experiences.map((experience) => (
-            <ExperienceCard
+            <article
               key={experience.title}
-              image={experience.image}
-              title={experience.title}
-              description={experience.description}
-            />
+              className="group overflow-hidden rounded-3xl bg-zinc-900"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src={experience.image}
+                  alt={experience.title}
+                  fill
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="p-8">
+                <h3 className="text-2xl font-light">
+                  {experience.title}
+                </h3>
+
+                <p className="mt-4 text-zinc-400 leading-8">
+                  {experience.description}
+                </p>
+
+                <Link
+                  href={experience.href}
+                  className="mt-8 inline-flex text-sm uppercase tracking-[0.25em] text-[var(--vs-accent)]"
+                >
+                  Discover →
+                </Link>
+              </div>
+            </article>
           ))}
-
         </div>
-
       </Container>
-
     </Section>
   );
 }

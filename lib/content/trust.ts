@@ -1,14 +1,32 @@
-export const trustIndicators = [
+export interface TrustItemData {
+  id: string;
+  title: string;
+  description: string;
+}
+
+export const trustItems: TrustItemData[] = [
   {
-    value: "20+",
-    label: "Years of Excellence",
+    id: "strategy",
+    title: "Strategy Before Technology",
+    description:
+      "Every engagement begins with understanding your business, ensuring every technical decision serves measurable commercial goals.",
   },
   {
-    value: "Tailored",
-    label: "Solutions for Every Client",
+    id: "engineering",
+    title: "Production-Grade Engineering",
+    description:
+      "Modern architecture, scalable development practices, and meticulous attention to long-term maintainability.",
   },
   {
-    value: "South Africa",
-    label: "Serving Clients Nationwide",
+    id: "experience",
+    title: "Luxury Digital Experiences",
+    description:
+      "Elegant interfaces crafted to communicate confidence, clarity, and premium brand value.",
+  },
+  {
+    id: "partnership",
+    title: "Long-Term Partnership",
+    description:
+      "We remain invested beyond launch, helping your platform evolve alongside your business.",
   },
 ];

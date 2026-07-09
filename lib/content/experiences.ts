@@ -2,32 +2,22 @@ export const experiences = [
   {
     title: "Luxury Living",
     description:
-      "Intelligent lighting, climate, entertainment and security engineered into one effortless living experience.",
-    image: "/images/experience-living.png",
-    href: "/solutions/living",
+      "Whole-home automation designed around architecture, comfort and effortless living.",
+    image: "/images/experiences/luxury-living.jpg",
+    href: "/solutions/luxury-living",
   },
-
   {
     title: "Private Cinema",
     description:
-      "Reference-quality cinema engineered into the architecture without compromising design.",
-    image: "/images/experience-cinema.png",
-    href: "/solutions/cinema",
+      "Reference-quality cinema engineered for immersive entertainment.",
+    image: "/images/projects/private-cinema.jpg",
+    href: "/projects",
   },
-
   {
-    title: "Executive Workspace",
+    title: "Intelligent Lighting",
     description:
-      "Elegant collaboration environments designed for focus, communication and leadership.",
-    image: "/images/experience-workspace.png",
-    href: "/solutions/workspace",
-  },
-
-  {
-    title: "Wellness & Security",
-    description:
-      "Beautiful environments protected through discreet intelligent technology.",
-    image: "/images/experience-wellness.png",
-    href: "/solutions/wellness",
+      "Lighting that enhances architecture, ambience and wellbeing.",
+    image: "/images/experiences/lighting.jpg",
+    href: "/solutions",
   },
 ];
