@@ -19,7 +19,7 @@ export const featuredProjects: FeaturedProject[] = [
     location: "Pretoria",
     description:
       "A dedicated cinema engineered for immersive sound, reference-quality projection and effortless control.",
-    image: "/images/projects/private-cinema.png",
+    image: "/images/projects/private-cinema.webp",
     href: "/projects/private-cinema",
   },
   {

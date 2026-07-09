@@ -12,10 +12,10 @@ export const caseStudies: ProjectCaseStudy[] = [
 
     year: "2025",
 
-    heroImage: "/images/projects/luxury-residence.jpg",
+    heroImage: "/images/projects/luxury-residence.webp",
 
     gallery: [
-      "/images/projects/luxury-residence.jpg",
+      "/images/projects/luxury-residence.webp",
     ],
 
     summary:

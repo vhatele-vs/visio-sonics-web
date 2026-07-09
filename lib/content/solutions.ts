@@ -11,7 +11,7 @@ const hero: SolutionHero = {
   title: "Engineering Extraordinary Environments",
   description:
     "Technology designed to disappear into architecture, creating extraordinary spaces that are intuitive, elegant, and timeless.",
-  image: "/images/solutions/hero.jpg",
+  image: "/images/solutions/hero.webp",
 };
 
 const featured: Solution = {
@@ -21,7 +21,7 @@ const featured: Solution = {
   description:
     "Integrated lighting, audio, security, climate and control systems designed to become part of the architecture rather than compete with it.",
   href: "/solutions/luxury-living",
-  image: "/images/solutions/luxury-living.jpg",
+  image: "/images/solutions/luxury-living.webp",
 };
 
 const items: Solution[] = [
@@ -32,7 +32,7 @@ const items: Solution[] = [
     description:
       "Intelligent environments that improve collaboration, presentation and operational efficiency.",
     href: "/solutions/commercial",
-    image: "/images/solutions/commercial.jpg",
+    image: "/images/solutions/commercial.webp",
   },
 
   {
@@ -42,7 +42,7 @@ const items: Solution[] = [
     description:
       "Guest experiences engineered through discreet technology and refined design.",
     href: "/solutions/hospitality",
-    image: "/images/solutions/hospitality.jpg",
+    image: "/images/solutions/hospitality.webp",
   },
 
   {
@@ -52,7 +52,7 @@ const items: Solution[] = [
     description:
       "Reliable entertainment, connectivity and automation systems built for life at sea.",
     href: "/solutions/marine",
-    image: "/images/solutions/marine.jpg",
+    image: "/images/solutions/marine.webp",
   },
 
   {
@@ -62,7 +62,7 @@ const items: Solution[] = [
     description:
       "Scalable technology infrastructure for luxury apartments and residential developments.",
     href: "/solutions/multi-dwelling",
-    image: "/images/solutions/multi-dwelling.jpg",
+    image: "/images/solutions/multi-dwelling.webp",
   },
 ];
 

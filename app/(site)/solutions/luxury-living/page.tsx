@@ -37,12 +37,12 @@ export default function LuxuryLivingPage() {
         eyebrow="Designed Around Daily Living"
         title="Technology that complements architecture."
         body="Every system is engineered to disappear into the home, allowing architecture and interior design to remain the focus."
-        image="/images/solutions/living-room.jpg"
+        image="/images/solutions/living-room.webp"
         imageAlt="Luxury living room"
       />
 
       <ImageNarrative
-        image="/images/solutions/evening-home.jpg"
+        image="/images/solutions/evening-home.webp"
         imageAlt="Luxury home at dusk"
         eyebrow="Evening Atmosphere"
         title="Spaces that respond naturally."
