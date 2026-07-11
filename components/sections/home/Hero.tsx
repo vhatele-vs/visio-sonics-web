@@ -1,35 +1,81 @@
+import Image from "next/image";
+
+import { heroContent } from "@/lib/content/home";
+
 import {
   Container,
-  Heading,
   Section,
-  Stack,
 } from "@/components/layout";
+
+import {
+  Button,
+  Eyebrow,
+  TextLink,
+} from "@/components/ui";
 
 export default function Hero() {
   return (
     <Section
       spacing="hero"
-      className="min-h-screen flex items-center bg-black text-white"
+      className="flex min-h-screen items-center"
     >
       <Container size="wide">
-        <Stack space="3xl">
-          <Heading
-            variant="hero"
-            eyebrow="Visio Sonics"
-            title="The Build Starts Here"
-            description="Engineering intelligent environments where technology becomes invisible and architecture remains the focus."
-          />
+        <div className="grid items-center gap-20 lg:grid-cols-12">
 
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <button className="bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-neutral-200">
-              Start Your Project
-            </button>
+          {/* Editorial Content */}
 
-            <button className="border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:border-white">
-              Explore Our Process
-            </button>
+          <div className="lg:col-span-5">
+            <div className="max-w-2xl">
+
+              <Eyebrow>
+                {heroContent.eyebrow}
+              </Eyebrow>
+
+              <h1 className="mt-8 text-5xl font-extralight leading-[0.88] tracking-[-0.04em] md:text-7xl xl:text-8xl">
+                <span className="block">
+                  {heroContent.title}
+                </span>
+
+                <span className="mt-3 block">
+                  {heroContent.subtitle}
+                </span>
+              </h1>
+
+              <p className="mt-10 max-w-xl text-lg leading-9 text-white/70 md:text-xl">
+                {heroContent.description}
+              </p>
+
+              <div className="mt-14 flex flex-wrap items-center gap-8">
+                <Button href={heroContent.primaryButton.href}>
+                  {heroContent.primaryButton.label}
+                </Button>
+
+                <TextLink href={heroContent.secondaryButton.href}>
+                  {heroContent.secondaryButton.label}
+                </TextLink>
+              </div>
+
+            </div>
           </div>
-        </Stack>
+
+          {/* Editorial Image */}
+
+          <div className="lg:col-span-7">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[40px]">
+
+              <Image
+                src={heroContent.image}
+                alt={heroContent.imageAlt}
+                fill
+                priority
+                sizes="(min-width:1024px) 58vw, 100vw"
+                className="object-cover"
+              />
+
+            </div>
+          </div>
+
+        </div>
       </Container>
     </Section>
   );

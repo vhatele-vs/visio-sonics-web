@@ -1,77 +1,67 @@
 import {
   Container,
-  Grid,
-  Heading,
   Section,
-  Stack,
 } from "@/components/layout";
 
-const reasons = [
-  {
-    title: "Engineering Before Installation",
-    description:
-      "Every decision is defined at design level to ensure precision, scalability, and long-term performance.",
-  },
-  {
-    title: "Invisible Technology",
-    description:
-      "Systems are integrated into the environment so seamlessly that they disappear into daily life.",
-  },
-  {
-    title: "Architectural Harmony",
-    description:
-      "Technology is designed to respect and enhance architectural intent, not compete with it.",
-  },
-  {
-    title: "Future-Proof Infrastructure",
-    description:
-      "We design systems that remain relevant, adaptable, and reliable as technology evolves.",
-  },
-  {
-    title: "Long-Term Reliability",
-    description:
-      "Every installation is engineered for stability, durability, and consistent performance over time.",
-  },
-  {
-    title: "End-to-End Responsibility",
-    description:
-      "From concept to lifecycle support, we remain accountable for every stage of delivery.",
-  },
-];
+import {
+  Eyebrow,
+} from "@/components/ui";
+
+import { whyVisioSonics } from "@/lib/content/home";
 
 export default function WhyVisioSonics() {
   return (
-    <Section
-      spacing="showcase"
-      className="border-t border-white/10 bg-black text-white"
-    >
+    <Section spacing="editorial">
+
       <Container>
-        <Stack space="2xl">
-          <Heading
-            eyebrow="Why Visio Sonics"
-            title="Engineering Without Compromise"
-          />
 
-          <Grid columns={2} gap="lg">
-            {reasons.map((item) => (
-              <article
-                key={item.title}
-                className="rounded-3xl border border-white/10 p-8 transition-colors duration-300 hover:border-white/30"
-              >
-                <Stack space="lg">
-                  <h3 className="text-xl font-light">
-                    {item.title}
-                  </h3>
+        <div className="max-w-3xl">
 
-                  <p className="leading-relaxed text-white/70">
-                    {item.description}
-                  </p>
-                </Stack>
-              </article>
-            ))}
-          </Grid>
-        </Stack>
+          <Eyebrow>
+            {whyVisioSonics.eyebrow}
+          </Eyebrow>
+
+          <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
+            {whyVisioSonics.heading}
+          </h2>
+
+          <p className="mt-10 max-w-2xl text-xl leading-9 text-white/68">
+            {whyVisioSonics.description}
+          </p>
+
+        </div>
+
+        <div className="mt-28 border-t border-white/10">
+
+          {whyVisioSonics.items.map((item, index) => (
+            <article
+              key={item.title}
+              className="grid gap-12 border-b border-white/10 py-16 lg:grid-cols-12"
+            >
+              <div className="lg:col-span-2">
+                <p className="text-sm tracking-[0.30em] text-white/35">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+              </div>
+
+              <div className="lg:col-span-4">
+                <h3 className="text-3xl font-light leading-tight">
+                  {item.title}
+                </h3>
+              </div>
+
+              <div className="lg:col-span-6">
+                <p className="max-w-2xl text-lg leading-9 text-white/68">
+                  {item.description}
+                </p>
+              </div>
+            </article>
+          ))}
+
+        </div>
+
       </Container>
+
     </Section>
   );
 }

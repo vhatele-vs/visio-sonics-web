@@ -1,80 +1,67 @@
+import { integrationMethod } from "@/lib/content/home";
+
 import {
   Container,
-  Heading,
   Section,
-  Stack,
 } from "@/components/layout";
 
-const steps = [
-  {
-    title: "Discovery & Design",
-    description:
-      "We begin by understanding the architecture, lifestyle, and technical requirements of the environment.",
-  },
-  {
-    title: "Engineering",
-    description:
-      "Detailed system design is developed across lighting, networking, automation, security, and entertainment.",
-  },
-  {
-    title: "Technology Selection",
-    description:
-      "We select and align technologies that meet performance, reliability, and integration standards.",
-  },
-  {
-    title: "Programming & Commissioning",
-    description:
-      "Systems are configured and tested for seamless, one-touch operation.",
-  },
-  {
-    title: "Precision Installation",
-    description:
-      "Installation is executed with strict adherence to architectural integrity and engineering detail.",
-  },
-  {
-    title: "Lifecycle Support",
-    description:
-      "Long-term system care ensures continued performance, reliability, and adaptability.",
-  },
-];
+import {
+  Eyebrow,
+} from "@/components/ui";
 
 export default function IntegrationMethod() {
   return (
-    <Section
-      spacing="editorial"
-      className="border-t border-white/10 bg-black text-white"
-    >
+    <Section spacing="editorial">
+
       <Container>
-        <Stack space="2xl">
-          <Heading
-            eyebrow="The Process"
-            title="The Integration Method"
-          />
 
-          <div className="border-l border-white/10 pl-8">
-            <Stack space="2xl">
-              {steps.map((step, index) => (
-                <article
-                  key={step.title}
-                  className="relative"
-                >
-                  <div className="absolute -left-[38px] top-2 h-3 w-3 rounded-full bg-white" />
+        <div className="max-w-3xl">
 
-                  <Stack space="md">
-                    <h3 className="text-xl font-light">
-                      {String(index + 1).padStart(2, "0")}. {step.title}
-                    </h3>
+          <Eyebrow>
+            {integrationMethod.eyebrow}
+          </Eyebrow>
 
-                    <p className="max-w-2xl leading-relaxed text-white/70">
-                      {step.description}
-                    </p>
-                  </Stack>
-                </article>
-              ))}
-            </Stack>
-          </div>
-        </Stack>
+          <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
+            {integrationMethod.heading}
+          </h2>
+
+          <p className="mt-10 max-w-2xl text-xl leading-9 text-white/68">
+            {integrationMethod.description}
+          </p>
+
+        </div>
+
+        <div className="mt-28 border-t border-white/10">
+
+          {integrationMethod.steps.map((step) => (
+            <article
+              key={step.number}
+              className="grid gap-12 border-b border-white/10 py-14 lg:grid-cols-12"
+            >
+              <div className="lg:col-span-2">
+                <p className="text-sm tracking-[0.30em] text-white/35">
+                  {step.number}
+                </p>
+              </div>
+
+              <div className="lg:col-span-4">
+                <h3 className="text-3xl font-light leading-tight">
+                  {step.title}
+                </h3>
+              </div>
+
+              <div className="lg:col-span-6">
+                <p className="max-w-2xl text-lg leading-9 text-white/68">
+                  {step.description}
+                </p>
+              </div>
+            </article>
+          ))}
+
+        </div>
+
       </Container>
+
     </Section>
   );
 }

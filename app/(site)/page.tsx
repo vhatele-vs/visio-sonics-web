@@ -1,25 +1,21 @@
-import Page from "@/components/layout/Page";
-
-import Hero from "@/components/home/Hero/Hero";
-import TrustBar from "@/components/home/TrustBar";
-
-
-import FeaturedProjects from "@/components/home/FeaturedProjects";
-import Method from "@/components/home/Method";
-import WhyVisioSonics from "@/components/home/WhyVisioSonics";
-import Consultation from "@/components/home/Consultation";
+import Hero from "@/components/sections/home/Hero";
+import TrustBar from "@/components/sections/home/TrustBar";
+import Philosophy from "@/components/sections/home/Philosophy";
+import Experiences from "@/components/sections/home/Experiences";
+import IntegrationMethod from "@/components/sections/home/IntegrationMethod";
+import WhyVisioSonics from "@/components/sections/home/WhyVisioSonics";
+import CTA from "@/components/sections/home/CTA";
 
 export default function HomePage() {
   return (
-    <Page>
+    <>
       <Hero />
       <TrustBar />
-      
-      
-      <FeaturedProjects />
-      <Method />
+      <Philosophy />
+      <Experiences />
+      <IntegrationMethod />
       <WhyVisioSonics />
-      <Consultation />
-    </Page>
+      <CTA />
+    </>
   );
 }

@@ -1,44 +1,65 @@
+import Image from "next/image";
+
+import { philosophy } from "@/lib/content/home";
+
 import {
   Container,
-  Grid,
-  Heading,
   Section,
-  Stack,
 } from "@/components/layout";
+
+import {
+  Eyebrow,
+} from "@/components/ui";
 
 export default function Philosophy() {
   return (
-    <Section
-      spacing="editorial"
-      className="border-t border-white/10 bg-black text-white"
-    >
-      <Container>
-        <Grid columns={2} gap="xl">
-          <Heading
-            eyebrow="Our Philosophy"
-            title="Technology Should Disappear."
-          />
+    <Section spacing="editorial">
 
-          <Stack space="xl" className="text-lg leading-relaxed text-white/70">
-            <p>
-              We believe the most advanced environments are the ones where
-              technology is never the focus. It simply works—quietly,
-              reliably, and in harmony with architecture.
-            </p>
+      <Container size="wide">
 
-            <p>
-              Visio Sonics engineers spaces where lighting, sound,
-              security, connectivity, and automation integrate seamlessly
-              into everyday life without drawing attention to themselves.
-            </p>
+        <div className="overflow-hidden rounded-[40px]">
+          <div className="relative aspect-[16/9]">
+            <Image
+              src={philosophy.image}
+              alt={philosophy.imageAlt}
+              fill
+              priority={false}
+              className="object-cover"
+            />
+          </div>
+        </div>
 
-            <p>
-              The result is not a smarter home. It is a more effortless
-              way of living and working.
-            </p>
-          </Stack>
-        </Grid>
       </Container>
+
+      <Container size="narrow">
+
+        <div className="mx-auto mt-28 max-w-3xl">
+
+          <Eyebrow>
+            {philosophy.eyebrow}
+          </Eyebrow>
+
+          <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
+            {philosophy.heading}
+          </h2>
+
+          <div className="mt-14 space-y-10">
+
+            {philosophy.paragraphs.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="text-xl leading-9 text-white/68"
+              >
+                {paragraph}
+              </p>
+            ))}
+
+          </div>
+
+        </div>
+
+      </Container>
+
     </Section>
   );
 }

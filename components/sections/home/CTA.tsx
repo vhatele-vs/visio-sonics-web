@@ -1,36 +1,52 @@
 import {
   Container,
-  Heading,
   Section,
-  Stack,
 } from "@/components/layout";
+
+import {
+  Button,
+  Eyebrow,
+  TextLink,
+} from "@/components/ui";
+
+import { homeCTA } from "@/lib/content/home";
 
 export default function CTA() {
   return (
     <Section
-      spacing="finale"
-      className="border-t border-white/10 bg-black text-white"
+      spacing="hero"
+      className="border-t border-white/10"
     >
       <Container size="narrow">
-        <Stack space="2xl" className="text-center">
-          <Heading
-            variant="section"
-            align="center"
-            eyebrow="Start Your Project"
-            title="Ready to Build Something Extraordinary?"
-            description="Begin a conversation with Visio Sonics and explore how intelligent, invisible technology can transform the way you experience your space."
-          />
 
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <button className="bg-white px-8 py-3 text-sm font-medium text-black transition hover:bg-neutral-200">
-              Start Your Project
-            </button>
+        <div className="mx-auto max-w-4xl text-center">
 
-            <button className="border border-white/20 px-8 py-3 text-sm font-medium text-white transition hover:border-white">
-              Book Consultation
-            </button>
+          <Eyebrow>
+            {homeCTA.eyebrow}
+          </Eyebrow>
+
+          <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
+            {homeCTA.heading}
+          </h2>
+
+          <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-white/68">
+            {homeCTA.description}
+          </p>
+
+          <div className="mt-16 flex flex-col items-center justify-center gap-8 sm:flex-row">
+
+            <Button href={homeCTA.primaryButton.href}>
+              {homeCTA.primaryButton.label}
+            </Button>
+
+            <TextLink href={homeCTA.secondaryButton.href}>
+              {homeCTA.secondaryButton.label}
+            </TextLink>
+
           </div>
-        </Stack>
+
+        </div>
+
       </Container>
     </Section>
   );
