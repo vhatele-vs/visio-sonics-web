@@ -1,3 +1,10 @@
+import {
+  Container,
+  Heading,
+  Section,
+  Stack,
+} from "@/components/layout";
+
 const steps = [
   {
     title: "Discovery & Design",
@@ -33,41 +40,41 @@ const steps = [
 
 export default function IntegrationMethod() {
   return (
-    <section className="py-28 border-t border-white/10 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <Section
+      spacing="editorial"
+      className="border-t border-white/10 bg-black text-white"
+    >
+      <Container>
+        <Stack space="2xl">
+          <Heading
+            eyebrow="The Process"
+            title="The Integration Method"
+          />
 
-        {/* Heading */}
-        <div className="mb-20">
-          <p className="text-white/50 text-xs uppercase tracking-[0.3em] mb-4">
-            The Process
-          </p>
+          <div className="border-l border-white/10 pl-8">
+            <Stack space="2xl">
+              {steps.map((step, index) => (
+                <article
+                  key={step.title}
+                  className="relative"
+                >
+                  <div className="absolute -left-[38px] top-2 h-3 w-3 rounded-full bg-white" />
 
-          <h2 className="text-4xl md:text-5xl font-light">
-            The Integration Method
-          </h2>
-        </div>
+                  <Stack space="md">
+                    <h3 className="text-xl font-light">
+                      {String(index + 1).padStart(2, "0")}. {step.title}
+                    </h3>
 
-        {/* Timeline */}
-        <div className="space-y-12 border-l border-white/10 pl-8">
-          {steps.map((step, index) => (
-            <div key={step.title} className="relative">
-              
-              {/* Dot */}
-              <div className="absolute -left-[41px] top-2 w-3 h-3 bg-white rounded-full" />
-
-              {/* Content */}
-              <h3 className="text-xl font-light mb-2">
-                {String(index + 1).padStart(2, "0")}. {step.title}
-              </h3>
-
-              <p className="text-white/70 leading-relaxed max-w-2xl">
-                {step.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
+                    <p className="max-w-2xl leading-relaxed text-white/70">
+                      {step.description}
+                    </p>
+                  </Stack>
+                </article>
+              ))}
+            </Stack>
+          </div>
+        </Stack>
+      </Container>
+    </Section>
   );
 }

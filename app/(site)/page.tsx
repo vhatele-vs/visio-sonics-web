@@ -2,8 +2,8 @@ import Page from "@/components/layout/Page";
 
 import Hero from "@/components/home/Hero/Hero";
 import TrustBar from "@/components/home/TrustBar";
-import Philosophy from "@/components/home/Philosophy";
-import Experiences from "@/components/home/Experiences";
+
+
 import FeaturedProjects from "@/components/home/FeaturedProjects";
 import Method from "@/components/home/Method";
 import WhyVisioSonics from "@/components/home/WhyVisioSonics";
@@ -14,8 +14,8 @@ export default function HomePage() {
     <Page>
       <Hero />
       <TrustBar />
-      <Philosophy />
-      <Experiences />
+      
+      
       <FeaturedProjects />
       <Method />
       <WhyVisioSonics />

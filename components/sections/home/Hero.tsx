@@ -1,29 +1,36 @@
+import {
+  Container,
+  Heading,
+  Section,
+  Stack,
+} from "@/components/layout";
+
 export default function Hero() {
   return (
-    <section className="h-screen flex items-center bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6 w-full">
-        <p className="text-white/60 text-sm mb-4 tracking-widest uppercase">
-          Visio Sonics
-        </p>
+    <Section
+      spacing="hero"
+      className="min-h-screen flex items-center bg-black text-white"
+    >
+      <Container size="wide">
+        <Stack space="3xl">
+          <Heading
+            variant="hero"
+            eyebrow="Visio Sonics"
+            title="The Build Starts Here"
+            description="Engineering intelligent environments where technology becomes invisible and architecture remains the focus."
+          />
 
-        <h1 className="text-5xl md:text-7xl font-light leading-tight">
-          The Build Starts Here
-        </h1>
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <button className="bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-neutral-200">
+              Start Your Project
+            </button>
 
-        <p className="mt-6 max-w-2xl text-white/70 text-lg">
-          Engineering intelligent environments where technology becomes invisible and architecture remains in control.
-        </p>
-
-        <div className="mt-10 flex gap-6">
-          <button className="bg-white text-black px-6 py-3 text-sm">
-            Start Your Project
-          </button>
-
-          <button className="text-white border border-white/30 px-6 py-3 text-sm">
-            Explore Our Process
-          </button>
-        </div>
-      </div>
-    </section>
+            <button className="border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:border-white">
+              Explore Our Process
+            </button>
+          </div>
+        </Stack>
+      </Container>
+    </Section>
   );
 }

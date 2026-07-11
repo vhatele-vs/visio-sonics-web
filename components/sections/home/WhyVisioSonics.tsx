@@ -1,3 +1,11 @@
+import {
+  Container,
+  Grid,
+  Heading,
+  Section,
+  Stack,
+} from "@/components/layout";
+
 const reasons = [
   {
     title: "Engineering Before Installation",
@@ -33,39 +41,37 @@ const reasons = [
 
 export default function WhyVisioSonics() {
   return (
-    <section className="py-28 border-t border-white/10 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <Section
+      spacing="showcase"
+      className="border-t border-white/10 bg-black text-white"
+    >
+      <Container>
+        <Stack space="2xl">
+          <Heading
+            eyebrow="Why Visio Sonics"
+            title="Engineering Without Compromise"
+          />
 
-        {/* Heading */}
-        <div className="mb-16">
-          <p className="text-white/50 text-xs uppercase tracking-[0.3em] mb-4">
-            Why Visio Sonics
-          </p>
+          <Grid columns={2} gap="lg">
+            {reasons.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-3xl border border-white/10 p-8 transition-colors duration-300 hover:border-white/30"
+              >
+                <Stack space="lg">
+                  <h3 className="text-xl font-light">
+                    {item.title}
+                  </h3>
 
-          <h2 className="text-4xl md:text-5xl font-light">
-            Engineering Without Compromise
-          </h2>
-        </div>
-
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-10">
-          {reasons.map((item) => (
-            <div
-              key={item.title}
-              className="border border-white/10 p-8 hover:border-white/30 transition"
-            >
-              <h3 className="text-xl font-light mb-4">
-                {item.title}
-              </h3>
-
-              <p className="text-white/70 leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
+                  <p className="leading-relaxed text-white/70">
+                    {item.description}
+                  </p>
+                </Stack>
+              </article>
+            ))}
+          </Grid>
+        </Stack>
+      </Container>
+    </Section>
   );
 }

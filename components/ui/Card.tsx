@@ -1,7 +1,7 @@
-type CardProps = {
+interface CardProps {
   children: React.ReactNode;
   className?: string;
-};
+}
 
 export default function Card({
   children,
@@ -9,15 +9,7 @@ export default function Card({
 }: CardProps) {
   return (
     <article
-      className={[
-        "rounded-[32px]",
-        "border border-white/10",
-        "bg-[var(--vs-surface)]",
-        "transition-all duration-500",
-        "hover:border-[var(--vs-accent)]/50",
-        "hover:-translate-y-1",
-        className,
-      ].join(" ")}
+      className={`rounded-3xl border border-white/10 p-8 ${className}`}
     >
       {children}
     </article>

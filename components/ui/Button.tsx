@@ -1,29 +1,36 @@
 import Link from "next/link";
+import { ReactNode } from "react";
 
-type ButtonProps = {
-  children: React.ReactNode;
+type ButtonVariant = "primary" | "secondary" | "outline";
+
+interface ButtonProps {
+  children: ReactNode;
   href?: string;
-  variant?: "solid" | "outline";
+  variant?: ButtonVariant;
   className?: string;
-};
+}
 
 export default function Button({
   children,
   href,
-  variant = "solid",
+  variant = "primary",
   className = "",
 }: ButtonProps) {
-  const classes = [
-    "inline-flex items-center justify-center rounded-full",
-    "px-7 py-3",
-    "text-sm uppercase tracking-[0.2em]",
-    "transition-all duration-300",
-    "focus:outline-none focus:ring-2 focus:ring-[var(--vs-accent)]",
-    variant === "solid"
-      ? "bg-[var(--vs-accent)] text-black hover:opacity-90"
-      : "border border-[var(--vs-accent)] text-white hover:bg-[var(--vs-accent)] hover:text-black",
-    className,
-  ].join(" ");
+  const base =
+    "inline-flex items-center justify-center px-8 py-3 text-sm font-medium transition-colors duration-300";
+
+  const styles = {
+    primary:
+      "bg-white text-black hover:bg-neutral-200",
+
+    secondary:
+    "bg-white/10 text-white hover:bg-white/20",
+
+  outline:
+    "border border-white/20 text-white hover:border-white",
+  };
+
+  const classes = `${base} ${styles[variant]} ${className}`;
 
   if (href) {
     return (
@@ -33,5 +40,9 @@ export default function Button({
     );
   }
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button className={classes}>
+      {children}
+    </button>
+  );
 }

@@ -1,36 +1,37 @@
+import {
+  Container,
+  Heading,
+  Section,
+  Stack,
+} from "@/components/layout";
+
 export default function CTA() {
   return (
-    <section className="py-28 border-t border-white/10 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <Section
+      spacing="finale"
+      className="border-t border-white/10 bg-black text-white"
+    >
+      <Container size="narrow">
+        <Stack space="2xl" className="text-center">
+          <Heading
+            variant="section"
+            align="center"
+            eyebrow="Start Your Project"
+            title="Ready to Build Something Extraordinary?"
+            description="Begin a conversation with Visio Sonics and explore how intelligent, invisible technology can transform the way you experience your space."
+          />
 
-        {/* Heading */}
-        <p className="text-white/50 text-xs uppercase tracking-[0.3em] mb-4">
-          Start Your Project
-        </p>
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <button className="bg-white px-8 py-3 text-sm font-medium text-black transition hover:bg-neutral-200">
+              Start Your Project
+            </button>
 
-        <h2 className="text-4xl md:text-5xl font-light mb-6">
-          Ready to Build Something Extraordinary?
-        </h2>
-
-        <p className="text-white/70 max-w-2xl mx-auto leading-relaxed mb-12">
-          Begin a conversation with Visio Sonics and explore how intelligent,
-          invisible technology can transform the way you experience your space.
-        </p>
-
-        {/* Buttons */}
-        <div className="flex flex-col md:flex-row gap-6 justify-center">
-          
-          <button className="bg-white text-black px-8 py-3 text-sm">
-            Start Your Project
-          </button>
-
-          <button className="border border-white/30 text-white px-8 py-3 text-sm">
-            Book Consultation
-          </button>
-
-        </div>
-
-      </div>
-    </section>
+            <button className="border border-white/20 px-8 py-3 text-sm font-medium text-white transition hover:border-white">
+              Book Consultation
+            </button>
+          </div>
+        </Stack>
+      </Container>
+    </Section>
   );
 }

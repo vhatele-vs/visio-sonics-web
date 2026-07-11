@@ -24,7 +24,7 @@ export default function LuxuryLivingPage() {
         eyebrow="Residential"
         title="Luxury Living"
         description="Technology that disappears into architecture, creating homes that feel effortless, elegant and intelligently connected."
-        image="/images/solutions/luxury-living-hero.png"
+        image="/images/solutions/luxury-living-hero.webp"
       />
 
       <EditorialIntro
