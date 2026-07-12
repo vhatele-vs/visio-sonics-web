@@ -3,24 +3,26 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
-interface HoverLiftProps {
+import { fade } from "@/lib/animation/motion";
+
+interface FadeProps {
   children: ReactNode;
   className?: string;
 }
 
-export default function HoverLift({
+export default function Fade({
   children,
   className,
-}: HoverLiftProps) {
+}: FadeProps) {
   return (
     <motion.div
       className={className}
-      whileHover={{
-        y: -8,
-        transition: {
-          duration: 0.35,
-          ease: [0.22, 1, 0.36, 1],
-        },
+      variants={fade}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{
+        once: true,
+        amount: 0.2,
       }}
     >
       {children}

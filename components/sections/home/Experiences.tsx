@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,83 +15,112 @@ import {
   TextLink,
 } from "@/components/ui";
 
+import {
+  FadeUp,
+  RevealImage,
+  Stagger,
+} from "@/components/motion";
+
 export default function Experiences() {
   return (
     <Section spacing="editorial">
 
       <Container>
 
-        <div className="max-w-3xl">
+        <FadeUp>
 
-          <Eyebrow>
-            {experiences.eyebrow}
-          </Eyebrow>
+          <div className="max-w-3xl">
 
-          <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
-            {experiences.heading}
-          </h2>
+            <Eyebrow>
+              {experiences.eyebrow}
+            </Eyebrow>
 
-          <p className="mt-10 max-w-2xl text-xl leading-9 text-white/68">
-            {experiences.description}
-          </p>
+            <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
+              {experiences.heading}
+            </h2>
 
-        </div>
+            <p className="mt-10 max-w-2xl text-xl leading-9 text-white/68">
+              {experiences.description}
+            </p>
 
-        <div className="mt-28 space-y-40">
+          </div>
 
-          {experiences.items.map((item, index) => (
-            <article
-              key={item.title}
-              className="grid items-center gap-20 lg:grid-cols-12"
-            >
-              <div
-                className={`${
-                  index % 2 === 0
-                    ? "lg:col-span-7"
-                    : "lg:col-span-5 lg:order-2"
-                }`}
+        </FadeUp>
+
+        <Stagger>
+
+          <div className="mt-28 space-y-40">
+
+            {experiences.items.map((item, index) => (
+              <article
+                key={item.title}
+                className="grid items-center gap-20 lg:grid-cols-12"
               >
-                <Link href={item.href}>
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-[40px]">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition duration-700 hover:scale-[1.03]"
-                    />
-                  </div>
-                </Link>
-              </div>
+                <div
+                  className={
+                    index % 2 === 0
+                      ? "lg:col-span-7"
+                      : "order-2 lg:col-span-5"
+                  }
+                >
+                  <RevealImage>
 
-              <div
-                className={`${
-                  index % 2 === 0
-                    ? "lg:col-span-5"
-                    : "lg:col-span-7 lg:order-1"
-                }`}
-              >
-                <p className="text-xs uppercase tracking-[0.30em] text-white/40">
-                  {item.category}
-                </p>
+                    <Link href={item.href}>
 
-                <h3 className="mt-6 text-4xl font-light leading-tight md:text-5xl">
-                  {item.title}
-                </h3>
+                      <div className="relative aspect-[16/10] overflow-hidden rounded-[40px]">
 
-                <p className="mt-8 max-w-xl text-xl leading-9 text-white/68">
-                  {item.description}
-                </p>
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+                        />
 
-                <div className="mt-12">
-                  <TextLink href={item.href}>
-                    Explore Environment
-                  </TextLink>
+                      </div>
+
+                    </Link>
+
+                  </RevealImage>
                 </div>
-              </div>
-            </article>
-          ))}
 
-        </div>
+                <div
+                  className={
+                    index % 2 === 0
+                      ? "lg:col-span-5"
+                      : "order-1 lg:col-span-7"
+                  }
+                >
+                  <FadeUp>
+
+                    <p className="text-xs uppercase tracking-[0.30em] text-white/40">
+                      {item.category}
+                    </p>
+
+                    <h3 className="mt-6 text-4xl font-light leading-tight md:text-5xl">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-8 max-w-xl text-xl leading-9 text-white/68">
+                      {item.description}
+                    </p>
+
+                    <div className="mt-12">
+
+                      <TextLink href={item.href}>
+                        Explore Environment
+                      </TextLink>
+
+                    </div>
+
+                  </FadeUp>
+                </div>
+
+              </article>
+            ))}
+
+          </div>
+
+        </Stagger>
 
       </Container>
 

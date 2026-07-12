@@ -1,35 +1,28 @@
 "use client";
 
-import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 
-interface StaggerProps {
+import { stagger } from "@/lib/animation/motion";
+
+interface StaggerContainerProps {
   children: ReactNode;
   className?: string;
 }
 
-const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-export default function Stagger({
+export default function StaggerContainer({
   children,
-  className = "",
-}: StaggerProps) {
+  className,
+}: StaggerContainerProps) {
   return (
     <motion.div
       className={className}
-      variants={container}
+      variants={stagger}
       initial="hidden"
       whileInView="visible"
       viewport={{
         once: true,
-        amount: 0.25,
+        amount: 0.2,
       }}
     >
       {children}

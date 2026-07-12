@@ -1,11 +1,12 @@
 "use client";
 
-import { ReactNode, useRef } from "react";
 import {
   motion,
   useScroll,
   useTransform,
 } from "framer-motion";
+import type { ReactNode } from "react";
+import { useRef } from "react";
 
 interface ParallaxProps {
   children: ReactNode;
@@ -15,7 +16,7 @@ interface ParallaxProps {
 
 export default function Parallax({
   children,
-  className = "",
+  className,
   offset = 80,
 }: ParallaxProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,14 +29,14 @@ export default function Parallax({
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    [-offset, offset]
+    [-offset, offset],
   );
 
   return (
     <motion.div
       ref={ref}
-      style={{ y }}
       className={className}
+      style={{ y }}
     >
       {children}
     </motion.div>

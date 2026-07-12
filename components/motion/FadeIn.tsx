@@ -1,30 +1,28 @@
 "use client";
 
-import { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { motionConfig } from "@/lib/motion";
+import type { ReactNode } from "react";
+
+import { fade } from "@/lib/animation/motion";
 
 interface FadeInProps {
   children: ReactNode;
-  delay?: number;
   className?: string;
 }
 
 export default function FadeIn({
   children,
-  delay = 0,
-  className = "",
+  className,
 }: FadeInProps) {
   return (
     <motion.div
       className={className}
-      initial={motionConfig.fadeIn.hidden}
-      whileInView={motionConfig.fadeIn.visible}
-      viewport={motionConfig.viewport}
-      transition={{
-        duration: motionConfig.duration,
-        delay,
-        ease: motionConfig.ease,
+      variants={fade}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{
+        once: true,
+        amount: 0.2,
       }}
     >
       {children}

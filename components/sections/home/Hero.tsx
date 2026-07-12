@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import { heroContent } from "@/lib/content/home";
@@ -13,6 +15,11 @@ import {
   TextLink,
 } from "@/components/ui";
 
+import {
+  FadeUp,
+  RevealImage,
+} from "@/components/motion";
+
 export default function Hero() {
   return (
     <Section
@@ -20,62 +27,75 @@ export default function Hero() {
       className="flex min-h-screen items-center"
     >
       <Container size="wide">
+
         <div className="grid items-center gap-20 lg:grid-cols-12">
 
-          {/* Editorial Content */}
-
           <div className="lg:col-span-5">
-            <div className="max-w-2xl">
 
-              <Eyebrow>
-                {heroContent.eyebrow}
-              </Eyebrow>
+            <FadeUp>
 
-              <h1 className="mt-8 text-5xl font-extralight leading-[0.88] tracking-[-0.04em] md:text-7xl xl:text-8xl">
-                <span className="block">
-                  {heroContent.title}
-                </span>
+              <div className="max-w-2xl">
 
-                <span className="mt-3 block">
-                  {heroContent.subtitle}
-                </span>
-              </h1>
+                <Eyebrow>
+                  {heroContent.eyebrow}
+                </Eyebrow>
 
-              <p className="mt-10 max-w-xl text-lg leading-9 text-white/70 md:text-xl">
-                {heroContent.description}
-              </p>
+                <h1 className="mt-8 text-5xl font-light leading-[0.92] tracking-tight md:text-7xl xl:text-8xl">
 
-              <div className="mt-14 flex flex-wrap items-center gap-8">
-                <Button href={heroContent.primaryButton.href}>
-                  {heroContent.primaryButton.label}
-                </Button>
+                  <span className="block">
+                    {heroContent.title}
+                  </span>
 
-                <TextLink href={heroContent.secondaryButton.href}>
-                  {heroContent.secondaryButton.label}
-                </TextLink>
+                  <span className="mt-2 block">
+                    {heroContent.subtitle}
+                  </span>
+
+                </h1>
+
+                <p className="mt-10 max-w-xl text-xl leading-9 text-white/70">
+                  {heroContent.description}
+                </p>
+
+                <div className="mt-14 flex items-center gap-8">
+
+                  <Button href={heroContent.primaryButton.href}>
+                    {heroContent.primaryButton.label}
+                  </Button>
+
+                  <TextLink href={heroContent.secondaryButton.href}>
+                    {heroContent.secondaryButton.label}
+                  </TextLink>
+
+                </div>
+
               </div>
 
-            </div>
+            </FadeUp>
+
           </div>
 
-          {/* Editorial Image */}
-
           <div className="lg:col-span-7">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[40px]">
 
-              <Image
-                src={heroContent.image}
-                alt={heroContent.imageAlt}
-                fill
-                priority
-                sizes="(min-width:1024px) 58vw, 100vw"
-                className="object-cover"
-              />
+            <RevealImage>
 
-            </div>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[40px]">
+
+                <Image
+                  src={heroContent.image}
+                  alt={heroContent.imageAlt}
+                  fill
+                  priority
+                  className="object-cover"
+                />
+
+              </div>
+
+            </RevealImage>
+
           </div>
 
         </div>
+
       </Container>
     </Section>
   );

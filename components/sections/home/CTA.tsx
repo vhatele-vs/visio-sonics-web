@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Container,
   Section,
@@ -11,6 +13,10 @@ import {
 
 import { homeCTA } from "@/lib/content/home";
 
+import {
+  FadeUp,
+} from "@/components/motion";
+
 export default function CTA() {
   return (
     <Section
@@ -19,33 +25,37 @@ export default function CTA() {
     >
       <Container size="narrow">
 
-        <div className="mx-auto max-w-4xl text-center">
+        <FadeUp>
 
-          <Eyebrow>
-            {homeCTA.eyebrow}
-          </Eyebrow>
+          <div className="mx-auto max-w-4xl text-center">
 
-          <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
-            {homeCTA.heading}
-          </h2>
+            <Eyebrow>
+              {homeCTA.eyebrow}
+            </Eyebrow>
 
-          <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-white/68">
-            {homeCTA.description}
-          </p>
+            <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
+              {homeCTA.heading}
+            </h2>
 
-          <div className="mt-16 flex flex-col items-center justify-center gap-8 sm:flex-row">
+            <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-white/68">
+              {homeCTA.description}
+            </p>
 
-            <Button href={homeCTA.primaryButton.href}>
-              {homeCTA.primaryButton.label}
-            </Button>
+            <div className="mt-16 flex flex-col items-center justify-center gap-8 sm:flex-row">
 
-            <TextLink href={homeCTA.secondaryButton.href}>
-              {homeCTA.secondaryButton.label}
-            </TextLink>
+              <Button href={homeCTA.primaryButton.href}>
+                {homeCTA.primaryButton.label}
+              </Button>
+
+              <TextLink href={homeCTA.secondaryButton.href}>
+                {homeCTA.secondaryButton.label}
+              </TextLink>
+
+            </div>
 
           </div>
 
-        </div>
+        </FadeUp>
 
       </Container>
     </Section>
