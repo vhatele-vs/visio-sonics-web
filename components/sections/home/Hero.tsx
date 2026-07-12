@@ -1,103 +1,253 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
-import Heading from "@/components/ui/Heading";
 
 export default function Hero() {
   return (
     <Section
       id="hero"
-      className="relative overflow-hidden pt-28 md:pt-36 lg:pt-44"
+      spacing="hero"
+      className="relative min-h-screen overflow-hidden"
     >
-      {/* Background */}
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-30">
+        <Image
+          src="/images/home/hero.webp"
+          alt="Luxury architectural residence by Visio Sonics"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
+
+      {/* Cinematic Overlay */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top,rgba(217,119,6,0.12),transparent_42%),linear-gradient(to_bottom,#050505,#050505)]"
+        className="absolute inset-0 -z-20 bg-black/55"
       />
 
+      {/* Bottom Gradient */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:72px_72px] opacity-30"
+        className="absolute inset-0 -z-20 bg-gradient-to-b from-black/10 via-black/20 to-[#050505]"
       />
 
-      <Container>
-        <div className="mx-auto flex min-h-[72vh] max-w-5xl flex-col items-center justify-center text-center">
+      {/* Editorial Grid */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 opacity-[0.06]
+        bg-[linear-gradient(rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px)]
+        bg-[size:72px_72px]"
+      />
+
+      {/* Ambient Glow */}
+      <div
+        aria-hidden
+        className="absolute left-1/2 top-0 -z-10 h-[900px] w-[900px]
+        -translate-x-1/2 rounded-full
+        bg-[radial-gradient(circle,rgba(217,119,6,.18),transparent_70%)]
+        blur-3xl"
+      />
+
+      <Container size="wide">
+        <div className="flex min-h-[calc(100vh-88px)] items-center">
+
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="w-full"
+            transition={{ duration: .8 }}
+            className="max-w-4xl"
           >
-            <Heading
-              eyebrow="ENGINEERING EXTRAORDINARY ENVIRONMENTS"
-              title="Technology disappears. Extraordinary living remains."
-              description="Visio Sonics engineers intelligent environments where architecture, technology, and human experience become one seamless system—from concept through commissioning."
-              align="center"
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
-            <Link
-              href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-[var(--vs-accent)] px-8 text-sm font-medium text-black transition-all duration-300 hover:bg-[var(--vs-accent-hover)] hover:shadow-[0_0_32px_rgba(217,119,6,0.25)]"
+            <p
+              className="
+                mb-8
+                text-xs
+                uppercase
+                tracking-[0.55em]
+                text-[var(--vs-accent)]
+              "
             >
-              Start Your Project
-            </Link>
+              Integrate • Engineer • Elevate
+            </p>
 
-            <Link
-              href="/projects"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-[var(--vs-accent)] hover:bg-white/10"
+            <h1
+              className="
+                max-w-5xl
+                text-5xl
+                font-light
+                leading-[0.92]
+                tracking-[-0.04em]
+                text-white
+                md:text-7xl
+                xl:text-[6.2rem]
+              "
             >
-              Explore Our Work
-            </Link>
+              Technology disappears.
+              <br />
+              Extraordinary living remains.
+            </h1>
+
+            <p
+              className="
+                mt-10
+                max-w-2xl
+                text-lg
+                leading-9
+                text-white/80
+              "
+            >
+              <span className="text-white">
+                Where Vision Meets Sound.
+              </span>
+
+              <br />
+              <br />
+
+              Visio Sonics engineers intelligent environments where
+              architecture, technology and human experience become one
+              seamless system—from concept through commissioning.
+            </p>
+
+                        <div className="mt-14 flex flex-col gap-5 sm:flex-row">
+
+              <Link
+                href="/contact"
+                className="
+                  inline-flex
+                  h-14
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[var(--vs-accent)]
+                  px-9
+                  text-sm
+                  font-medium
+                  uppercase
+                  tracking-[0.18em]
+                  text-black
+                  transition-all
+                  duration-300
+                  hover:bg-[var(--vs-accent-hover)]
+                  hover:shadow-[0_0_40px_rgba(217,119,6,.35)]
+                "
+              >
+                Start Your Project
+              </Link>
+
+              <Link
+                href="/projects"
+                className="
+                  inline-flex
+                  h-14
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-white/15
+                  bg-white/5
+                  px-9
+                  text-sm
+                  font-medium
+                  uppercase
+                  tracking-[0.18em]
+                  text-white
+                  backdrop-blur-md
+                  transition-all
+                  duration-300
+                  hover:border-[var(--vs-accent)]
+                  hover:bg-white/10
+                "
+              >
+                Explore Our Work
+              </Link>
+
+            </div>
+
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.45, duration: 0.8 }}
-            className="mt-20 grid w-full max-w-4xl grid-cols-1 gap-6 border-t border-white/10 pt-10 sm:grid-cols-3"
-          >
-            <div>
-              <p className="text-xs uppercase tracking-[0.24em] text-[var(--vs-text-muted)]">
-                Architecture
-              </p>
-              <p className="mt-2 text-sm leading-7 text-white/90">
-                Invisible technology designed around architectural intent.
-              </p>
-            </div>
-
-            <div>
-              <p className="text-xs uppercase tracking-[0.24em] text-[var(--vs-text-muted)]">
-                Integration
-              </p>
-              <p className="mt-2 text-sm leading-7 text-white/90">
-                Audio, video, lighting, networking, security, climate, and
-                energy unified into one ecosystem.
-              </p>
-            </div>
-
-            <div>
-              <p className="text-xs uppercase tracking-[0.24em] text-[var(--vs-text-muted)]">
-                Experience
-              </p>
-              <p className="mt-2 text-sm leading-7 text-white/90">
-                Crafted for discerning homeowners, architects, and developers
-                who expect technology to disappear.
-              </p>
-            </div>
-          </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: .8,
+            delay: .35,
+          }}
+          className="
+            mt-8
+            grid
+            gap-8
+            border-t
+            border-white/10
+            pt-10
+            md:grid-cols-3
+          "
+        >
+          <div>
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.28em]
+                text-[var(--vs-accent)]
+              "
+            >
+              Architecture
+            </p>
+
+            <p className="mt-4 text-sm leading-8 text-white/70">
+              Invisible technology engineered around
+              architectural intent from concept to completion.
+            </p>
+          </div>
+
+          <div>
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.28em]
+                text-[var(--vs-accent)]
+              "
+            >
+              Integration
+            </p>
+
+            <p className="mt-4 text-sm leading-8 text-white/70">
+              Audio, video, lighting, networking,
+              security, climate and energy unified
+              into one intelligent ecosystem.
+            </p>
+          </div>
+
+          <div>
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.28em]
+                text-[var(--vs-accent)]
+              "
+            >
+              Experience
+            </p>
+
+            <p className="mt-4 text-sm leading-8 text-white/70">
+              Crafted for discerning homeowners,
+              architects and developers who expect
+              technology to disappear.
+            </p>
+          </div>
+        </motion.div>
       </Container>
-    </Section>
+
+          </Section>
   );
 }

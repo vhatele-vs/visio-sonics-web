@@ -55,7 +55,7 @@ html{
 }
 
 body {
-  background: var(--vs-bg);
+ background: var(--vs-background);
   color: var(--vs-text);
   font-family: system-ui, sans-serif;
 }

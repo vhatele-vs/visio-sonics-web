@@ -4,68 +4,144 @@ import { motion } from "framer-motion";
 
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
-import Heading from "@/components/ui/Heading";
-
-const trustItems = [
-  {
-    title: "Architecture First",
-    description:
-      "Technology is designed to respect the architecture—not compete with it.",
-  },
-  {
-    title: "Invisible Integration",
-    description:
-      "Every system works together seamlessly through thoughtful engineering.",
-  },
-  {
-    title: "Future Ready",
-    description:
-      "Infrastructure planned today for tomorrow's technologies and lifestyles.",
-  },
-  {
-    title: "Luxury Experience",
-    description:
-      "Engineered for discerning homeowners, architects, and developers.",
-  },
-];
 
 export default function TrustBar() {
   return (
-    <Section id="trust" spacing="compact">
-      <Container>
-        <Heading
-          eyebrow="OUR PHILOSOPHY"
-          title="Technology should never become the focal point."
-          description="Our role is to engineer extraordinary environments where every system disappears into the architecture and every interaction feels effortless."
-          align="center"
-        />
+    <Section
+      id="trust"
+      spacing="compact"
+      className="relative border-y border-white/5 bg-[#080808]"
+    >
+      <Container size="wide">
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {trustItems.map((item, index) => (
-            <motion.article
-              key={item.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.08,
-              }}
-              className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-300 hover:border-[var(--vs-accent)]/50 hover:bg-white/[0.04]"
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: .6 }}
+          className="
+            mx-auto
+            max-w-5xl
+            text-center
+          "
+        >
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.45em]
+              text-[var(--vs-accent)]
+            "
+          >
+            WHY VISIO SONICS
+          </p>
+
+          <h2
+            className="
+              mt-6
+              text-4xl
+              font-light
+              leading-tight
+              tracking-[-0.03em]
+              text-white
+              md:text-5xl
+            "
+          >
+            Invisible technology.
+            <br />
+            Intentional engineering.
+          </h2>
+
+          <p
+            className="
+              mx-auto
+              mt-8
+              max-w-3xl
+              text-lg
+              leading-9
+              text-white/70
+            "
+          >
+            Every project begins with architecture—not products.
+            We engineer integrated environments where technology
+            quietly supports the way people live, work and entertain.
+          </p>
+        </motion.div>
+
+                <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            delay: 0.15,
+          }}
+          className="
+            mt-20
+            grid
+            gap-10
+            border-t
+            border-white/10
+            pt-10
+            md:grid-cols-3
+          "
+        >
+          <div>
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.28em]
+                text-[var(--vs-accent)]
+              "
             >
-              <div className="mb-6 h-px w-12 bg-[var(--vs-accent)] transition-all duration-300 group-hover:w-20" />
+              Architecture First
+            </p>
 
-              <h3 className="text-lg font-semibold text-white">
-                {item.title}
-              </h3>
+            <p className="mt-4 text-sm leading-8 text-white/70">
+              Every solution is designed around the architectural vision,
+              ensuring technology enhances rather than dominates the space.
+            </p>
+          </div>
 
-              <p className="mt-4 text-sm leading-7 text-[var(--vs-text-muted)]">
-                {item.description}
-              </p>
-            </motion.article>
-          ))}
-        </div>
-      </Container>
+          <div>
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.28em]
+                text-[var(--vs-accent)]
+              "
+            >
+              Engineered Integration
+            </p>
+
+            <p className="mt-4 text-sm leading-8 text-white/70">
+              Lighting, audio, networking, security and environmental
+              systems are engineered as one intelligent ecosystem.
+            </p>
+          </div>
+
+          <div>
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.28em]
+                text-[var(--vs-accent)]
+              "
+            >
+              Future Ready
+            </p>
+
+            <p className="mt-4 text-sm leading-8 text-white/70">
+              Infrastructure planned today for tomorrow&apos;s technology,
+              protecting your investment for years to come.
+            </p>
+          </div>
+        </motion.div>
+
+              </Container>
     </Section>
   );
 }

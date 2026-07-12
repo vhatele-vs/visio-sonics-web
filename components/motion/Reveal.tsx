@@ -1,6 +1,6 @@
 "use client";
 
-import { m } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
 interface RevealProps {
   children: React.ReactNode;
@@ -13,6 +13,12 @@ export default function Reveal({
   delay = 0,
   className = "",
 }: RevealProps) {
+  const prefersReducedMotion = useReducedMotion();
+
+  if (prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <m.div
       initial={{
@@ -28,8 +34,9 @@ export default function Reveal({
         amount: 0.2,
       }}
       transition={{
-        duration: 0.6,
+        duration: 0.8,
         delay,
+        ease: [0.22, 1, 0.36, 1],
       }}
       className={className}
     >
