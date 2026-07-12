@@ -1,93 +1,81 @@
 "use client";
 
-import { whyVisioSonics } from "@/lib/content/home";
+import { motion } from "framer-motion";
 
-import {
-  Container,
-  Section,
-} from "@/components/layout";
+import Container from "@/components/layout/Container";
+import Section from "@/components/layout/Section";
+import Heading from "@/components/ui/Heading";
 
-import {
-  Eyebrow,
-} from "@/components/ui";
-
-import {
-  FadeUp,
-  Stagger,
-} from "@/components/motion";
+const differentiators = [
+  {
+    title: "Architecture-Led Design",
+    description:
+      "Every technology decision begins with the architecture, never with products.",
+  },
+  {
+    title: "Single Integrated Platform",
+    description:
+      "Lighting, audio, video, networking, security and environmental control engineered as one ecosystem.",
+  },
+  {
+    title: "Future-Ready Infrastructure",
+    description:
+      "Infrastructure planned for expansion, reducing disruption as technology evolves.",
+  },
+  {
+    title: "Precision Commissioning",
+    description:
+      "Every system is calibrated, documented and validated before handover.",
+  },
+  {
+    title: "Long-Term Partnership",
+    description:
+      "Ongoing optimisation, maintenance and support beyond project completion.",
+  },
+  {
+    title: "Luxury Without Complexity",
+    description:
+      "Sophisticated technology delivered through intuitive, effortless experiences.",
+  },
+];
 
 export default function WhyVisioSonics() {
   return (
-    <Section spacing="editorial">
-
+    <Section id="why-visio-sonics">
       <Container>
+        <Heading
+          eyebrow="WHY VISIO SONICS"
+          title="Technology should feel effortless."
+          description="Our responsibility extends beyond installation. We engineer environments that remain elegant, reliable and adaptable for years to come."
+          align="center"
+        />
 
-        <FadeUp>
+        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {differentiators.map((item, index) => (
+            <motion.article
+              key={item.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.45,
+                delay: index * 0.08,
+              }}
+              className="rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-300 hover:border-[var(--vs-accent)] hover:bg-white/[0.04]"
+            >
+              <div className="mb-6 h-1 w-12 rounded-full bg-[var(--vs-accent)]" />
 
-          <div className="max-w-3xl">
+              <h3 className="text-xl font-semibold text-white">
+                {item.title}
+              </h3>
 
-            <Eyebrow>
-              {whyVisioSonics.eyebrow}
-            </Eyebrow>
-
-            <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
-              {whyVisioSonics.heading}
-            </h2>
-
-            <p className="mt-10 max-w-2xl text-xl leading-9 text-white/68">
-              {whyVisioSonics.description}
-            </p>
-
-          </div>
-
-        </FadeUp>
-
-        <Stagger>
-
-          <div className="mt-28 border-t border-white/10">
-
-            {whyVisioSonics.items.map((item, index) => (
-
-              <FadeUp key={item.title}>
-
-                <article className="grid gap-12 border-b border-white/10 py-16 lg:grid-cols-12">
-
-                  <div className="lg:col-span-2">
-
-                    <p className="text-sm tracking-[0.30em] text-white/35">
-                      {String(index + 1).padStart(2, "0")}
-                    </p>
-
-                  </div>
-
-                  <div className="lg:col-span-4">
-
-                    <h3 className="text-3xl font-light leading-tight">
-                      {item.title}
-                    </h3>
-
-                  </div>
-
-                  <div className="lg:col-span-6">
-
-                    <p className="max-w-2xl text-lg leading-9 text-white/68">
-                      {item.description}
-                    </p>
-
-                  </div>
-
-                </article>
-
-              </FadeUp>
-
-            ))}
-
-          </div>
-
-        </Stagger>
-
+              <p className="mt-4 text-sm leading-7 text-[var(--vs-text-muted)]">
+                {item.description}
+              </p>
+            </motion.article>
+          ))}
+        </div>
       </Container>
-
     </Section>
   );
 }

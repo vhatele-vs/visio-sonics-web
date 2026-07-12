@@ -1,21 +1,23 @@
+// app/(site)/page.tsx
+
 import Hero from "@/components/sections/home/Hero";
 import TrustBar from "@/components/sections/home/TrustBar";
-import Philosophy from "@/components/sections/home/Philosophy";
-import Experiences from "@/components/sections/home/Experiences";
+import FeaturedProjects from "@/components/sections/home/FeaturedProjects";
 import IntegrationMethod from "@/components/sections/home/IntegrationMethod";
 import WhyVisioSonics from "@/components/sections/home/WhyVisioSonics";
-import CTA from "@/components/sections/home/CTA";
+import CallToAction from "@/components/sections/home/CallToAction";
+import Footer from "@/components/sections/home/Footer";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <TrustBar />
-      <Philosophy />
-      <Experiences />
+      <FeaturedProjects />
       <IntegrationMethod />
       <WhyVisioSonics />
-      <CTA />
+      <CallToAction />
+      <Footer />
     </>
   );
 }

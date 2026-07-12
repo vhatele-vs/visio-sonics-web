@@ -1,93 +1,77 @@
 "use client";
 
-import { integrationMethod } from "@/lib/content/home";
+import { motion } from "framer-motion";
 
-import {
-  Container,
-  Section,
-} from "@/components/layout";
+import Container from "@/components/layout/Container";
+import Section from "@/components/layout/Section";
+import Heading from "@/components/ui/Heading";
 
-import {
-  Eyebrow,
-} from "@/components/ui";
-
-import {
-  FadeUp,
-  Stagger,
-} from "@/components/motion";
+const phases = [
+  {
+    step: "01",
+    title: "Discover",
+    description:
+      "Understand the architecture, lifestyle, and long-term vision before specifying technology.",
+  },
+  {
+    step: "02",
+    title: "Engineer",
+    description:
+      "Produce detailed infrastructure, rack layouts, wiring schedules, and integration documentation.",
+  },
+  {
+    step: "03",
+    title: "Integrate",
+    description:
+      "Install, program, calibrate, and commission every subsystem as one intelligent platform.",
+  },
+  {
+    step: "04",
+    title: "Support",
+    description:
+      "Provide continuous optimisation, maintenance, and future expansion throughout the life of the property.",
+  },
+];
 
 export default function IntegrationMethod() {
   return (
-    <Section spacing="editorial">
-
+    <Section id="method">
       <Container>
+        <Heading
+          eyebrow="OUR METHOD"
+          title="Engineering before installation."
+          description="Exceptional intelligent homes are never assembled on-site. They are engineered long before construction is complete."
+          align="center"
+        />
 
-        <FadeUp>
+        <div className="mt-20 grid gap-8 lg:grid-cols-4">
+          {phases.map((phase, index) => (
+            <motion.article
+              key={phase.step}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+              }}
+              className="relative rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition-all duration-300 hover:border-[var(--vs-accent)]"
+            >
+              <span className="text-5xl font-light text-[var(--vs-accent)]/30">
+                {phase.step}
+              </span>
 
-          <div className="max-w-3xl">
+              <h3 className="mt-8 text-xl font-semibold text-white">
+                {phase.title}
+              </h3>
 
-            <Eyebrow>
-              {integrationMethod.eyebrow}
-            </Eyebrow>
-
-            <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
-              {integrationMethod.heading}
-            </h2>
-
-            <p className="mt-10 max-w-2xl text-xl leading-9 text-white/68">
-              {integrationMethod.description}
-            </p>
-
-          </div>
-
-        </FadeUp>
-
-        <Stagger>
-
-          <div className="mt-28 border-t border-white/10">
-
-            {integrationMethod.steps.map((step) => (
-
-              <FadeUp key={step.number}>
-
-                <article className="grid gap-12 border-b border-white/10 py-16 lg:grid-cols-12">
-
-                  <div className="lg:col-span-2">
-
-                    <p className="text-sm tracking-[0.30em] text-white/35">
-                      {step.number}
-                    </p>
-
-                  </div>
-
-                  <div className="lg:col-span-4">
-
-                    <h3 className="text-3xl font-light leading-tight">
-                      {step.title}
-                    </h3>
-
-                  </div>
-
-                  <div className="lg:col-span-6">
-
-                    <p className="max-w-2xl text-lg leading-9 text-white/68">
-                      {step.description}
-                    </p>
-
-                  </div>
-
-                </article>
-
-              </FadeUp>
-
-            ))}
-
-          </div>
-
-        </Stagger>
-
+              <p className="mt-5 text-sm leading-7 text-[var(--vs-text-muted)]">
+                {phase.description}
+              </p>
+            </motion.article>
+          ))}
+        </div>
       </Container>
-
     </Section>
   );
 }
