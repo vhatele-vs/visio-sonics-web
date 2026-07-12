@@ -1,14 +1,9 @@
-import { typography } from "@/design";
-
-type HeadingVariant = "hero" | "section";
-type HeadingAlign = "left" | "center";
-
 interface HeadingProps {
   eyebrow?: string;
   title: string;
   description?: string;
-  variant?: HeadingVariant;
-  align?: HeadingAlign;
+  align?: "left" | "center";
+  variant?: "hero" | "section";
   className?: string;
 }
 
@@ -16,60 +11,44 @@ export default function Heading({
   eyebrow,
   title,
   description,
-  variant = "section",
   align = "left",
+  variant = "section",
   className = "",
 }: HeadingProps) {
-  const alignment = align === "center" ? "text-center mx-auto" : "text-left";
+  const alignment =
+    align === "center"
+      ? "mx-auto max-w-4xl text-center"
+      : "max-w-4xl";
 
-  const titleStyle =
+  const titleSize =
     variant === "hero"
-      ? {
-          fontSize: typography.hero.size,
-          lineHeight: typography.hero.lineHeight,
-          fontWeight: typography.hero.weight,
-          letterSpacing: typography.hero.tracking,
-        }
-      : {
-          fontSize: typography.section.size,
-          lineHeight: typography.section.lineHeight,
-          fontWeight: typography.section.weight,
-          letterSpacing: typography.section.tracking,
-        };
+      ? "text-6xl md:text-7xl xl:text-8xl"
+      : "text-5xl md:text-6xl xl:text-7xl";
+
+  const descriptionWidth =
+    variant === "hero"
+      ? "max-w-3xl"
+      : "max-w-2xl";
 
   return (
-    <header
-      className={[
-        "max-w-3xl",
-        "space-y-6",
-        alignment,
-        className,
-      ].join(" ")}
-    >
+    <header className={`${alignment} ${className}`}>
       {eyebrow && (
-        <p
-          className="uppercase text-orange-500"
-          style={{
-            fontSize: typography.eyebrow.size,
-            lineHeight: typography.eyebrow.lineHeight,
-            fontWeight: typography.eyebrow.weight,
-            letterSpacing: typography.eyebrow.tracking,
-          }}
-        >
+        <p className="text-xs font-medium uppercase tracking-[0.35em] text-white/45">
           {eyebrow}
         </p>
       )}
 
-      <h2 style={titleStyle}>{title}</h2>
+      <h2
+        className={`mt-8 font-light leading-[0.94] tracking-tight ${titleSize}`}
+      >
+        {title}
+      </h2>
 
       {description && (
         <p
-          className="text-neutral-300"
-          style={{
-            fontSize: typography.lead.size,
-            lineHeight: typography.lead.lineHeight,
-            fontWeight: typography.lead.weight,
-          }}
+          className={`mt-10 text-lg leading-9 text-white/68 ${descriptionWidth} ${
+            align === "center" ? "mx-auto" : ""
+          }`}
         >
           {description}
         </p>

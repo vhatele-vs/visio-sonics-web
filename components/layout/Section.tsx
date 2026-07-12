@@ -1,42 +1,47 @@
 import { ReactNode } from "react";
-import { spacing } from "@/design";
-
-type SectionSpacing =
-  | "hero"
-  | "editorial"
-  | "showcase"
-  | "finale"
-  | "compact"
-  | "default";
 
 interface SectionProps {
-  id?: string;
   children: ReactNode;
-  spacing?: SectionSpacing;
+  id?: string;
   className?: string;
+  spacing?:
+    | "none"
+    | "compact"
+    | "default"
+    | "editorial"
+    | "showcase"
+    | "hero";
 }
 
-export default function Section({
-  id,
-  children,
-  spacing: spacingVariant = "default",
-  className = "",
-}: SectionProps) {
-  const spacingClass =
-    spacingVariant === "compact"
-      ? spacing.section.compact
-      : spacingVariant === "default"
-      ? spacing.section.default
-      : spacing.editorial[spacingVariant];
+const spacingMap = {
+  none: "",
 
+  compact:
+    "py-20 md:py-24 xl:py-28",
+
+  default:
+    "py-24 md:py-32 xl:py-40",
+
+  editorial:
+    "py-32 md:py-40 xl:py-48",
+
+  showcase:
+    "py-36 md:py-44 xl:py-56",
+
+  hero:
+    "pt-36 pb-28 md:pt-44 md:pb-36 xl:pt-52 xl:pb-44",
+};
+
+export default function Section({
+  children,
+  id,
+  className = "",
+  spacing = "default",
+}: SectionProps) {
   return (
     <section
       id={id}
-      className={[
-        "relative",
-        spacingClass,
-        className,
-      ].join(" ")}
+      className={`relative w-full ${spacingMap[spacing]} ${className}`}
     >
       {children}
     </section>
