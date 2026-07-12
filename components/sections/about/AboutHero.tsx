@@ -29,8 +29,8 @@ export default function AboutHero() {
 
             <Button
               href={aboutHero.secondaryButton.href}
-              variant="outline"
-            >
+              variant="secondary"
+>
               {aboutHero.secondaryButton.label}
             </Button>
           </div>

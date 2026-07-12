@@ -1,7 +1,7 @@
 import Script from "next/script";
 
 import Header from "@/components/navigation/Header";
-import Footer from "@/components/home/Footer";
+import Footer from "@/components/sections/home/Footer";
 import { organizationSchema } from "@/app/structuredData";
 
 export default function SiteLayout({
