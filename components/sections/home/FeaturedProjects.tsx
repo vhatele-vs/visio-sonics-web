@@ -1,81 +1,67 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Heading from "@/components/ui/Heading";
-
-const projects = [
-  {
-    title: "Luxury Residence",
-    location: "Johannesburg",
-    description:
-      "Whole-home automation integrating lighting, audio, security, networking and climate into one invisible ecosystem.",
-    href: "/projects/luxury-residence",
-  },
-  {
-    title: "Executive Penthouse",
-    location: "Cape Town",
-    description:
-      "Architectural lighting, cinematic entertainment and enterprise-grade connectivity engineered as one experience.",
-    href: "/projects/executive-penthouse",
-  },
-  {
-    title: "Private Estate",
-    location: "Pretoria",
-    description:
-      "Future-ready infrastructure supporting intelligent living across every space of the property.",
-    href: "/projects/private-estate",
-  },
-];
+import ImageFrame from "@/components/ui/ImageFrame";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
+import { featuredProjects } from "@/lib/content/projects";
 
 export default function FeaturedProjects() {
   return (
-    <Section id="featured-projects">
+    <Section id="featured-projects" spacing="editorial">
       <Container>
         <Heading
           eyebrow="SELECTED WORK"
-          title="Engineered around architecture. Designed for life."
-          description="Every project begins long before the equipment arrives. Our work starts with design, planning and engineering."
+          title={featuredProjects.heading}
+          description={featuredProjects.description}
           align="center"
         />
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
-          {projects.map((project, index) => (
+        <div className="mt-20 grid gap-8 lg:grid-cols-3">
+          {featuredProjects.items.map((project, index) => (
             <motion.article
-              key={project.title}
-              initial={{ opacity: 0, y: 24 }}
+              key={project.id}
+              initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-              }}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-300 hover:border-[var(--vs-accent)]"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.08 }}
+              className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02]"
             >
-              <div className="aspect-[4/3] bg-white/5" />
+              <div className="relative aspect-[4/3]">
+                <ImageFrame
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full rounded-none border-0 bg-transparent"
+                />
+              </div>
 
-              <div className="p-8">
-                <p className="text-xs uppercase tracking-[0.25em] text-[var(--vs-accent)]">
-                  {project.location}
-                </p>
+              <div className="space-y-5 p-8">
+                <Badge variant="accent">{project.category}</Badge>
 
-                <h3 className="mt-3 text-2xl font-semibold text-white">
-                  {project.title}
-                </h3>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.25em] text-[var(--vs-text-muted)]">
+                    {project.location}
+                  </p>
 
-                <p className="mt-5 text-sm leading-7 text-[var(--vs-text-muted)]">
+                  <h3 className="mt-3 text-2xl font-light text-white">
+                    {project.title}
+                  </h3>
+                </div>
+
+                <p className="leading-8 text-[var(--vs-text-muted)]">
                   {project.description}
                 </p>
 
-                <Link
+                <Button
                   href={project.href}
-                  className="mt-8 inline-flex items-center text-sm font-medium text-white transition-colors hover:text-[var(--vs-accent)]"
+                  variant="secondary"
+                  className="mt-2"
                 >
-                  View Project →
-                </Link>
+                  View Project
+                </Button>
               </div>
             </motion.article>
           ))}
