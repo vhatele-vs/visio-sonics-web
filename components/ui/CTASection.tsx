@@ -1,5 +1,3 @@
-// components/ui/CTASection.tsx
-
 import Link from "next/link";
 
 export type CTASectionProps = {
@@ -22,28 +20,45 @@ export default function CTASection({
   secondaryHref,
 }: CTASectionProps) {
   return (
-    <section className="w-full bg-black text-white py-24 px-6">
+    <section className="w-full bg-black px-6 py-32 text-white md:py-40">
       <div className="mx-auto max-w-5xl text-center">
         {eyebrow && (
-          <p className="mb-3 text-xs uppercase tracking-[0.2em] text-white/60">
+          <p className="text-xs uppercase tracking-[0.45em] text-[var(--vs-accent)]">
             {eyebrow}
           </p>
         )}
 
-        <h2 className="text-3xl md:text-5xl font-light">
+        <h2 className="mt-6 text-4xl font-light leading-tight tracking-[-0.03em] md:text-6xl">
           {title}
         </h2>
 
         {description && (
-          <p className="mt-6 text-white/70 max-w-2xl mx-auto">
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-white/70">
             {description}
           </p>
         )}
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
           <Link
             href={primaryHref}
-            className="bg-white text-black px-6 py-3 text-sm tracking-wide hover:opacity-80 transition"
+            className="
+              inline-flex
+              h-14
+              items-center
+              justify-center
+              rounded-full
+              bg-[var(--vs-accent)]
+              px-8
+              text-sm
+              font-medium
+              uppercase
+              tracking-[0.2em]
+              text-black
+              transition-all
+              duration-300
+              hover:scale-[1.02]
+              hover:bg-[var(--vs-accent-hover)]
+            "
           >
             {primaryLabel}
           </Link>
@@ -51,7 +66,26 @@ export default function CTASection({
           {secondaryLabel && secondaryHref && (
             <Link
               href={secondaryHref}
-              className="border border-white/30 px-6 py-3 text-sm tracking-wide hover:border-white transition"
+              className="
+                inline-flex
+                h-14
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-white/15
+                bg-white/[0.03]
+                px-8
+                text-sm
+                font-medium
+                uppercase
+                tracking-[0.2em]
+                text-white
+                transition-all
+                duration-300
+                hover:border-[var(--vs-accent)]
+                hover:bg-white/[0.06]
+              "
             >
               {secondaryLabel}
             </Link>

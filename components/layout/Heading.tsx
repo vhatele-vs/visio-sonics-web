@@ -1,9 +1,12 @@
+import { cn } from "@/lib/utils";
+
 interface HeadingProps {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
   variant?: "hero" | "section";
+  as?: "h1" | "h2" | "h3";
   className?: string;
 }
 
@@ -13,8 +16,11 @@ export default function Heading({
   description,
   align = "left",
   variant = "section",
-  className = "",
+  as = "h2",
+  className,
 }: HeadingProps) {
+  const Title = as;
+
   const alignment =
     align === "center"
       ? "mx-auto max-w-4xl text-center"
@@ -23,7 +29,7 @@ export default function Heading({
   const titleSize =
     variant === "hero"
       ? "text-6xl md:text-7xl xl:text-8xl"
-      : "text-5xl md:text-6xl xl:text-7xl";
+      : "text-4xl md:text-5xl xl:text-6xl";
 
   const descriptionWidth =
     variant === "hero"
@@ -31,28 +37,35 @@ export default function Heading({
       : "max-w-2xl";
 
   return (
-    <header className={`${alignment} ${className}`}>
+    <header className={cn(alignment, className)}>
+
       {eyebrow && (
         <p className="text-xs font-medium uppercase tracking-[0.35em] text-white/45">
           {eyebrow}
         </p>
       )}
 
-      <h2
-        className={`mt-8 font-light leading-[0.94] tracking-tight ${titleSize}`}
+      <Title
+        className={cn(
+          "mt-8 font-light leading-[0.96] tracking-tight",
+          titleSize
+        )}
       >
         {title}
-      </h2>
+      </Title>
 
       {description && (
         <p
-          className={`mt-10 text-lg leading-9 text-white/68 ${descriptionWidth} ${
-            align === "center" ? "mx-auto" : ""
-          }`}
+          className={cn(
+            "mt-10 text-lg leading-relaxed text-white/68",
+            descriptionWidth,
+            align === "center" && "mx-auto"
+          )}
         >
           {description}
         </p>
       )}
+
     </header>
   );
 }

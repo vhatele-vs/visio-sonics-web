@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface TextLinkProps {
   href: string;
@@ -9,12 +10,16 @@ interface TextLinkProps {
 export default function TextLink({
   href,
   children,
-  className = "",
+  className,
 }: TextLinkProps) {
   return (
     <Link
       href={href}
-      className={`text-white hover:text-white/70 transition-colors ${className}`}
+      className={cn(
+        "text-white transition-colors duration-300",
+        "hover:text-white/70",
+        className
+      )}
     >
       {children}
     </Link>

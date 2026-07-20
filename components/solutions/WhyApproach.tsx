@@ -35,7 +35,7 @@ export default function WhyApproach() {
             <FadeUp>
 
               <p className="text-xs uppercase tracking-[0.35em] text-amber-400">
-                Our Approach
+                Architecture Before Technology
               </p>
 
             </FadeUp>
@@ -50,7 +50,7 @@ export default function WhyApproach() {
 
             <FadeUp delay={0.2}>
 
-              <div className="mt-8 h-px w-24 bg-amber-400" />
+              <div className="mt-8 h-px w-24 bg-[var(--vs-accent)]" />
 
             </FadeUp>
 

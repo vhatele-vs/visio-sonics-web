@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface SectionProps {
   children: ReactNode;
@@ -35,13 +36,17 @@ const spacingMap = {
 export default function Section({
   children,
   id,
-  className = "",
+  className,
   spacing = "default",
 }: SectionProps) {
   return (
     <section
       id={id}
-      className={`relative w-full ${spacingMap[spacing]} ${className}`}
+      className={cn(
+        "relative w-full",
+        spacingMap[spacing],
+        className
+      )}
     >
       {children}
     </section>

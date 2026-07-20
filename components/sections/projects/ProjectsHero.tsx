@@ -1,5 +1,4 @@
 import { projectsHero } from "@/lib/content/projects";
-import { Button } from "@/components/ui";
 import {
   Container,
   Section,
@@ -9,7 +8,6 @@ export default function ProjectsHero() {
   return (
     <Section spacing="hero">
       <Container>
-
         <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/50">
           {projectsHero.eyebrow}
         </p>
@@ -22,21 +20,7 @@ export default function ProjectsHero() {
           {projectsHero.description}
         </p>
 
-        <div className="mt-12 flex flex-wrap gap-5">
-
-          <Button href={projectsHero.primaryButton.href}>
-            {projectsHero.primaryButton.label}
-          </Button>
-
-          <Button
-            href={projectsHero.secondaryButton.href}
-            variant="secondary"
-          >
-            {projectsHero.secondaryButton.label}
-          </Button>
-
-        </div>
-
+        <div className="mt-12 h-[52px]" />
       </Container>
     </Section>
   );

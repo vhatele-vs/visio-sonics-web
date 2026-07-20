@@ -5,16 +5,6 @@ export const servicesHero = {
 
   description:
     "Visio Sonics designs and engineers intelligent technology environments for luxury residences and commercial spaces. Every solution is planned from the architecture outward, creating seamless experiences that elevate the way people live and work.",
-
-  primaryButton: {
-    label: "Start Your Project",
-    href: "/contact",
-  },
-
-  secondaryButton: {
-    label: "View Projects",
-    href: "/projects",
-  },
 };
 
 export const servicesOverview = {
@@ -24,9 +14,9 @@ export const servicesOverview = {
     "Our services extend beyond installation. We engineer complete technology ecosystems that integrate seamlessly with architecture, infrastructure, and the lifestyles of the people who use them.",
 
   paragraphs: [
-    "Every successful technology environment begins with engineering rather than equipment selection. We believe infrastructure, documentation, and long-term planning are the foundation of exceptional projects.",
+    "Every successful technology environment begins with engineering rather than equipment selection. Infrastructure, documentation, and long-term planning form the foundation of exceptional projects.",
 
-    "Our multidisciplinary approach integrates networking, automation, lighting, security, entertainment, and environmental systems into one cohesive architecture.",
+    "Our multidisciplinary approach brings together networking, automation, lighting, security, entertainment, and environmental systems as one cohesive technology architecture.",
 
     "The result is technology that disappears into the background while delivering reliability, elegance, and a seamless user experience for years to come.",
   ],
@@ -149,20 +139,15 @@ export const whyChooseUs = {
 };
 
 export const servicesCTA = {
-  eyebrow: "Let's Build Together",
+  eyebrow: "Begin the Conversation",
 
-  title: "Ready to Engineer Your Next Project?",
+  title: "Let's engineer what comes next.",
 
   description:
-    "Whether you're planning a luxury residence, a commercial development, or a bespoke technology environment, Visio Sonics is ready to help transform your vision into an intelligently engineered reality.",
+    "Every extraordinary environment begins with a conversation. Tell us about your project, and we will begin shaping the technology architecture behind it.",
 
   primaryButton: {
-    label: "Start Your Project",
+    label: "Schedule a Consultation",
     href: "/contact",
-  },
-
-  secondaryButton: {
-    label: "View Projects",
-    href: "/projects",
   },
 };

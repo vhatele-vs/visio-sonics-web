@@ -1,9 +1,16 @@
 import { projectEnquiry } from "@/lib/content/contact";
+
 import {
   Container,
   Heading,
   Section,
 } from "@/components/layout";
+
+const inputStyles =
+  "w-full rounded-xl border border-white/10 bg-white/[0.02] px-5 py-4 text-white placeholder:text-white/30 outline-none transition-all duration-300 focus:border-[var(--vs-accent)] focus:bg-white/[0.04] focus:ring-1 focus:ring-[var(--vs-accent)]/20";
+
+const labelStyles =
+  "mb-2 block text-sm tracking-wide text-white/70";
 
 export default function ProjectEnquiry() {
   return (
@@ -19,66 +26,78 @@ export default function ProjectEnquiry() {
           align="left"
         />
 
-        <form className="mt-16 space-y-8">
+        <form className="mt-20 space-y-10">
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-x-8 gap-y-10 md:grid-cols-2">
 
             <div>
               <label
                 htmlFor="name"
-                className="mb-2 block text-sm text-white/70"
+                className={labelStyles}
               >
                 Full Name
               </label>
 
               <input
                 id="name"
+                name="name"
                 type="text"
-                className="w-full rounded-xl border border-white/10 bg-transparent px-5 py-4 text-white outline-none transition focus:border-white/40"
+                autoComplete="name"
+                required
+                className={inputStyles}
               />
             </div>
+
 
             <div>
               <label
                 htmlFor="email"
-                className="mb-2 block text-sm text-white/70"
+                className={labelStyles}
               >
                 Email Address
               </label>
 
               <input
                 id="email"
+                name="email"
                 type="email"
-                className="w-full rounded-xl border border-white/10 bg-transparent px-5 py-4 text-white outline-none transition focus:border-white/40"
+                autoComplete="email"
+                required
+                className={inputStyles}
               />
             </div>
+
 
             <div>
               <label
                 htmlFor="phone"
-                className="mb-2 block text-sm text-white/70"
+                className={labelStyles}
               >
                 Phone Number
               </label>
 
               <input
                 id="phone"
+                name="phone"
                 type="tel"
-                className="w-full rounded-xl border border-white/10 bg-transparent px-5 py-4 text-white outline-none transition focus:border-white/40"
+                autoComplete="tel"
+                className={inputStyles}
               />
             </div>
+
 
             <div>
               <label
                 htmlFor="project-type"
-                className="mb-2 block text-sm text-white/70"
+                className={labelStyles}
               >
                 Project Type
               </label>
 
               <select
                 id="project-type"
-                className="w-full rounded-xl border border-white/10 bg-black px-5 py-4 text-white outline-none transition focus:border-white/40"
+                name="project-type"
+                className={inputStyles}
               >
                 <option>Luxury Residence</option>
                 <option>Commercial</option>
@@ -89,60 +108,100 @@ export default function ProjectEnquiry() {
               </select>
             </div>
 
+
             <div>
               <label
                 htmlFor="location"
-                className="mb-2 block text-sm text-white/70"
+                className={labelStyles}
               >
                 Project Location
               </label>
 
               <input
                 id="location"
+                name="location"
                 type="text"
-                className="w-full rounded-xl border border-white/10 bg-transparent px-5 py-4 text-white outline-none transition focus:border-white/40"
+                className={inputStyles}
               />
             </div>
+
 
             <div>
               <label
                 htmlFor="timeline"
-                className="mb-2 block text-sm text-white/70"
+                className={labelStyles}
               >
                 Project Timeline
               </label>
 
               <input
                 id="timeline"
+                name="timeline"
                 type="text"
                 placeholder="e.g. Q1 2027"
-                className="w-full rounded-xl border border-white/10 bg-transparent px-5 py-4 text-white placeholder:text-white/30 outline-none transition focus:border-white/40"
+                className={inputStyles}
               />
             </div>
 
           </div>
 
-          <div>
+
+          <div className="pt-4">
+
             <label
               htmlFor="message"
-              className="mb-2 block text-sm text-white/70"
+              className={labelStyles}
             >
-              Tell Us About Your Project
+              Share Your Vision
             </label>
 
             <textarea
               id="message"
+              name="message"
               rows={8}
-              className="w-full rounded-xl border border-white/10 bg-transparent px-5 py-4 text-white outline-none transition focus:border-white/40"
+              required
+              placeholder="Tell us about your project, goals, timeline, and any requirements you would like us to understand."
+              className={`${inputStyles} min-h-[220px] resize-y`}
             />
+
           </div>
 
-          <button
-            type="submit"
-            className="rounded-xl bg-white px-8 py-4 text-black transition hover:opacity-90"
-          >
-            {projectEnquiry.submitLabel}
-          </button>
+
+          <div className="mt-12 border-t border-white/10 pt-10 pb-24">
+
+            <button
+              type="submit"
+              className="
+                inline-flex
+                min-h-[64px]
+                w-full
+                items-center
+                justify-center
+                rounded-full
+                bg-[var(--vs-accent)]
+                px-12
+                text-sm
+                font-medium
+                uppercase
+                tracking-[0.22em]
+                text-white
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:bg-[var(--vs-accent-hover)]
+                md:w-auto
+              "
+            >
+              {projectEnquiry.submitLabel}
+            </button>
+
+
+            <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/50">
+              Once we receive your enquiry, our team will review your project
+              requirements and contact you to discuss the next steps.
+            </p>
+
+          </div>
 
         </form>
 

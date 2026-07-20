@@ -19,18 +19,56 @@ export default function ContactFAQ() {
           align="left"
         />
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2">
-          {contactFAQ.items.map((item) => (
-            <Card key={item.question}>
-              <h3 className="mb-4 text-xl font-light">
-                {item.question}
-              </h3>
+        <div className="mt-20 grid gap-8 md:grid-cols-2">
 
-              <p className="leading-relaxed text-white/70">
-                {item.answer}
-              </p>
+          {contactFAQ.items.map((item, index) => (
+            <Card
+              key={item.question}
+            >
+
+              <article>
+
+                <div className="mb-5 flex items-start gap-4">
+
+                  <span
+                    className="
+                      pt-1
+                      text-xs
+                      font-medium
+                      tracking-[0.3em]
+                      text-white/40
+                    "
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <h3
+                    className="
+                      text-xl
+                      font-light
+                      leading-snug
+                      tracking-wide
+                    "
+                  >
+                    {item.question}
+                  </h3>
+
+                </div>
+
+                <p
+                  className="
+                    leading-relaxed
+                    text-white/70
+                  "
+                >
+                  {item.answer}
+                </p>
+
+              </article>
+
             </Card>
           ))}
+
         </div>
 
       </Container>

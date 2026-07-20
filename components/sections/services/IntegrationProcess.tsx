@@ -1,39 +1,40 @@
 import { integrationProcess } from "@/lib/content/services";
-import {
-  Container,
-  Heading,
-  Section,
-} from "@/components/layout";
+
+import Container from "@/components/layout/Container";
+import Section from "@/components/layout/Section";
+import Heading from "@/components/ui/Heading";
 
 export default function IntegrationProcess() {
   return (
-    <Section spacing="editorial">
+    <Section id="process">
       <Container>
-
-        <Heading
-          title={integrationProcess.heading}
-          description={integrationProcess.description}
-          align="left"
-        />
-
-        <div className="mt-16 space-y-12 border-l border-white/10 pl-8">
-          {integrationProcess.steps.map((step, index) => (
-            <div key={step.title} className="relative">
-
-              <div className="absolute -left-[41px] top-2 h-3 w-3 rounded-full bg-white" />
-
-              <h3 className="mb-2 text-xl font-light">
-                {String(index + 1).padStart(2, "0")}. {step.title}
-              </h3>
-
-              <p className="max-w-2xl leading-relaxed text-white/70">
-                {step.description}
-              </p>
-
-            </div>
-          ))}
+        <div className="mb-16 max-w-3xl">
+          <Heading
+            title={integrationProcess.heading}
+            description={integrationProcess.description}
+          />
         </div>
 
+        <div className="divide-y divide-white/10 border-y border-white/10">
+          {integrationProcess.steps.map((step) => (
+            <article
+              key={step.number}
+              className="grid gap-6 py-8 md:grid-cols-[120px_280px_1fr] md:items-start"
+            >
+              <span className="text-sm font-medium tracking-[0.2em] text-[var(--vs-accent)]">
+                {step.number}
+              </span>
+
+              <h3 className="text-xl font-medium tracking-tight text-white">
+                {step.title}
+              </h3>
+
+              <p className="max-w-2xl text-base leading-relaxed text-white/60">
+                {step.description}
+              </p>
+            </article>
+          ))}
+        </div>
       </Container>
     </Section>
   );

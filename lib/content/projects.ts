@@ -5,16 +5,6 @@ export const projectsHero = {
 
   description:
     "From luxury residences to intelligent commercial environments, every Visio Sonics project is designed to integrate seamlessly with architecture while delivering exceptional performance and long-term reliability.",
-
-  primaryButton: {
-    label: "Start Your Project",
-    href: "/contact",
-  },
-
-  secondaryButton: {
-    label: "Our Services",
-    href: "/services",
-  },
 };
 
 export const featuredProjects = {
@@ -24,37 +14,37 @@ export const featuredProjects = {
     "A selection of environments engineered to demonstrate the integration of technology, architecture, and human experience.",
 
   items: [
-  {
-    id: "luxury-living",
-    category: "Luxury Residential",
-    title: "Luxury Residence",
-    location: "Private Estate",
-    image: "/images/projects/luxury-residence.webp",
-    href: "/solutions/luxury-living",
-    description:
-      "A fully integrated smart residence engineered with automation, lighting, networking, security, and immersive entertainment.",
-  },
-  {
-    id: "executive-boardroom",
-    category: "Commercial",
-    title: "Executive Boardroom",
-    location: "Corporate Headquarters",
-    image: "/images/projects/executive-boardroom.webp",
-    href: "/projects",
-    description:
-      "A collaborative executive meeting environment featuring enterprise AV, conferencing, control, and intelligent automation.",
-  },
-  {
-    id: "private-cinema",
-    category: "Entertainment",
-    title: "Private Cinema",
-    location: "Residential",
-    image: "/images/projects/private-cinema.webp",
-    href: "/projects",
-    description:
-      "A purpose-built private cinema engineered for immersive audio, reference-quality video, and exceptional comfort.",
-  },
-],
+    {
+      id: "luxury-living",
+      category: "Luxury Residential",
+      title: "Luxury Residence",
+      location: "Private Estate",
+      image: "/images/projects/luxury-residence.webp",
+      href: "/solutions/luxury-living",
+      description:
+        "A fully integrated smart residence engineered with automation, lighting, networking, security, and immersive entertainment.",
+    },
+    {
+      id: "executive-boardroom",
+      category: "Commercial",
+      title: "Executive Boardroom",
+      location: "Corporate Headquarters",
+      image: "/images/projects/executive-boardroom.webp",
+      href: "/projects",
+      description:
+        "A collaborative executive meeting environment featuring enterprise AV, conferencing, control, and intelligent automation.",
+    },
+    {
+      id: "private-cinema",
+      category: "Entertainment",
+      title: "Private Cinema",
+      location: "Residential",
+      image: "/images/projects/private-cinema.webp",
+      href: "/projects",
+      description:
+        "A purpose-built private cinema engineered for immersive audio, reference-quality video, and exceptional comfort.",
+    },
+  ],
 };
 
 export const industries = {
@@ -64,41 +54,40 @@ export const industries = {
     "Our engineering methodology adapts to a wide range of environments while maintaining the same standards of precision and reliability.",
 
   items: [
-  {
-    title: "Luxury Residential",
-    description:
-      "Intelligent technology ecosystems engineered for bespoke homes and private estates.",
-  },
-  {
-    title: "Corporate Offices",
-    description:
-      "Professional collaboration, networking, AV, and automation solutions for modern workplaces.",
-  },
-  {
-    title: "Hospitality",
-    description:
-      "Guest experiences enhanced through seamless entertainment, networking, and automation.",
-  },
-  {
-    title: "Retail",
-    description:
-      "Integrated digital environments that improve customer experience and operational efficiency.",
-  },
-  {
-    title: "Education",
-    description:
-      "Reliable AV, collaboration, and infrastructure solutions for modern learning environments.",
-  },
-  {
-    title: "Healthcare",
-    description:
-      "Secure, dependable technology infrastructure designed for healthcare facilities.",
-  },
-],
+    {
+      title: "Luxury Residential",
+      description:
+        "Intelligent technology ecosystems engineered for bespoke homes and private estates.",
+    },
+    {
+      title: "Corporate Offices",
+      description:
+        "Professional collaboration, networking, AV, and automation solutions for modern workplaces.",
+    },
+    {
+      title: "Hospitality",
+      description:
+        "Guest experiences enhanced through seamless entertainment, networking, and automation.",
+    },
+    {
+      title: "Retail",
+      description:
+        "Integrated digital environments that improve customer experience and operational efficiency.",
+    },
+    {
+      title: "Education",
+      description:
+        "Reliable AV, collaboration, and infrastructure solutions for modern learning environments.",
+    },
+    {
+      title: "Healthcare",
+      description:
+        "Secure, dependable technology infrastructure designed for healthcare facilities.",
+    },
+  ],
 };
 
 export const clientConfidence = {
-  
   heading: "Built on Trust. Delivered with Precision.",
 
   description:
@@ -165,7 +154,7 @@ export const luxuryLivingProject = {
 
   image: "/images/projects/luxury-residence.webp",
 
-  href: "/projects", 
+  href: "/projects",
 
   description:
     "A fully integrated luxury residence combining intelligent lighting, climate control, security, enterprise networking, distributed audio, and private cinema into one seamless technology ecosystem.",
@@ -174,13 +163,13 @@ export const luxuryLivingProject = {
 export const projectsCTA = {
   eyebrow: "Let's Create Something Exceptional",
 
-  title: "Your Project Could Be Our Next Success Story.",
+  title: "Your Project is Our Next Success Story.",
 
   description:
     "Whether you're building a luxury residence, upgrading a commercial environment, or planning a bespoke technology solution, we're ready to help engineer a project that reflects your vision and performs for years to come.",
 
   primaryButton: {
-    label: "Start Your Project",
+    label: "Schedule a Consultation",
     href: "/contact",
   },
 

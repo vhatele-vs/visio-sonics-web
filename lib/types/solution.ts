@@ -5,8 +5,12 @@ export interface Solution {
   category: string;
   title: string;
   description: string;
-  href: string;
+  href?: string;
   image: string;
+} 
+
+export interface FeaturedSolution extends Solution {
+  href: string;
 }
 
 export interface SolutionHero {
@@ -18,6 +22,6 @@ export interface SolutionHero {
 
 export interface SolutionsContent {
   hero: SolutionHero;
-  featured: Solution;
+  featured: FeaturedSolution;
   items: Solution[];
 }

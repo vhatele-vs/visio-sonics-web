@@ -1,142 +1,214 @@
 export const contactHero = {
-  eyebrow: "Let's Start the Conversation",
+  eyebrow: "Start a Conversation",
 
-  title: "Every Exceptional Project Begins With a Conversation.",
-
-  description:
-    "Whether you're planning a luxury residence, commercial development, or intelligent technology upgrade, we're ready to help engineer a solution tailored to your vision.",
-
-  primaryButton: {
-    label: "Start Your Project",
-    href: "#project-enquiry",
-  },
-
-  secondaryButton: {
-    label: "Call Us",
-    href: "tel:+270000000000",
-  },
-};
-
-export const contactMethods = {
-  heading: "How to Reach Us",
+  title: "Let's Engineer What Comes Next.",
 
   description:
-    "Choose the communication method that best suits your project and we'll respond promptly.",
-
-  items: [
-    {
-      title: "Project Consultation",
-      description:
-        "Book an initial consultation to discuss your project requirements and vision.",
-    },
-    {
-      title: "Email",
-      value: "info@visiosonics.co.za",
-      description:
-        "Send us drawings, specifications, or project information for review.",
-    },
-    {
-      title: "Telephone",
-      description:
-        "Speak directly with our team during business hours.",
-    },
-    {
-      title: "Site Meeting",
-      value: "By Appointment",
-      description:
-        "Arrange an on-site consultation for existing or new developments.",
-    },
-  ],
+    "Whether you are planning a new build, renovating an existing property, or looking to elevate your current technology environment, we would love to understand your vision.",
 };
+
 
 export const consultationProcess = {
   heading: "What Happens Next",
 
   description:
-    "Our consultation process is designed to understand your objectives before recommending technology.",
+    "Our consultation process is designed to understand your project before recommending a solution.",
 
   steps: [
     {
-      title: "Initial Discussion",
+      title: "Initial Conversation",
+
       description:
-        "Understanding your vision and project objectives.",
+        "We begin by understanding your vision, property, lifestyle, and technology objectives.",
     },
+
     {
-      title: "Technical Assessment",
+      title: "Project Discovery",
+
       description:
-        "Reviewing architectural drawings and infrastructure requirements.",
+        "We explore the architectural, technical, and operational requirements of your environment.",
     },
+
     {
-      title: "Proposal",
+      title: "Concept & Direction",
+
       description:
-        "Preparing a tailored engineering proposal and project roadmap.",
+        "We develop an initial technology direction aligned with your goals, architecture, and future requirements.",
     },
+
     {
-      title: "Project Commencement",
+      title: "Proposal & Next Steps",
+
       description:
-        "Beginning engineering, documentation, and implementation.",
+        "We present a clear path forward, outlining the recommended approach and the next stage of the project.",
     },
   ],
 };
 
-export const contactCTA = {
-  eyebrow: "Your Vision Starts Here",
 
-  title: "Let's Engineer Something Exceptional Together.",
-
-  description:
-    "Every successful project begins with a conversation. We look forward to understanding your vision and delivering an intelligent technology solution tailored to your environment.",
-
-  primaryButton: {
-    label: "Submit Your Enquiry",
-    href: "#project-enquiry",
-  },
-
-  secondaryButton: {
-    label: "Explore Our Projects",
-    href: "/projects",
-  },
-};
-
-export const projectEnquiry = {
-  heading: "Tell Us About Your Project",
+export const contactMethods = {
+  heading: "Connect With Us",
 
   description:
-    "Complete the enquiry form below and our engineering team will contact you to discuss your project requirements.",
+    "Choose the contact method that works best for you.",
 
-  fields: [
-    "Full Name",
-    "Email Address",
-    "Telephone",
-    "Project Location",
-    "Project Type",
-    "Message",
+  items: [
+    {
+      title: "Call Us",
+
+      value: "+27 87 657 3217",
+
+      href: "tel:+27876573217",
+
+      description:
+        "Available during office hours for project discussions and consultation enquiries.",
+    },
+
+    {
+      title: "Email",
+
+      value: "hello@visiosonics.co.za",
+
+      href: "mailto:hello@visiosonics.co.za",
+
+      description:
+        "Send us an overview of your project and requirements.",
+    },
+
+    {
+      title: "Project Enquiry",
+
+      value: "Start a Conversation",
+
+      href: "#project-enquiry",
+
+      description:
+        "Tell us about the environment you are creating.",
+    },
+
+    {
+      title: "Service Area",
+
+      value: "South Africa & Africa",
+
+      description:
+        "Engineering intelligent environments across the region.",
+    },
   ],
-
-  submitLabel: "Submit Your Enquiry",
 };
+
 
 export const contactFAQ = {
   heading: "Frequently Asked Questions",
 
   description:
-    "Answers to some of the most common questions we receive before a project begins.",
+    "A few answers to common questions about working with Visio Sonics.",
 
   items: [
     {
-      question: "When should Visio Sonics become involved in a project?",
+      question:
+        "When should I involve Visio Sonics in my project?",
+
       answer:
-        "Ideally during the architectural design phase so technology infrastructure can be engineered into the building from the beginning.",
+        "The earlier the better. Early involvement allows technology infrastructure to be coordinated with architecture, electrical systems, interior design, and construction.",
     },
+
     {
-      question: "Do you work with architects and builders?",
+      question:
+        "Do you work with architects and designers?",
+
       answer:
-        "Yes. We collaborate closely with architects, interior designers, builders, developers, and other consultants throughout the project lifecycle.",
+        "Yes. We regularly collaborate with architects, interior designers, developers, builders, and consultants to ensure technology integrates seamlessly into the wider project vision.",
     },
+
     {
-      question: "Do you provide ongoing support?",
+      question:
+        "Do you work on existing properties?",
+
       answer:
-        "Yes. We offer maintenance, optimisation, upgrades, and long-term support after project completion.",
+        "Yes. We can assess existing environments and develop upgrade, retrofit, or replacement strategies based on the property's requirements.",
+    },
+
+    {
+      question:
+        "Do you provide ongoing support after installation?",
+
+      answer:
+        "Yes. We provide ongoing maintenance, optimisation, upgrades, and long-term technology support.",
     },
   ],
+};
+
+
+export const projectEnquiry = {
+  heading: "Tell Us About Your Project",
+
+  description:
+    "Share a little about your project, and we will begin understanding how we can help.",
+
+  submitLabel:
+    "Submit Project Enquiry",
+
+  fields: [
+    {
+      id: "name",
+      label: "Full Name",
+      type: "text",
+      required: true,
+    },
+
+    {
+      id: "email",
+      label: "Email Address",
+      type: "email",
+      required: true,
+    },
+
+    {
+      id: "phone",
+      label: "Phone Number",
+      type: "tel",
+      required: false,
+    },
+
+    {
+      id: "location",
+      label: "Project Location",
+      type: "text",
+      required: false,
+    },
+
+    {
+      id: "timeline",
+      label: "Project Timeline",
+      type: "text",
+      required: false,
+    },
+  ],
+
+  projectTypes: [
+    "Luxury Residence",
+    "Commercial",
+    "Boardroom",
+    "Hospitality",
+    "Private Cinema",
+    "Other",
+  ],
+};
+
+
+export const contactCTA = {
+  eyebrow: "Begin the Conversation",
+
+  title:
+    "Every extraordinary environment begins with a conversation.",
+
+  description:
+    "Tell us about your project, and let's explore what is possible.",
+
+  primaryButton: {
+    label: "Schedule a Consultation",
+
+    href: "#project-enquiry",
+  },
 };

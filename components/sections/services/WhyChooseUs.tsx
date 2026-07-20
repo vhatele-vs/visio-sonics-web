@@ -1,36 +1,40 @@
 import { whyChooseUs } from "@/lib/content/services";
-import {
-  Container,
-  Heading,
-  Section,
-} from "@/components/layout";
-import { Card } from "@/components/ui";
+
+import Container from "@/components/layout/Container";
+import Section from "@/components/layout/Section";
+import Heading from "@/components/ui/Heading";
 
 export default function WhyChooseUs() {
   return (
-    <Section spacing="editorial">
+    <Section>
       <Container>
+        <div className="mb-16 max-w-3xl">
+          <Heading
+            title={whyChooseUs.heading}
+            description={whyChooseUs.description}
+          />
+        </div>
 
-        <Heading
-          title={whyChooseUs.heading}
-          description={whyChooseUs.description}
-          align="left"
-        />
+        <div className="grid gap-px overflow-hidden rounded-2xl bg-white/10 md:grid-cols-2">
+          {whyChooseUs.items.map((item, index) => (
+            <article
+              key={item.title}
+              className="bg-[var(--vs-background)] p-8 lg:p-10"
+            >
+              <span className="mb-10 block text-sm font-medium tracking-[0.2em] text-[var(--vs-accent)]">
+                {String(index + 1).padStart(2, "0")}
+              </span>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {whyChooseUs.items.map((item) => (
-            <Card key={item.title}>
-              <h3 className="mb-4 text-xl font-light">
+              <h3 className="text-2xl font-medium tracking-tight text-white">
                 {item.title}
               </h3>
 
-              <p className="leading-relaxed text-white/70">
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-white/60">
                 {item.description}
               </p>
-            </Card>
+            </article>
           ))}
         </div>
-
       </Container>
     </Section>
   );

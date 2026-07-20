@@ -8,7 +8,7 @@ export default function SolutionGrid() {
       <div className="space-y-10">
         <FeaturedSolution solution={solutions.featured} />
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:auto-rows-[420px]">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {solutions.items.map((solution, index) => {
             const span =
               index % 4 === 0

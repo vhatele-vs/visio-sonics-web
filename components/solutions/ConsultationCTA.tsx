@@ -3,13 +3,11 @@ import CTASection from "@/components/ui/CTASection";
 export default function ConsultationCTA() {
   return (
     <CTASection
-      eyebrow="Consultation"
-      title="Let’s design your environment"
-      description="Speak with our team to begin shaping a tailored architectural experience."
-      primaryLabel="Book Consultation"
+      eyebrow="Your Environment"
+      title="Let’s engineer what comes next."
+      description="Begin a conversation about the environment you are creating, and discover how Visio Sonics can bring architecture, technology and experience together."
+      primaryLabel="Schedule a Consultation"
       primaryHref="/contact"
-      secondaryLabel="View Projects"
-      secondaryHref="/projects"
     />
   );
 }

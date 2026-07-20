@@ -1,6 +1,5 @@
-// lib/content/solutions.ts
-
 import type {
+  FeaturedSolution,
   Solution,
   SolutionHero,
   SolutionsContent,
@@ -14,7 +13,7 @@ const hero: SolutionHero = {
   image: "/images/solutions/hero.webp",
 };
 
-const featured: Solution = {
+const featured: FeaturedSolution = {
   id: "luxury-living",
   category: "Residential",
   title: "Luxury Living",
@@ -31,7 +30,6 @@ const items: Solution[] = [
     title: "Commercial Spaces",
     description:
       "Intelligent environments that improve collaboration, presentation and operational efficiency.",
-    href: "/solutions/commercial",
     image: "/images/solutions/commercial.webp",
   },
 
@@ -41,7 +39,6 @@ const items: Solution[] = [
     title: "Hospitality",
     description:
       "Guest experiences engineered through discreet technology and refined design.",
-    href: "/solutions/hospitality",
     image: "/images/solutions/hospitality.webp",
   },
 
@@ -51,7 +48,6 @@ const items: Solution[] = [
     title: "Marine",
     description:
       "Reliable entertainment, connectivity and automation systems built for life at sea.",
-    href: "/solutions/marine",
     image: "/images/solutions/marine.webp",
   },
 
@@ -61,7 +57,6 @@ const items: Solution[] = [
     title: "Multi-Dwelling",
     description:
       "Scalable technology infrastructure for luxury apartments and residential developments.",
-    href: "/solutions/multi-dwelling",
     image: "/images/solutions/multi-dwelling.webp",
   },
 ];

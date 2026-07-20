@@ -23,17 +23,10 @@ export default function ProjectsCTA() {
             {projectsCTA.description}
           </p>
 
-          <div className="mt-12 flex flex-wrap justify-center gap-5">
+          <div className="mt-12 flex justify-center">
 
             <Button href={projectsCTA.primaryButton.href}>
               {projectsCTA.primaryButton.label}
-            </Button>
-
-            <Button
-              href={projectsCTA.secondaryButton.href}
-              variant="secondary"
-            >
-              {projectsCTA.secondaryButton.label}
             </Button>
 
           </div>

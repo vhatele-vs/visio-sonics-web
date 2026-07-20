@@ -1,20 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Logo() {
   return (
     <Link
       href="/"
       aria-label="Visio Sonics Home"
-      className="flex items-center"
+      className="inline-flex items-center"
     >
-      <Image
+      <img
         src="/branding/visio-sonics-logo.svg"
         alt="Visio Sonics"
-        width={300}
-        height={101}
-        priority
-        className="w-[220px] h-auto lg:w-[260px]"
+        className="block h-auto w-[220px] bg-red-500 lg:w-[260px]"
       />
     </Link>
   );

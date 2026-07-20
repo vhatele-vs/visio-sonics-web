@@ -1,36 +1,44 @@
 import { serviceCategories } from "@/lib/content/services";
-import {
-  Container,
-  Heading,
-  Section,
-} from "@/components/layout";
-import { Card } from "@/components/ui";
+
+import Container from "@/components/layout/Container";
+import Section from "@/components/layout/Section";
+import Heading from "@/components/ui/Heading";
 
 export default function ServiceCategories() {
   return (
-    <Section spacing="editorial">
+    <Section>
       <Container>
-
-        <Heading
-          title={serviceCategories.heading}
-          description={serviceCategories.description}
-          align="left"
-        />
-
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {serviceCategories.items.map((service) => (
-            <Card key={service.title}>
-              <h3 className="mb-4 text-xl font-light">
-                {service.title}
-              </h3>
-
-              <p className="text-white/70 leading-relaxed">
-                {service.description}
-              </p>
-            </Card>
-          ))}
+        <div className="mb-12 max-w-3xl">
+          <Heading
+            title={serviceCategories.heading}
+            description={serviceCategories.description}
+          />
         </div>
 
+        <div className="grid gap-px overflow-hidden rounded-2xl bg-white/10 md:grid-cols-2 lg:grid-cols-3">
+          {serviceCategories.items.map((service) => (
+            <article
+              key={service.title}
+              className="bg-[var(--vs-background)] p-8 transition-colors duration-300 hover:bg-[var(--vs-surface)]"
+            >
+              <div className="flex min-h-56 flex-col justify-between">
+                <div>
+                  <p className="mb-8 text-sm font-medium tracking-[0.2em] text-[var(--vs-accent)]">
+                    {service.icon}
+                  </p>
+
+                  <h3 className="text-xl font-medium tracking-tight text-white">
+                    {service.title}
+                  </h3>
+                </div>
+
+                <p className="mt-8 text-sm leading-relaxed text-white/60">
+                  {service.description}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
       </Container>
     </Section>
   );

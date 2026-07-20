@@ -1,83 +1,75 @@
 "use client";
 
-import Image from "next/image";
-
-import { philosophy } from "@/lib/content/home";
-
-import {
-  Container,
-  Section,
-} from "@/components/layout";
-
-import {
-  Eyebrow,
-} from "@/components/ui";
-
-import {
-  FadeUp,
-  RevealImage,
-} from "@/components/motion";
+import { motion } from "framer-motion";
 
 export default function Philosophy() {
   return (
-    <Section spacing="editorial">
+    <section
+      id="philosophy"
+      className="relative overflow-hidden bg-[#050505]"
+    >
+      {/* Spatial breathing room */}
+      <div className="mx-auto max-w-[1680px] px-8 md:px-14 xl:px-24 py-40 lg:py-56">
 
-      <Container size="wide">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-[240px]"
+        >
+          <span className="text-[11px] uppercase tracking-[0.55em] text-[var(--vs-accent)]">
+            Chapter 02
+          </span>
 
-        <RevealImage>
+          <div className="mt-6 h-px w-24 bg-white/10" />
+        </motion.div>
 
-          <div className="overflow-hidden rounded-[40px]">
+        <div className="h-32 lg:h-44" />
 
-            <div className="relative aspect-[16/9]">
+        <div className="grid gap-24 xl:grid-cols-12">
 
-              <Image
-                src={philosophy.image}
-                alt={philosophy.imageAlt}
-                fill
-                className="object-cover"
-              />
+          {/* Editorial Statement */}
 
-            </div>
-
-          </div>
-
-        </RevealImage>
-
-      </Container>
-
-      <Container size="narrow">
-
-        <FadeUp>
-
-          <div className="mx-auto mt-28 max-w-3xl">
-
-            <Eyebrow>
-              {philosophy.eyebrow}
-            </Eyebrow>
-
-            <h2 className="mt-8 text-5xl font-light leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
-              {philosophy.heading}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 0.9 }}
+            className="xl:col-span-7"
+          >
+            <h2 className="max-w-5xl font-light leading-[1.04] tracking-[-0.045em] text-white text-5xl md:text-6xl xl:text-[5.8rem]">
+              Technology should never compete with architecture.
             </h2>
+          </motion.div>
 
-            <div className="mt-14 space-y-10">
+          {/* Philosophy */}
 
-              {philosophy.paragraphs.map((paragraph) => (
-                <p
-                  key={paragraph}
-                  className="text-xl leading-9 text-white/68"
-                >
-                  {paragraph}
-                </p>
-              ))}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ delay: 0.15, duration: 0.9 }}
+            className="xl:col-span-5 xl:pt-8"
+          >
+            <p className="max-w-xl text-lg leading-10 text-white/72">
+              At Visio Sonics, we believe exceptional technology is experienced,
+              not displayed. Every lighting scene, every soundscape, every
+              security layer and every intelligent system is engineered to
+              disappear into the architecture, allowing the home itself to
+              become the centre of attention.
+            </p>
 
-            </div>
+            <div className="mt-16 h-px w-32 bg-white/10" />
 
-          </div>
+            <p className="mt-16 max-w-lg text-sm uppercase tracking-[0.35em] text-white/45 leading-8">
+              Invisible Technology • Architectural Precision • Human Experience
+            </p>
+          </motion.div>
 
-        </FadeUp>
+        </div>
 
-      </Container>
-
-    </Section>
+      </div>
+    </section>
   );
 }

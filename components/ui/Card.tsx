@@ -12,7 +12,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
 export default function Card({
   children,
   hover = true,
-  animated = true,
+  animated = false,
   className = "",
   ...props
 }: CardProps) {
@@ -22,9 +22,11 @@ export default function Card({
     "bg-white/[0.02]",
     "p-8",
     "transition-all duration-300",
+
     hover
       ? "hover:border-[var(--vs-accent)] hover:bg-white/[0.04]"
       : "",
+
     className,
   ]
     .filter(Boolean)
@@ -33,10 +35,22 @@ export default function Card({
   if (animated) {
     return (
       <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.5 }}
+        initial={{
+          opacity: 0,
+          y: 24,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+        }}
         className={styles}
       >
         {children}
@@ -45,7 +59,10 @@ export default function Card({
   }
 
   return (
-    <div className={styles} {...props}>
+    <div
+      className={styles}
+      {...props}
+    >
       {children}
     </div>
   );

@@ -4,250 +4,176 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import Container from "@/components/layout/Container";
-import Section from "@/components/layout/Section";
-
 export default function Hero() {
   return (
-    <Section
+    <section
       id="hero"
-      spacing="hero"
-      className="relative min-h-screen overflow-hidden"
+      className="relative isolate min-h-screen overflow-hidden bg-[#050505]"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 -z-30">
-        <Image
-          src="/images/home/hero.webp"
-          alt="Luxury architectural residence by Visio Sonics"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-      </div>
 
-      {/* Cinematic Overlay */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-20 bg-black/55"
+      <Image
+        src="/images/home/hero.webp"
+        alt="Luxury architectural residence featuring invisible technology integration"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
       />
 
-      {/* Bottom Gradient */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-20 bg-gradient-to-b from-black/10 via-black/20 to-[#050505]"
-      />
+      {/* Cinematic Overlays */}
 
-      {/* Editorial Grid */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 opacity-[0.06]
-        bg-[linear-gradient(rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px)]
-        bg-[size:72px_72px]"
-      />
+      <div className="absolute inset-0 bg-black/55" />
 
-      {/* Ambient Glow */}
-      <div
-        aria-hidden
-        className="absolute left-1/2 top-0 -z-10 h-[900px] w-[900px]
-        -translate-x-1/2 rounded-full
-        bg-[radial-gradient(circle,rgba(217,119,6,.18),transparent_70%)]
-        blur-3xl"
-      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-[#050505]" />
 
-      <Container size="wide">
-        <div className="flex min-h-[calc(100vh-88px)] items-center">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.18)_65%,rgba(0,0,0,0.55)_100%)]" />
 
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: .8 }}
-            className="max-w-4xl"
-          >
-            <p
-              className="
-                mb-8
-                text-xs
-                uppercase
-                tracking-[0.55em]
-                text-[var(--vs-accent)]
-              "
-            >
-              Integrate • Engineer • Elevate
-            </p>
+      <div className="absolute inset-0 opacity-[0.035] bg-[linear-gradient(rgba(255,255,255,.10)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.10)_1px,transparent_1px)] bg-[size:90px_90px]" />
 
-            <h1
-              className="
-                max-w-5xl
-                text-5xl
-                font-light
-                leading-[0.92]
-                tracking-[-0.04em]
-                text-white
-                md:text-7xl
-                xl:text-[6.2rem]
-              "
-            >
-              Technology disappears.
-              <br />
-              Extraordinary living remains.
-            </h1>
+      {/* Hero Content */}
 
-            <p
-              className="
-                mt-10
-                max-w-2xl
-                text-lg
-                leading-9
-                text-white/80
-              "
-            >
-              <span className="text-white">
-                Where Vision Meets Sound.
-              </span>
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-[1680px] flex-col px-8 md:px-14 xl:px-24">
 
-              <br />
-              <br />
+        {/* Spacer for Glass Header */}
 
-              Visio Sonics engineers intelligent environments where
-              architecture, technology and human experience become one
-              seamless system—from concept through commissioning.
-            </p>
-
-                        <div className="mt-14 flex flex-col gap-5 sm:flex-row">
-
-              <Link
-                href="/contact"
-                className="
-                  inline-flex
-                  h-14
-                  items-center
-                  justify-center
-                  rounded-full
-                  bg-[var(--vs-accent)]
-                  px-9
-                  text-sm
-                  font-medium
-                  uppercase
-                  tracking-[0.18em]
-                  text-black
-                  transition-all
-                  duration-300
-                  hover:bg-[var(--vs-accent-hover)]
-                  hover:shadow-[0_0_40px_rgba(217,119,6,.35)]
-                "
-              >
-                Start Your Project
-              </Link>
-
-              <Link
-                href="/projects"
-                className="
-                  inline-flex
-                  h-14
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-white/15
-                  bg-white/5
-                  px-9
-                  text-sm
-                  font-medium
-                  uppercase
-                  tracking-[0.18em]
-                  text-white
-                  backdrop-blur-md
-                  transition-all
-                  duration-300
-                  hover:border-[var(--vs-accent)]
-                  hover:bg-white/10
-                "
-              >
-                Explore Our Work
-              </Link>
-
-            </div>
-
-          </motion.div>
-
-        </div>
+        <div className="h-40 lg:h-48" />
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: .8,
-            delay: .35,
+            duration: 0.9,
+            ease: [0.22, 1, 0.36, 1],
           }}
-          className="
-            mt-8
-            grid
-            gap-8
-            border-t
-            border-white/10
-            pt-10
-            md:grid-cols-3
-          "
+        >
+          <p className="text-[11px] uppercase tracking-[0.55em] text-[var(--vs-accent)]">
+            VISIO SONICS
+          </p>
+
+          <div className="mt-6 h-px w-24 bg-white/10" />
+
+          <p className="mt-8 max-w-xl text-sm uppercase tracking-[0.28em] text-white/55">
+            Luxury Technology Integration House
+          </p>
+        </motion.div>
+
+        <div className="h-24 lg:h-32" />
+
+        {/* Editorial Headline */}
+
+        <motion.h1
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.12,
+            duration: 1,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="max-w-6xl font-light leading-[0.92] tracking-[-0.055em] text-white text-5xl md:text-7xl xl:text-[7.4rem]"
+        >
+          Technology disappears.
+          <br />
+          Extraordinary living remains.
+        </motion.h1>
+
+        <div className="h-20 lg:h-24" />
+
+        {/* Editorial Description */}
+
+        <motion.p
+          initial={{ opacity: 0, y: 26 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.24,
+            duration: 0.9,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="max-w-2xl text-lg leading-10 text-white/72"
+        >
+          We engineer intelligent environments where architecture,
+          lighting, entertainment, security and automation become one
+          invisible ecosystem designed exclusively around the way you live.
+        </motion.p>
+
+        <div className="h-20 lg:h-24" />
+
+        {/* Actions */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.35,
+            duration: 0.9,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="flex flex-col gap-5 sm:flex-row"
+        >
+          <Link
+            href="/contact"
+            className="inline-flex h-14 items-center justify-center rounded-full bg-[var(--vs-accent)] px-10 text-sm uppercase tracking-[0.2em] text-black transition-all duration-300 hover:scale-[1.02] hover:bg-amber-400"
+          >
+            Begin Your Project
+          </Link>
+
+          <Link
+            href="/projects"
+            className="inline-flex h-14 items-center justify-center rounded-full border border-white/15 bg-white/5 px-10 text-sm uppercase tracking-[0.2em] text-white transition-all duration-300 hover:border-[var(--vs-accent)] hover:bg-white/10"
+          >
+            Explore Our Work
+          </Link>
+        </motion.div>
+
+        <div className="flex-1" />
+
+        {/* Editorial Footer */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.45,
+            duration: 0.9,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="grid gap-14 border-t border-white/10 py-16 md:grid-cols-3"
         >
           <div>
-            <p
-              className="
-                text-xs
-                uppercase
-                tracking-[0.28em]
-                text-[var(--vs-accent)]
-              "
-            >
+            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--vs-accent)]">
               Architecture
-            </p>
+            </h2>
 
-            <p className="mt-4 text-sm leading-8 text-white/70">
-              Invisible technology engineered around
-              architectural intent from concept to completion.
+            <p className="mt-6 max-w-sm text-base leading-8 text-white/60">
+              Technology designed to disappear into exceptional
+              architecture.
             </p>
           </div>
 
           <div>
-            <p
-              className="
-                text-xs
-                uppercase
-                tracking-[0.28em]
-                text-[var(--vs-accent)]
-              "
-            >
+            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--vs-accent)]">
               Integration
-            </p>
+            </h2>
 
-            <p className="mt-4 text-sm leading-8 text-white/70">
-              Audio, video, lighting, networking,
-              security, climate and energy unified
-              into one intelligent ecosystem.
+            <p className="mt-6 max-w-sm text-base leading-8 text-white/60">
+              Every system working together as one intelligent living
+              environment.
             </p>
           </div>
 
           <div>
-            <p
-              className="
-                text-xs
-                uppercase
-                tracking-[0.28em]
-                text-[var(--vs-accent)]
-              "
-            >
+            <h2 className="text-xs uppercase tracking-[0.35em] text-[var(--vs-accent)]">
               Experience
-            </p>
+            </h2>
 
-            <p className="mt-4 text-sm leading-8 text-white/70">
-              Crafted for discerning homeowners,
-              architects and developers who expect
-              technology to disappear.
+            <p className="mt-6 max-w-sm text-base leading-8 text-white/60">
+              Comfort, simplicity and confidence engineered into every
+              moment of everyday life.
             </p>
           </div>
         </motion.div>
-      </Container>
 
-          </Section>
+      </div>
+    </section>
   );
 }

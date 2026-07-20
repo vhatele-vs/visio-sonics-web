@@ -1,5 +1,4 @@
 import { aboutHero } from "@/lib/content/about";
-import { Button } from "@/components/ui";
 import {
   Container,
   Heading,
@@ -21,19 +20,6 @@ export default function AboutHero() {
             title={aboutHero.title}
             description={aboutHero.description}
           />
-
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <Button href={aboutHero.primaryButton.href}>
-              {aboutHero.primaryButton.label}
-            </Button>
-
-            <Button
-              href={aboutHero.secondaryButton.href}
-              variant="secondary"
->
-              {aboutHero.secondaryButton.label}
-            </Button>
-          </div>
         </Stack>
       </Container>
     </Section>

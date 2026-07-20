@@ -3,6 +3,7 @@ import {
   Heading,
   Section,
 } from "@/components/layout";
+import { Button } from "@/components/ui";
 
 export default function AboutPhilosophy() {
   return (
@@ -14,21 +15,27 @@ export default function AboutPhilosophy() {
             align="left"
           />
 
-          <div className="space-y-6 text-lg leading-relaxed text-white/70">
-            <p>
-              We believe environments should respond to human intent without
-              requiring interaction with complex systems.
-            </p>
+          <div>
+            <div className="space-y-6 text-lg leading-relaxed text-white/70">
+              <p>
+                We believe environments should respond to human intent without
+                requiring interaction with complex systems.
+              </p>
 
-            <p>
-              Every system we design is engineered to integrate seamlessly into
-              architecture, preserving clarity, comfort, and control.
-            </p>
+              <p>
+                Every system we design is engineered to integrate seamlessly
+                into architecture, preserving clarity, comfort, and control.
+              </p>
 
-            <p>
-              Our focus is not on devices, but on the experience of living and
-              working within intelligently designed spaces.
-            </p>
+              <p>
+                Our focus is not on devices, but on the experience of living
+                and working within intelligently designed spaces.
+              </p>
+            </div>
+
+            <div className="mt-24 flex translate-y-6 justify-center pt-24 lg:justify-start">
+              <Button href="/contact">Schedule a Consultation</Button>
+            </div>
           </div>
         </div>
       </Container>
