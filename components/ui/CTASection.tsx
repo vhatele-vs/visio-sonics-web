@@ -1,11 +1,19 @@
-import Link from "next/link";
+import { Button } from "@/components/ui";
+
+import {
+  Container,
+  Heading,
+  Section,
+} from "@/components/layout";
 
 export type CTASectionProps = {
   eyebrow?: string;
   title: string;
   description?: string;
+
   primaryLabel: string;
   primaryHref: string;
+
   secondaryLabel?: string;
   secondaryHref?: string;
 };
@@ -19,79 +27,55 @@ export default function CTASection({
   secondaryLabel,
   secondaryHref,
 }: CTASectionProps) {
+  const hasSecondary =
+    secondaryLabel && secondaryHref;
+
   return (
-    <section className="w-full bg-black px-6 py-32 text-white md:py-40">
-      <div className="mx-auto max-w-5xl text-center">
-        {eyebrow && (
-          <p className="text-xs uppercase tracking-[0.45em] text-[var(--vs-accent)]">
-            {eyebrow}
-          </p>
-        )}
+    <Section
+      spacing="hero"
+      className="bg-black text-white"
+    >
+      <Container
+        size="wide"
+        className="text-center"
+      >
+        <Heading
+          eyebrow={eyebrow}
+          title={title}
+          description={description}
+          as="h2"
+          variant="hero"
+        />
 
-        <h2 className="mt-6 text-4xl font-light leading-tight tracking-[-0.03em] md:text-6xl">
-          {title}
-        </h2>
-
-        {description && (
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-white/70">
-            {description}
-          </p>
-        )}
-
-        <div className="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
-          <Link
+        <div
+          className="
+            mt-12
+            flex
+            flex-col
+            items-center
+            justify-center
+            gap-4
+            sm:flex-row
+          "
+        >
+          <Button
             href={primaryHref}
-            className="
-              inline-flex
-              h-14
-              items-center
-              justify-center
-              rounded-full
-              bg-[var(--vs-accent)]
-              px-8
-              text-sm
-              font-medium
-              uppercase
-              tracking-[0.2em]
-              text-black
-              transition-all
-              duration-300
-              hover:scale-[1.02]
-              hover:bg-[var(--vs-accent-hover)]
-            "
+            size="lg"
           >
             {primaryLabel}
-          </Link>
+          </Button>
 
-          {secondaryLabel && secondaryHref && (
-            <Link
+          {hasSecondary && (
+            <Button
               href={secondaryHref}
-              className="
-                inline-flex
-                h-14
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/15
-                bg-white/[0.03]
-                px-8
-                text-sm
-                font-medium
-                uppercase
-                tracking-[0.2em]
-                text-white
-                transition-all
-                duration-300
-                hover:border-[var(--vs-accent)]
-                hover:bg-white/[0.06]
-              "
+              variant="secondary"
+              size="lg"
             >
               {secondaryLabel}
-            </Link>
+            </Button>
           )}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

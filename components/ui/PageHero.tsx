@@ -1,14 +1,19 @@
-// components/ui/PageHero.tsx
-
 import Image from "next/image";
+import type { ReactNode } from "react";
 
-export type PageHeroProps = {
+import {
+  Container,
+  Heading,
+  Section,
+} from "@/components/layout";
+
+export interface PageHeroProps {
   eyebrow?: string;
   title: string;
   description?: string;
   image?: string;
-  children?: React.ReactNode;
-};
+  children?: ReactNode;
+}
 
 export default function PageHero({
   eyebrow,
@@ -18,9 +23,12 @@ export default function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className="relative w-full overflow-hidden bg-black text-white">
+    <Section
+      spacing="hero"
+      className="relative overflow-hidden bg-black text-white"
+    >
       {image && (
-        <div className="absolute inset-0">
+        <>
           <Image
             src={image}
             alt={title}
@@ -28,29 +36,33 @@ export default function PageHero({
             priority
             className="object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+
+          <div className="absolute inset-0 bg-black/55" />
+        </>
       )}
 
-      <div className="relative mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center px-6 py-24">
-        {eyebrow && (
-          <p className="mb-4 text-xs uppercase tracking-[0.2em] text-white/70">
-            {eyebrow}
-          </p>
-        )}
+      <Container
+        size="wide"
+        className="relative z-10 flex min-h-[70vh] items-center"
+      >
+        <div className="max-w-4xl">
 
-        <h1 className="text-4xl font-light leading-tight md:text-6xl">
-          {title}
-        </h1>
+          <Heading
+            eyebrow={eyebrow}
+            title={title}
+            description={description}
+            as="h1"
+            variant="hero"
+          />
 
-        {description && (
-          <p className="mt-6 max-w-2xl text-base text-white/70 md:text-lg">
-            {description}
-          </p>
-        )}
+          {children && (
+            <div className="mt-12">
+              {children}
+            </div>
+          )}
 
-        {children && <div className="mt-10">{children}</div>}
-      </div>
-    </section>
+        </div>
+      </Container>
+    </Section>
   );
 }

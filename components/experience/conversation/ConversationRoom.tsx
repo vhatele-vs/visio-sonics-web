@@ -1,8 +1,9 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import type { Transition } from "framer-motion";
-import Link from "next/link";
+
+import { Button } from "@/components/ui";
 
 const luxuryEase: Transition["ease"] = [0.22, 1, 0.36, 1];
 
@@ -26,30 +27,21 @@ const reveal = {
 };
 
 export default function ConversationRoom() {
-  const reducedMotion = useReducedMotion();
-
   return (
     <section
       id="conversation"
       aria-labelledby="conversation-title"
-      className="
-        relative
-        isolate
-        overflow-hidden
-        bg-[#050505]
-      "
+      className="relative isolate overflow-hidden bg-[#050505]"
     >
       {/* Ambient atmosphere */}
 
       <div
         aria-hidden="true"
         className="
-          absolute
-          inset-0
+          absolute inset-0
           bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.08),transparent_75%)]
         "
       />
-
 
       <div
         className="
@@ -66,7 +58,6 @@ export default function ConversationRoom() {
           xl:px-24
         "
       >
-
         <div className="max-w-5xl">
 
           {/* Eyebrow */}
@@ -84,35 +75,29 @@ export default function ConversationRoom() {
             Begin the Conversation
           </motion.span>
 
-
           {/* Divider */}
 
           <motion.div
-            initial={
-              reducedMotion
-                ? { width: 96 }
-                : { width: 0 }
-            }
-            whileInView={{
-              width: 96,
-            }}
-            viewport={{
-              once: true,
-            }}
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
             transition={{
               duration: 0.8,
               delay: 0.15,
               ease: luxuryEase,
             }}
+            style={{
+              transformOrigin: "left center",
+            }}
             className="
               mt-6
               h-px
+              w-24
               bg-white/10
             "
           />
 
-
-          {/* Main statement */}
+          {/* Heading */}
 
           <motion.h2
             {...reveal}
@@ -140,7 +125,6 @@ export default function ConversationRoom() {
             one conversation.
           </motion.h2>
 
-
           {/* Supporting copy */}
 
           <motion.p
@@ -162,12 +146,11 @@ export default function ConversationRoom() {
             "
           >
             From the earliest stages of a project, we work alongside the people
-            shaping the space — bringing architecture, technology and experience
+            shaping the space—bringing architecture, technology and experience
             together before complexity ever reaches the surface.
           </motion.p>
 
-
-          {/* Primary action only */}
+          {/* Call to Action */}
 
           <motion.div
             {...reveal}
@@ -176,60 +159,18 @@ export default function ConversationRoom() {
               delay: 0.3,
               ease: luxuryEase,
             }}
-            className="
-              mt-10
-              flex
-              md:mt-12
-            "
+            className="mt-10 flex md:mt-12"
           >
-
-            <Link
+            <Button
               href="/contact"
-              className="
-                group
-                inline-flex
-                h-14
-                items-center
-                justify-center
-                rounded-full
-                bg-[var(--vs-accent)]
-                px-10
-                text-sm
-                uppercase
-                tracking-[0.2em]
-                text-black
-                transition-all
-                duration-300
-                hover:scale-[1.02]
-                hover:bg-white
-                focus-visible:outline-none
-                focus-visible:ring-2
-                focus-visible:ring-[var(--vs-accent)]
-                focus-visible:ring-offset-2
-                focus-visible:ring-offset-[#050505]
-              "
+              size="lg"
             >
-              Begin a Conversation
-
-              <span
-                className="
-                  ml-3
-                  transition-transform
-                  duration-300
-                  group-hover:translate-x-1
-                "
-              >
-                →
-              </span>
-
-            </Link>
-
+              Begin a Conversation →
+            </Button>
           </motion.div>
 
         </div>
-
       </div>
-
     </section>
   );
 }

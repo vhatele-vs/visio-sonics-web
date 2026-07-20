@@ -6,6 +6,8 @@ import {
   Section,
 } from "@/components/layout";
 
+import { Button } from "@/components/ui";
+
 const inputStyles =
   "w-full rounded-xl border border-white/10 bg-white/[0.02] px-5 py-4 text-white placeholder:text-white/30 outline-none transition-all duration-300 focus:border-[var(--vs-accent)] focus:bg-white/[0.04] focus:ring-1 focus:ring-[var(--vs-accent)]/20";
 
@@ -31,10 +33,7 @@ export default function ProjectEnquiry() {
           <div className="grid gap-x-8 gap-y-10 md:grid-cols-2">
 
             <div>
-              <label
-                htmlFor="name"
-                className={labelStyles}
-              >
+              <label htmlFor="name" className={labelStyles}>
                 Full Name
               </label>
 
@@ -50,10 +49,7 @@ export default function ProjectEnquiry() {
 
 
             <div>
-              <label
-                htmlFor="email"
-                className={labelStyles}
-              >
+              <label htmlFor="email" className={labelStyles}>
                 Email Address
               </label>
 
@@ -69,10 +65,7 @@ export default function ProjectEnquiry() {
 
 
             <div>
-              <label
-                htmlFor="phone"
-                className={labelStyles}
-              >
+              <label htmlFor="phone" className={labelStyles}>
                 Phone Number
               </label>
 
@@ -87,10 +80,7 @@ export default function ProjectEnquiry() {
 
 
             <div>
-              <label
-                htmlFor="project-type"
-                className={labelStyles}
-              >
+              <label htmlFor="project-type" className={labelStyles}>
                 Project Type
               </label>
 
@@ -110,10 +100,7 @@ export default function ProjectEnquiry() {
 
 
             <div>
-              <label
-                htmlFor="location"
-                className={labelStyles}
-              >
+              <label htmlFor="location" className={labelStyles}>
                 Project Location
               </label>
 
@@ -127,10 +114,7 @@ export default function ProjectEnquiry() {
 
 
             <div>
-              <label
-                htmlFor="timeline"
-                className={labelStyles}
-              >
+              <label htmlFor="timeline" className={labelStyles}>
                 Project Timeline
               </label>
 
@@ -148,10 +132,7 @@ export default function ProjectEnquiry() {
 
           <div className="pt-4">
 
-            <label
-              htmlFor="message"
-              className={labelStyles}
-            >
+            <label htmlFor="message" className={labelStyles}>
               Share Your Vision
             </label>
 
@@ -169,31 +150,12 @@ export default function ProjectEnquiry() {
 
           <div className="mt-12 border-t border-white/10 pt-10 pb-24">
 
-            <button
+            <Button
               type="submit"
-              className="
-                inline-flex
-                min-h-[64px]
-                w-full
-                items-center
-                justify-center
-                rounded-full
-                bg-[var(--vs-accent)]
-                px-12
-                text-sm
-                font-medium
-                uppercase
-                tracking-[0.22em]
-                text-white
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:bg-[var(--vs-accent-hover)]
-                md:w-auto
-              "
+              size="lg"
             >
               {projectEnquiry.submitLabel}
-            </button>
+            </Button>
 
 
             <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/50">

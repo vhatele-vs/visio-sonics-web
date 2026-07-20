@@ -25,9 +25,7 @@ export default function ContactMethods() {
         <div className="mt-16 grid gap-8 md:grid-cols-2">
 
           {contactMethods.items.map((method) => (
-            <Card
-              key={method.title}
-            >
+            <Card key={method.title}>
 
               <h3
                 className="
@@ -65,12 +63,7 @@ export default function ContactMethods() {
                 </p>
               )}
 
-              <p
-                className="
-                  leading-relaxed
-                  text-white/70
-                "
-              >
+              <p className="leading-relaxed text-white/70">
                 {method.description}
               </p>
 

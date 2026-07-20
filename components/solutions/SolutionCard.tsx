@@ -15,43 +15,119 @@ export default function SolutionCard({
 }: SolutionCardProps) {
   const content = (
     <article className="flex h-full flex-col">
+
       <div className="relative aspect-[4/3] overflow-hidden">
+
         <Image
           src={solution.image}
           alt={solution.title}
           fill
-          sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
-          className={[
-            "object-cover transition-transform duration-1000 ease-out",
-            solution.href ? "group-hover:scale-[1.05]" : "",
-          ]
-            .filter(Boolean)
-            .join(" ")}
+          sizes="
+            (max-width:768px) 100vw,
+            (max-width:1200px) 50vw,
+            33vw
+          "
+          className="
+            object-cover
+            transition-transform
+            duration-1000
+            ease-out
+            group-hover:scale-[1.05]
+          "
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
+        <div
+          aria-hidden="true"
+          className="
+            absolute
+            inset-0
+            bg-gradient-to-t
+            from-black
+            via-black/25
+            to-transparent
+          "
+        />
+
       </div>
 
+
       <div className="flex flex-1 flex-col p-10">
-        <p className="text-xs font-medium uppercase tracking-[0.35em] text-[var(--vs-accent)]">
+
+        <p
+          className="
+            text-xs
+            font-medium
+            uppercase
+            tracking-[0.35em]
+            text-[var(--vs-accent)]
+          "
+        >
           {solution.category}
         </p>
 
-        <h3 className="mt-5 font-display text-3xl font-light leading-tight text-white">
+
+        <h3
+          className="
+            mt-5
+            font-display
+            text-3xl
+            font-light
+            leading-tight
+            text-white
+          "
+        >
           {solution.title}
         </h3>
 
-        <div className="mt-6 h-px w-14 bg-[var(--vs-accent)]" />
 
-        <p className="mt-6 flex-1 leading-8 text-zinc-400">
+        <div
+          aria-hidden="true"
+          className="
+            mt-6
+            h-px
+            w-14
+            bg-[var(--vs-accent)]
+          "
+        />
+
+
+        <p
+          className="
+            mt-6
+            flex-1
+            leading-8
+            text-zinc-400
+          "
+        >
           {solution.description}
         </p>
 
+
         {solution.href && (
-          <div className="mt-10 inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.25em] text-white transition-transform duration-300 group-hover:translate-x-2">
-            <span>Explore {solution.title}</span>
+          <div
+            className="
+              mt-10
+              inline-flex
+              items-center
+              gap-3
+              text-sm
+              font-medium
+              uppercase
+              tracking-[0.25em]
+              text-white
+              transition-transform
+              duration-300
+              group-hover:translate-x-2
+            "
+          >
+
+            <span>
+              View Solution
+            </span>
+
 
             <svg
+              aria-hidden="true"
               className="h-4 w-4"
               viewBox="0 0 24 24"
               fill="none"
@@ -64,26 +140,54 @@ export default function SolutionCard({
                 strokeLinejoin="round"
               />
             </svg>
+
           </div>
         )}
+
       </div>
+
     </article>
   );
 
+
   return (
     <FadeUp delay={delay}>
+
       {solution.href ? (
+
         <Link
           href={solution.href}
-          className="group block h-full overflow-hidden rounded-[32px] bg-zinc-900"
+          className="
+            group
+            block
+            h-full
+            overflow-hidden
+            rounded-[32px]
+            bg-zinc-900
+            transition-transform
+            duration-500
+            hover:-translate-y-1
+          "
         >
           {content}
         </Link>
+
       ) : (
-        <div className="block h-full overflow-hidden rounded-[32px] bg-zinc-900">
+
+        <div
+          className="
+            block
+            h-full
+            overflow-hidden
+            rounded-[32px]
+            bg-zinc-900
+          "
+        >
           {content}
         </div>
+
       )}
+
     </FadeUp>
   );
 }

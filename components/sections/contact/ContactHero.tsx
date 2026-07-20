@@ -6,15 +6,12 @@ import {
   Section,
 } from "@/components/layout";
 
-import {
-  Eyebrow,
-} from "@/components/ui";
+import { Eyebrow } from "@/components/ui";
 
 export default function ContactHero() {
   return (
     <Section spacing="hero">
       <Container size="narrow">
-
         <Eyebrow>
           {contactHero.eyebrow}
         </Eyebrow>
@@ -26,7 +23,6 @@ export default function ContactHero() {
           className="mt-8"
           align="left"
         />
-
       </Container>
     </Section>
   );

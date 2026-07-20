@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 
-import Container from "@/components/layout/Container";
-
 import SolutionHero from "@/components/solutions/SolutionHero";
 import SolutionGrid from "@/components/solutions/SolutionGrid";
 import WhyApproach from "@/components/solutions/WhyApproach";
@@ -19,19 +17,11 @@ export default function SolutionsPage() {
       <SolutionHero />
 
       <main className="bg-black">
-
-        <section className="py-32">
-          <Container>
-
-            <SolutionGrid />
-
-          </Container>
-        </section>
+        <SolutionGrid />
 
         <WhyApproach />
 
         <ConsultationCTA />
-
       </main>
     </>
   );
