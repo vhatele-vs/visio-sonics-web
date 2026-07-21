@@ -5,7 +5,7 @@ export default function EngineeringStatement() {
 
         <div className="max-w-4xl">
 
-          <p
+          <h2
             id="engineering-heading"
             className="
               max-w-3xl
@@ -18,7 +18,7 @@ export default function EngineeringStatement() {
             "
           >
             Effortless living is engineered.
-          </p>
+          </h2>
 
           <p
             className="

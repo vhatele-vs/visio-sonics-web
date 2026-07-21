@@ -15,12 +15,14 @@ export default function HeroHeadline() {
         ease: [0.22, 1, 0.36, 1],
       }}
       className="
-        max-w-[760px]
+        max-w-full
+        lg:max-w-[760px]
         font-extralight
         tracking-[-0.025em]
         leading-[1.06]
         text-white
-        text-4xl
+        text-3xl
+        sm:text-4xl
         md:text-5xl
         lg:text-[4.5rem]
         xl:text-[5rem]
@@ -28,10 +30,7 @@ export default function HeroHeadline() {
       "
     >
       {heroContent.headline.map((line) => (
-        <span
-          key={line}
-          className="block"
-        >
+        <span key={line} className="block">
           {line}
         </span>
       ))}

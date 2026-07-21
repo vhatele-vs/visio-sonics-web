@@ -7,7 +7,7 @@ import { principles } from "./why.data";
 
 export default function PrincipleGrid() {
   return (
-    <section
+    <div
       id="why-visio-sonics"
       className="
         relative
@@ -17,15 +17,17 @@ export default function PrincipleGrid() {
       "
     >
 
-      <div className="
-        mx-auto
-        max-w-[1680px]
-        px-8
-        pt-40
-        md:px-14
-        lg:pt-56
-        xl:px-24
-      ">
+      <div
+        className="
+          mx-auto
+          max-w-[1680px]
+          px-8
+          pt-40
+          md:px-14
+          lg:pt-56
+          xl:px-24
+        "
+      >
 
         <motion.div
           initial={{
@@ -46,41 +48,51 @@ export default function PrincipleGrid() {
           }}
         >
 
-          <span className="
-            text-[11px]
-            uppercase
-            tracking-[0.55em]
-            text-[var(--vs-accent)]
-          ">
+          <span
+            className="
+              text-[11px]
+              uppercase
+              tracking-[0.55em]
+              text-[var(--vs-accent)]
+            "
+          >
             The Difference
           </span>
 
 
-          <div className="mt-6 h-px w-24 bg-white/10" />
+          <div
+            aria-hidden="true"
+            className="mt-6 h-px w-24 bg-white/10"
+          />
 
 
-          <h2 className="
-            mt-12
-            max-w-5xl
-            text-[clamp(3rem,5vw,5.5rem)]
-            font-light
-            leading-[1.02]
-            tracking-[-0.045em]
-            text-white
-          ">
+          <h2
+            id="why-heading"
+            className="
+              mt-12
+              max-w-5xl
+              text-[clamp(3rem,5vw,5.5rem)]
+              font-light
+              leading-[1.02]
+              tracking-[-0.045em]
+              text-white
+            "
+          >
             Why
             <br />
             Visio Sonics
           </h2>
 
 
-          <p className="
-            mt-12
-            max-w-2xl
-            text-lg
-            leading-10
-            text-white/70
-          ">
+          <p
+            className="
+              mt-12
+              max-w-2xl
+              text-lg
+              leading-10
+              text-white/70
+            "
+          >
             We measure our work not by the technology we install,
             but by the experiences that become effortless,
             timeless, and invisible within exceptional architecture.
@@ -103,6 +115,6 @@ export default function PrincipleGrid() {
 
       </div>
 
-    </section>
+    </div>
   );
 }

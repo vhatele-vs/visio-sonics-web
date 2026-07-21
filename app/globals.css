@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "../styles/tokens.css";
 @import "../styles/typography.css";
+
 /* ==========================================================
    VISIO SONICS DESIGN SYSTEM
    ========================================================== */
@@ -17,7 +18,7 @@
   --vs-accent: #d97706;
   --vs-accent-hover: #f59e0b;
 
-  --vs-border: rgba(255,255,255,.08);
+  --vs-border: rgba(255, 255, 255, 0.08);
 
   /* Layout */
   --container-width: 1280px;
@@ -29,7 +30,7 @@
   --radius: 18px;
 
   /* Shadows */
-  --shadow-soft: 0 20px 60px rgba(0,0,0,.35);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.35);
 
   /* Transition */
   --transition: 250ms ease;
@@ -41,52 +42,52 @@
 
 *,
 *::before,
-*::after{
-  box-sizing:border-box;
+*::after {
+  box-sizing: border-box;
 }
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
- background: var(--vs-background);
+  background: var(--vs-background);
   color: var(--vs-text);
   font-family: system-ui, sans-serif;
 }
 
-img{
-  display:block;
-  max-width:100%;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-button{
-  cursor:pointer;
-  border:none;
-  background:none;
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
 /* ==========================================================
    GLOBAL LAYOUT
    ========================================================== */
 
-.container{
-  width:min(92%, var(--container-width));
-  margin-inline:auto;
+.container {
+  width: min(92%, var(--container-width));
+  margin-inline: auto;
 }
 
-.section{
-  padding-block:var(--section-padding);
+.section {
+  padding-block: var(--section-padding);
 }
 
 /* ==========================================================
@@ -96,21 +97,42 @@ button{
 h1,
 h2,
 h3,
-h4{
-  font-weight:300;
-  line-height:1.1;
+h4 {
+  font-weight: 300;
+  line-height: 1.1;
 }
 
-p{
-  color:var(--vs-text-muted);
-  line-height:1.8;
+p {
+  color: var(--vs-text-muted);
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   SUBMIT BUTTON
+   ========================================================== */
+
+.submitButton {
+  background-color: var(--vs-text);
+  color: var(--vs-background);
+  padding: 0.875rem 2rem;
+  border: 1px solid var(--vs-text);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.submitButton:hover {
+  background-color: var(--vs-accent);
+  color: var(--vs-text);
+  border-color: var(--vs-accent);
 }
 
 /* ==========================================================
    SELECTION
    ========================================================== */
 
-::selection{
-  background:var(--vs-accent);
-  color:white;
+::selection {
+  background: var(--vs-accent);
+  color: var(--vs-text);
 }

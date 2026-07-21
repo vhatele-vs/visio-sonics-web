@@ -28,7 +28,8 @@ export default function HeroActions() {
           border
           border-white/15
           bg-white/8
-          px-12
+          px-8
+          sm:px-12
           backdrop-blur-md
           transition-all
           duration-500

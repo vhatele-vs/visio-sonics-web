@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { forwardRef } from "react";
 import type {
@@ -19,7 +17,6 @@ type ButtonSize =
   | "md"
   | "lg";
 
-
 interface BaseButtonProps {
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -28,13 +25,11 @@ interface BaseButtonProps {
   children: React.ReactNode;
 }
 
-
 type ButtonLinkProps =
   BaseButtonProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
     href: string;
   };
-
 
 type ButtonElementProps =
   BaseButtonProps &
@@ -42,18 +37,15 @@ type ButtonElementProps =
     href?: never;
   };
 
-
 type ButtonProps =
   | ButtonLinkProps
   | ButtonElementProps;
-
 
 const variants = {
   primary: cn(
     "bg-[var(--vs-accent)]",
     "text-white",
-    "hover:bg-[var(--vs-accent-hover)]",
-    "hover:-translate-y-0.5"
+    "hover:bg-[var(--vs-accent-hover)]"
   ),
 
   secondary: cn(
@@ -70,18 +62,11 @@ const variants = {
   ),
 };
 
-
 const sizes = {
-  sm:
-    "min-h-10 px-5 text-xs",
-
-  md:
-    "min-h-12 px-8 text-sm",
-
-  lg:
-    "min-h-14 px-10 text-sm",
+  sm: "min-h-10 px-5 text-xs",
+  md: "min-h-12 px-8 text-sm",
+  lg: "min-h-14 px-10 text-sm",
 };
-
 
 const baseStyles = cn(
   "inline-flex",
@@ -92,9 +77,16 @@ const baseStyles = cn(
   "uppercase",
   "tracking-[0.18em]",
   "transition-all",
-  "duration-300"
+  "duration-300",
+  "hover:-translate-y-0.5",
+  "focus-visible:outline-none",
+  "focus-visible:ring-2",
+  "focus-visible:ring-[var(--vs-accent)]",
+  "focus-visible:ring-offset-2",
+  "focus-visible:ring-offset-[var(--vs-background)]",
+  "disabled:pointer-events-none",
+  "disabled:opacity-50"
 );
-
 
 const Button = forwardRef<
   HTMLButtonElement | HTMLAnchorElement,
@@ -118,16 +110,11 @@ const Button = forwardRef<
     className
   );
 
-
-  if (
-    "href" in props &&
-    typeof props.href === "string"
-  ) {
+  if ("href" in props && typeof props.href === "string") {
     const {
       href,
       ...anchorProps
     } = props;
-
 
     return (
       <Link
@@ -141,12 +128,10 @@ const Button = forwardRef<
     );
   }
 
-
   const {
     type = "button",
     ...buttonProps
   } = props;
-
 
   return (
     <button
@@ -160,8 +145,6 @@ const Button = forwardRef<
   );
 });
 
-
 Button.displayName = "Button";
-
 
 export default Button;

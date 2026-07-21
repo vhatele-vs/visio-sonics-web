@@ -12,8 +12,13 @@ export default function MenuButton({
   return (
     <button
       type="button"
-      aria-label={isOpen ? "Close navigation" : "Open navigation"}
+      aria-label={
+        isOpen
+          ? "Close navigation"
+          : "Open navigation"
+      }
       aria-expanded={isOpen}
+      aria-controls="navigation-panel"
       onClick={onToggle}
       className="
         relative
@@ -32,19 +37,26 @@ export default function MenuButton({
       "
     >
       <span className="relative block h-5 w-7">
+
         <span
           className={[
             "absolute left-0 top-1/2 h-px w-7 -translate-y-2 bg-white transition-all duration-300",
-            isOpen ? "translate-y-0 rotate-45" : "",
+            isOpen
+              ? "translate-y-0 rotate-45"
+              : "",
           ].join(" ")}
         />
+
 
         <span
           className={[
             "absolute left-0 top-1/2 h-px w-7 translate-y-2 bg-white transition-all duration-300",
-            isOpen ? "translate-y-0 -rotate-45" : "",
+            isOpen
+              ? "translate-y-0 -rotate-45"
+              : "",
           ].join(" ")}
         />
+
       </span>
     </button>
   );

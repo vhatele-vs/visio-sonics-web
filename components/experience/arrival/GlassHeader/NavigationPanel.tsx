@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
+import type { Transition } from "framer-motion";
 
 import { navigation } from "./glass-header.data";
 
@@ -10,6 +11,11 @@ interface NavigationPanelProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
+const panelTransition: Transition = {
+  duration: 0.55,
+  ease: [0.22, 1, 0.36, 1],
+};
 
 export default function NavigationPanel({
   isOpen,
@@ -19,15 +25,14 @@ export default function NavigationPanel({
     <AnimatePresence mode="wait">
       {isOpen && (
         <>
-          {/* Background overlay */}
+          {/* Backdrop */}
 
           <motion.div
+            aria-hidden="true"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{
-              duration: 0.3,
-            }}
+            transition={{ duration: 0.35 }}
             onClick={onClose}
             className="
               fixed
@@ -39,9 +44,11 @@ export default function NavigationPanel({
           />
 
 
-          {/* Navigation panel */}
+          {/* Navigation Drawer */}
 
           <motion.aside
+            id="navigation-panel"
+            aria-label="Main navigation"
             initial={{
               x: "100%",
             }}
@@ -51,10 +58,7 @@ export default function NavigationPanel({
             exit={{
               x: "100%",
             }}
-            transition={{
-              duration: 0.55,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+            transition={panelTransition}
             className="
               fixed
               inset-y-0
@@ -62,9 +66,8 @@ export default function NavigationPanel({
               z-50
               flex
               w-full
-              max-w-md
-              overflow-y-auto
               flex-col
+              overflow-y-auto
               border-l
               border-white/10
               bg-[#050505]
@@ -73,9 +76,9 @@ export default function NavigationPanel({
             "
           >
 
-            {/* Header */}
+            {/* Drawer Header */}
 
-            <div
+            <header
               className="
                 flex
                 h-24
@@ -88,7 +91,6 @@ export default function NavigationPanel({
                 lg:px-12
               "
             >
-
               <span
                 className="
                   text-xs
@@ -115,16 +117,20 @@ export default function NavigationPanel({
                   border
                   border-white/10
                   text-white
-                  transition
+                  transition-all
                   duration-300
                   hover:border-[var(--vs-accent)]
                   hover:text-[var(--vs-accent)]
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-[var(--vs-accent)]
                 "
               >
-                ✕
+                <span aria-hidden="true">
+                  ✕
+                </span>
               </button>
-
-            </div>
+            </header>
 
 
             {/* Brand */}
@@ -139,7 +145,6 @@ export default function NavigationPanel({
                 lg:px-12
               "
             >
-
               <div className="flex items-center gap-5">
 
                 <Image
@@ -180,14 +185,13 @@ export default function NavigationPanel({
                 </div>
 
               </div>
-
             </div>
 
 
-            {/* Links */}
+            {/* Navigation Links */}
 
             <nav
-              aria-label="Main navigation"
+              aria-label="Primary navigation"
               className="
                 flex
                 flex-1
@@ -197,12 +201,11 @@ export default function NavigationPanel({
                 lg:px-12
               "
             >
-
-              <div className="w-full space-y-8">
+              <ul className="w-full space-y-8">
 
                 {navigation.map((item, index) => (
 
-                  <motion.div
+                  <motion.li
                     key={item.href}
                     initial={{
                       opacity: 0,
@@ -215,6 +218,7 @@ export default function NavigationPanel({
                     transition={{
                       delay: index * 0.08,
                       duration: 0.45,
+                      ease: [0.22, 1, 0.36, 1],
                     }}
                   >
 
@@ -233,21 +237,27 @@ export default function NavigationPanel({
                         font-light
                         tracking-[-0.04em]
                         text-white
-                        transition
+                        transition-all
                         duration-300
-                        lg:text-5xl
+                        hover:border-white/20
                         hover:text-[var(--vs-accent)]
+                        lg:text-5xl
                       "
                     >
 
-                      {item.label}
+                      <span>
+                        {item.label}
+                      </span>
 
 
                       <span
+                        aria-hidden="true"
                         className="
+                          translate-x-0
                           opacity-0
-                          transition
+                          transition-all
                           duration-300
+                          group-hover:translate-x-2
                           group-hover:opacity-100
                         "
                       >
@@ -256,18 +266,17 @@ export default function NavigationPanel({
 
                     </Link>
 
-                  </motion.div>
+                  </motion.li>
 
                 ))}
 
-              </div>
-
+              </ul>
             </nav>
 
 
             {/* Footer */}
 
-            <div
+            <footer
               className="
                 shrink-0
                 border-t
@@ -277,7 +286,6 @@ export default function NavigationPanel({
                 lg:px-12
               "
             >
-
               <p
                 className="
                   text-xs
@@ -288,11 +296,9 @@ export default function NavigationPanel({
               >
                 Where Vision Meets Sound
               </p>
-
-            </div>
+            </footer>
 
           </motion.aside>
-
         </>
       )}
     </AnimatePresence>

@@ -16,12 +16,8 @@ const labelStyles =
 
 export default function ProjectEnquiry() {
   return (
-    <Section
-      id="project-enquiry"
-      spacing="editorial"
-    >
+    <Section id="project-enquiry" spacing="editorial">
       <Container size="narrow">
-
         <Heading
           title={projectEnquiry.heading}
           description={projectEnquiry.description}
@@ -29,9 +25,7 @@ export default function ProjectEnquiry() {
         />
 
         <form className="mt-20 space-y-10">
-
           <div className="grid gap-x-8 gap-y-10 md:grid-cols-2">
-
             <div>
               <label htmlFor="name" className={labelStyles}>
                 Full Name
@@ -46,7 +40,6 @@ export default function ProjectEnquiry() {
                 className={inputStyles}
               />
             </div>
-
 
             <div>
               <label htmlFor="email" className={labelStyles}>
@@ -63,7 +56,6 @@ export default function ProjectEnquiry() {
               />
             </div>
 
-
             <div>
               <label htmlFor="phone" className={labelStyles}>
                 Phone Number
@@ -78,7 +70,6 @@ export default function ProjectEnquiry() {
               />
             </div>
 
-
             <div>
               <label htmlFor="project-type" className={labelStyles}>
                 Project Type
@@ -87,17 +78,32 @@ export default function ProjectEnquiry() {
               <select
                 id="project-type"
                 name="project-type"
+                defaultValue=""
                 className={inputStyles}
               >
-                <option>Luxury Residence</option>
-                <option>Commercial</option>
-                <option>Boardroom</option>
-                <option>Hospitality</option>
-                <option>Private Cinema</option>
-                <option>Other</option>
+                <option value="" disabled>
+                  Select project type
+                </option>
+                <option value="luxury-residence">
+                  Luxury Residence
+                </option>
+                <option value="commercial">
+                  Commercial
+                </option>
+                <option value="boardroom">
+                  Boardroom
+                </option>
+                <option value="hospitality">
+                  Hospitality
+                </option>
+                <option value="private-cinema">
+                  Private Cinema
+                </option>
+                <option value="other">
+                  Other
+                </option>
               </select>
             </div>
-
 
             <div>
               <label htmlFor="location" className={labelStyles}>
@@ -112,7 +118,6 @@ export default function ProjectEnquiry() {
               />
             </div>
 
-
             <div>
               <label htmlFor="timeline" className={labelStyles}>
                 Project Timeline
@@ -126,12 +131,9 @@ export default function ProjectEnquiry() {
                 className={inputStyles}
               />
             </div>
-
           </div>
 
-
           <div className="pt-4">
-
             <label htmlFor="message" className={labelStyles}>
               Share Your Vision
             </label>
@@ -144,29 +146,23 @@ export default function ProjectEnquiry() {
               placeholder="Tell us about your project, goals, timeline, and any requirements you would like us to understand."
               className={`${inputStyles} min-h-[220px] resize-y`}
             />
-
           </div>
 
-
           <div className="mt-12 border-t border-white/10 pt-10 pb-24">
-
             <Button
               type="submit"
+              variant="primary"
               size="lg"
             >
               {projectEnquiry.submitLabel}
             </Button>
 
-
             <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/50">
               Once we receive your enquiry, our team will review your project
               requirements and contact you to discuss the next steps.
             </p>
-
           </div>
-
         </form>
-
       </Container>
     </Section>
   );

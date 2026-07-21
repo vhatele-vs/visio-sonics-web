@@ -31,17 +31,25 @@ export default function ConversationRoom() {
     <section
       id="conversation"
       aria-labelledby="conversation-title"
-      className="relative isolate overflow-hidden bg-[#050505]"
+      className="
+        relative
+        isolate
+        overflow-hidden
+        bg-[#050505]
+      "
     >
+
       {/* Ambient atmosphere */}
 
       <div
         aria-hidden="true"
         className="
-          absolute inset-0
+          absolute
+          inset-0
           bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.08),transparent_75%)]
         "
       />
+
 
       <div
         className="
@@ -58,6 +66,7 @@ export default function ConversationRoom() {
           xl:px-24
         "
       >
+
         <div className="max-w-5xl">
 
           {/* Eyebrow */}
@@ -75,9 +84,11 @@ export default function ConversationRoom() {
             Begin the Conversation
           </motion.span>
 
+
           {/* Divider */}
 
           <motion.div
+            aria-hidden="true"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
@@ -96,6 +107,7 @@ export default function ConversationRoom() {
               bg-white/10
             "
           />
+
 
           {/* Heading */}
 
@@ -125,6 +137,7 @@ export default function ConversationRoom() {
             one conversation.
           </motion.h2>
 
+
           {/* Supporting copy */}
 
           <motion.p
@@ -150,6 +163,7 @@ export default function ConversationRoom() {
             together before complexity ever reaches the surface.
           </motion.p>
 
+
           {/* Call to Action */}
 
           <motion.div
@@ -165,12 +179,15 @@ export default function ConversationRoom() {
               href="/contact"
               size="lg"
             >
-              Begin a Conversation →
+              Begin a Conversation
+              <span aria-hidden="true"> →</span>
             </Button>
           </motion.div>
 
         </div>
+
       </div>
+
     </section>
   );
 }

@@ -17,16 +17,56 @@ export default function GlassHeader() {
       setIsScrolled(window.scrollY > 80);
     }
 
+
+    function handleEscape(event: KeyboardEvent) {
+      if (
+        event.key === "Escape" &&
+        isMenuOpen
+      ) {
+        setIsMenuOpen(false);
+      }
+    }
+
+
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
+
+    window.addEventListener(
+      "scroll",
+      handleScroll,
+      {
+        passive: true,
+      }
+    );
+
+
+    window.addEventListener(
+      "keydown",
+      handleEscape
+    );
+
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
+
+      window.removeEventListener(
+        "keydown",
+        handleEscape
+      );
+
+      document.body.style.overflow = "";
     };
-  }, []);
+  }, [isMenuOpen]);
 
 
   function handleMenuToggle() {
@@ -69,17 +109,19 @@ export default function GlassHeader() {
           className="
             mx-auto
             flex
-            h-24
-            max-w-[1680px]
+            h-20
             items-center
             justify-between
-            px-8
+            max-w-[1680px]
+            px-5
+            sm:px-8
+            md:h-24
             md:px-14
             xl:px-24
           "
         >
 
-          {/* Left Brand */}
+          {/* Brand */}
 
           <Brand />
 
@@ -89,7 +131,7 @@ export default function GlassHeader() {
           <HeaderWordmark />
 
 
-          {/* Navigation Trigger */}
+          {/* Menu Trigger */}
 
           <MenuButton
             isOpen={isMenuOpen}
@@ -100,8 +142,6 @@ export default function GlassHeader() {
 
       </header>
 
-
-      {/* Full Screen Navigation */}
 
       <NavigationPanel
         isOpen={isMenuOpen}
