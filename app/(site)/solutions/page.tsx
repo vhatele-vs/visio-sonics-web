@@ -6,9 +6,23 @@ import WhyApproach from "@/components/solutions/WhyApproach";
 import ConsultationCTA from "@/components/solutions/ConsultationCTA";
 
 export const metadata: Metadata = {
-  title: "Solutions | Visio Sonics",
+  title: "Intelligent Technology Solutions",
+
   description:
-    "Luxury residential and commercial technology solutions engineered to integrate seamlessly with exceptional architecture.",
+    "Explore intelligent technology solutions engineered by Visio Sonics for luxury residences, commercial environments, entertainment spaces, and extraordinary architecture.",
+
+  alternates: {
+    canonical: "/solutions",
+  },
+
+  openGraph: {
+    title: "Intelligent Technology Solutions | Visio Sonics",
+
+    description:
+      "Explore intelligent technology solutions engineered by Visio Sonics for luxury residences, commercial environments, entertainment spaces, and extraordinary architecture.",
+
+    url: "/solutions",
+  },
 };
 
 export default function SolutionsPage() {

@@ -1,34 +1,43 @@
 import type { MetadataRoute } from "next";
 
+const siteUrl = "https://visiosonics.co.za";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://visiosonics.co.za",
-      lastModified: new Date(),
+      url: siteUrl,
+      changeFrequency: "monthly",
+      priority: 1,
     },
     {
-      url: "https://visiosonics.co.za/about",
-      lastModified: new Date(),
+      url: `${siteUrl}/services`,
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     {
-      url: "https://visiosonics.co.za/services",
-      lastModified: new Date(),
+      url: `${siteUrl}/solutions`,
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     {
-      url: "https://visiosonics.co.za/process",
-      lastModified: new Date(),
+      url: `${siteUrl}/projects`,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
-      url: "https://visiosonics.co.za/projects",
-      lastModified: new Date(),
+      url: `${siteUrl}/process`,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
-      url: "https://visiosonics.co.za/insights",
-      lastModified: new Date(),
+      url: `${siteUrl}/about`,
+      changeFrequency: "yearly",
+      priority: 0.7,
     },
     {
-      url: "https://visiosonics.co.za/contact",
-      lastModified: new Date(),
+      url: `${siteUrl}/contact`,
+      changeFrequency: "yearly",
+      priority: 0.8,
     },
   ];
 }

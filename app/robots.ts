@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+const siteUrl = "https://visiosonics.co.za";
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
@@ -8,6 +10,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://visiosonics.co.za/sitemap.xml",
+
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   };
 }
