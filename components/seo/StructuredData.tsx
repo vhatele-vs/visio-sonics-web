@@ -2,7 +2,7 @@ const siteUrl = "https://visiosonics.co.za";
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "LocalBusiness",
 
   "@id": `${siteUrl}/#organization`,
 
@@ -10,25 +10,30 @@ const structuredData = {
 
   url: siteUrl,
 
-  logo: `${siteUrl}/images/brand/visio-sonics-logo.svg`,
+  logo: {
+    "@type": "ImageObject",
+    url: `${siteUrl}/images/brand/visio-sonics-logo.svg`,
+  },
+
+  image: `${siteUrl}/images/og/visio-sonics-og.webp`,
 
   description:
     "Visio Sonics engineers intelligent environments where architecture, technology, and human experience become one seamless system.",
 
   slogan: "Where Vision Meets Sound.",
 
-  areaServed: [
-    {
-      "@type": "Country",
-      name: "South Africa",
-    },
-    {
-      "@type": "Continent",
-      name: "Africa",
-    },
-  ],
+  telephone: "+27876573217",
 
-  knowsAbout: [
+  email: "hello@visiosonics.co.za",
+
+  priceRange: "$$$",
+
+  areaServed: {
+    "@type": "Country",
+    name: "South Africa",
+  },
+
+  serviceType: [
     "Luxury Technology Integration",
     "Home Automation",
     "Audio Visual Integration",
@@ -38,6 +43,12 @@ const structuredData = {
     "Networking",
     "Security Integration",
     "Building Automation",
+  ],
+
+  sameAs: [
+    "https://www.linkedin.com/company/visio-sonics/",
+    "https://www.instagram.com/visiosonics/",
+    "https://www.facebook.com/visiosonics/",
   ],
 };
 
