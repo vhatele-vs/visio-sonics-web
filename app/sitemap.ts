@@ -10,12 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${siteUrl}/services`,
+      url: `${siteUrl}/solutions`,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${siteUrl}/solutions`,
+      url: `${siteUrl}/services`,
       changeFrequency: "monthly",
       priority: 0.9,
     },
@@ -25,7 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${siteUrl}/process`,
+      url: `${siteUrl}/solutions/luxury-living`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/projects/luxury-residence`,
       changeFrequency: "monthly",
       priority: 0.8,
     },
