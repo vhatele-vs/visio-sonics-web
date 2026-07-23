@@ -153,6 +153,7 @@ export default function ProjectEnquiry() {
               type="submit"
               variant="primary"
               size="lg"
+              className="min-w-[260px]"
             >
               {projectEnquiry.submitLabel}
             </Button>

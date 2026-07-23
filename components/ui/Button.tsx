@@ -45,7 +45,10 @@ const variants = {
   primary: cn(
     "bg-[var(--vs-accent)]",
     "text-white",
-    "hover:bg-[var(--vs-accent-hover)]"
+    "shadow-[0_0_0_1px_rgba(217,119,6,0.35)]",
+    "hover:bg-[var(--vs-accent-hover)]",
+    "hover:-translate-y-0.5",
+    "active:translate-y-0"
   ),
 
   secondary: cn(
@@ -53,7 +56,7 @@ const variants = {
     "bg-white/[0.03]",
     "text-white",
     "hover:border-[var(--vs-accent)]",
-    "hover:bg-white/[0.06]"
+      "hover:bg-white/[0.06]"
   ),
 
   ghost: cn(

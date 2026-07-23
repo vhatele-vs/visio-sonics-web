@@ -73,8 +73,6 @@ a {
 
 button {
   cursor: pointer;
-  border: none;
-  background: none;
 }
 
 /* ==========================================================
@@ -105,27 +103,6 @@ h4 {
 p {
   color: var(--vs-text-muted);
   line-height: 1.8;
-}
-
-/* ==========================================================
-   SUBMIT BUTTON
-   ========================================================== */
-
-.submitButton {
-  background-color: var(--vs-text);
-  color: var(--vs-background);
-  padding: 0.875rem 2rem;
-  border: 1px solid var(--vs-text);
-  border-radius: var(--radius);
-  cursor: pointer;
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-.submitButton:hover {
-  background-color: var(--vs-accent);
-  color: var(--vs-text);
-  border-color: var(--vs-accent);
 }
 
 /* ==========================================================
