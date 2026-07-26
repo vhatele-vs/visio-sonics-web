@@ -4,6 +4,11 @@ import { transporter } from "@/lib/email";
 import { contactSchema } from "@/lib/validation/contactSchema";
 
 export async function sendContactForm(formData: FormData) {
+  // Honeypot check — real users never fill this in, bots often do
+  if (formData.get("website")) {
+    return { success: true }; // pretend success so bots don't learn they were caught
+  }
+
   const raw = {
     name: formData.get("name"),
     email: formData.get("email"),
