@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="h-24 lg:h-28" />
 
         <div className="flex flex-1 items-center">
-          <div className="mx-auto w-full max-w-[1680px] px-8 md:px-14 xl:px-24">
+          <div className="mx-auto w-full max-w-[1680px] px-5 sm:px-8 md:px-14 xl:px-24">
 
             <HeroIdentity />
 
@@ -28,11 +28,11 @@ export default function Hero() {
               <HeroHeadline />
             </div>
 
-            <div className="mt-16">
+            <div className="mt-10 md:mt-14">
               <HeroDescription />
             </div>
 
-            <div className="mt-16">
+            <div className="mt-10 md:mt-14">
               <HeroActions />
             </div>
 

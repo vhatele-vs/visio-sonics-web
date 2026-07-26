@@ -21,7 +21,7 @@ export default function HeroBackground() {
 
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-black/10"
+        className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent"
       />
 
 

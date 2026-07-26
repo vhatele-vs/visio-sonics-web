@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-sans",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
 });
 
 const siteUrl = "https://visiosonics.co.za";
@@ -107,9 +116,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-ZA" data-scroll-behavior="smooth">
-
-      <body className={inter.className}>
+    <html lang="en-ZA">
+      <body className={`${inter.variable} ${fraunces.variable} font-sans`}>
         {children}
       </body>
     </html>
