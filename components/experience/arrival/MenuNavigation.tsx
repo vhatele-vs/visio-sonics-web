@@ -35,7 +35,7 @@ export default function MenuNavigation({
         xl:px-24
       "
     >
-      <div className="mx-auto w-full max-w-[1680px]">
+      <div className="site-container">
         <div className="grid gap-14 xl:grid-cols-[280px_1fr]">
           {/* Editorial Chapter Marker */}
           <motion.div
@@ -73,7 +73,7 @@ export default function MenuNavigation({
                 max-w-[220px]
                 text-sm
                 leading-8
-                text-white/55
+                text-muted
               "
             >
               Navigate the Visio Sonics digital experience through
@@ -133,10 +133,10 @@ export default function MenuNavigation({
                             max-w-2xl
                             text-base
                             leading-8
-                            text-white/55
+                            text-muted
                             transition-colors
                             duration-300
-                            group-hover:text-white/75
+                            group-hover:text-muted
                           "
                         >
                           {item.description}

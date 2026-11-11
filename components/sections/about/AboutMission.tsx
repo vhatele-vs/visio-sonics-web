@@ -21,7 +21,7 @@ export default function AboutMission() {
             max-w-3xl
             text-lg
             leading-relaxed
-            text-white/70
+            text-muted
           "
         >
           Through disciplined engineering, architectural sensitivity, and

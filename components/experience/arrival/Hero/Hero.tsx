@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen overflow-hidden bg-[#050505]"
+      className="relative min-h-screen overflow-hidden bg-background"
     >
       <HeroBackground />
 
@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="h-24 lg:h-28" />
 
         <div className="flex flex-1 items-center">
-          <div className="mx-auto w-full max-w-[1680px] px-5 sm:px-8 md:px-14 xl:px-24">
+          <div className="site-container">
 
             <HeroIdentity />
 

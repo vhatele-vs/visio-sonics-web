@@ -39,7 +39,7 @@ export default function Experiences() {
               {experiences.heading}
             </h2>
 
-            <p className="mt-10 max-w-2xl text-xl leading-9 text-white/68">
+            <p className="mt-10 max-w-2xl text-xl leading-9 text-muted">
               {experiences.description}
             </p>
 
@@ -92,7 +92,7 @@ export default function Experiences() {
                 >
                   <FadeUp>
 
-                    <p className="text-xs uppercase tracking-[0.30em] text-white/40">
+                    <p className="text-xs uppercase tracking-[0.30em] text-muted">
                       {item.category}
                     </p>
 
@@ -100,7 +100,7 @@ export default function Experiences() {
                       {item.title}
                     </h3>
 
-                    <p className="mt-8 max-w-xl text-xl leading-9 text-white/68">
+                    <p className="mt-8 max-w-xl text-xl leading-9 text-muted">
                       {item.description}
                     </p>
 

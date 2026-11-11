@@ -25,7 +25,7 @@ export default function ClientConfidence() {
                 {item.title}
               </h3>
 
-              <p className="leading-relaxed text-white/70">
+              <p className="leading-relaxed text-muted">
                 {item.description}
               </p>
             </Card>

@@ -96,7 +96,7 @@ export default function SolutionCard({
             mt-6
             flex-1
             leading-8
-            text-zinc-400
+            text-muted
           "
         >
           {solution.description}
@@ -163,7 +163,7 @@ export default function SolutionCard({
             h-full
             overflow-hidden
             rounded-[32px]
-            bg-zinc-900
+            bg-surface
             transition-transform
             duration-500
             hover:-translate-y-1
@@ -180,7 +180,7 @@ export default function SolutionCard({
             h-full
             overflow-hidden
             rounded-[32px]
-            bg-zinc-900
+            bg-surface
           "
         >
           {content}

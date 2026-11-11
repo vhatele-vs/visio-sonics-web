@@ -37,7 +37,7 @@ export default function CTA() {
               {homeCTA.heading}
             </h2>
 
-            <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-white/68">
+            <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-muted">
               {homeCTA.description}
             </p>
 

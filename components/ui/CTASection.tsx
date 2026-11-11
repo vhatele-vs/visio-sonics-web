@@ -32,11 +32,10 @@ export default function CTASection({
 
   return (
     <Section
-      spacing="hero"
-      className="bg-black text-white"
+      spacing="editorial"
+      className="border-y border-[var(--vs-border)] bg-surface text-foreground"
     >
       <Container
-        size="wide"
         className="text-center"
       >
         <Heading
@@ -44,7 +43,7 @@ export default function CTASection({
           title={title}
           description={description}
           as="h2"
-          variant="hero"
+          align="center"
         />
 
         <div

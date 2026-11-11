@@ -39,7 +39,7 @@ const items: Solution[] = [
     title: "Hospitality",
     description:
       "Guest experiences engineered through discreet technology and refined design.",
-    image: "/images/solutions/hospitality.webp",
+    image: "/images/solutions/Hospitality.webp",
   },
 
   {

@@ -22,7 +22,7 @@ const structuredData = {
 
   slogan: "Where Vision Meets Sound.",
 
-  telephone: "+27876573217",
+  telephone: "+27870853448",
 
   email: "hello@visiosonics.co.za",
 

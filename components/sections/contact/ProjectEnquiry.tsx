@@ -12,7 +12,7 @@ const inputStyles =
   "w-full rounded-xl border border-white/10 bg-white/[0.02] px-5 py-4 text-white placeholder:text-white/30 outline-none transition-all duration-300 focus:border-[var(--vs-accent)] focus:bg-white/[0.04] focus:ring-1 focus:ring-[var(--vs-accent)]/20";
 
 const labelStyles =
-  "mb-2 block text-sm tracking-wide text-white/70";
+  "mb-2 block text-sm tracking-wide text-muted";
 
 export default function ProjectEnquiry() {
   return (
@@ -158,7 +158,7 @@ export default function ProjectEnquiry() {
               {projectEnquiry.submitLabel}
             </Button>
 
-            <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/50">
+            <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted">
               Once we receive your enquiry, our team will review your project
               requirements and contact you to discuss the next steps.
             </p>

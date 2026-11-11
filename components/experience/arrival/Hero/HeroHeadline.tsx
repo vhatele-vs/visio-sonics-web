@@ -15,18 +15,13 @@ export default function HeroHeadline() {
         ease: [0.22, 1, 0.36, 1],
       }}
       className="
-        max-w-full
-        lg:max-w-[760px]
-        font-extralight
-        tracking-[-0.025em]
-        leading-[1.06]
+        max-w-4xl
+        font-display
+        font-normal
+        tracking-tight
+        leading-[1.1]
         text-white
-        text-3xl
-        sm:text-4xl
-        md:text-5xl
-        lg:text-[4.5rem]
-        xl:text-[5rem]
-        2xl:text-[5.4rem]
+        text-[clamp(2.5rem,6vw,5.5rem)]
       "
     >
       {heroContent.headline.map((line) => (

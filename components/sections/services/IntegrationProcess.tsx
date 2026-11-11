@@ -29,7 +29,7 @@ export default function IntegrationProcess() {
                 {step.title}
               </h3>
 
-              <p className="max-w-2xl text-base leading-relaxed text-white/60">
+              <p className="max-w-2xl text-base leading-relaxed text-muted">
                 {step.description}
               </p>
             </article>

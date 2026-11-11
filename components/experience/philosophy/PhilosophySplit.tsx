@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function PhilosophySplit() {
   return (
-    <section className="relative overflow-hidden bg-[#050505]">
-      <div className="mx-auto max-w-[1680px] px-8 py-32 md:px-14 lg:py-44 xl:px-24">
+    <section className="relative overflow-hidden bg-background">
+      <div className="site-container py-[var(--vs-section-space)] ">
 
         <div className="grid gap-20 xl:grid-cols-12">
 
@@ -28,7 +28,7 @@ export default function PhilosophySplit() {
               Visible architecture.
             </h3>
 
-            <p className="mt-10 text-lg leading-10 text-white/70">
+            <p className="mt-10 text-lg leading-10 text-muted">
               Every project begins with the architecture—not the equipment.
               We study how a space will be lived in before specifying a
               single device. Technology is carefully integrated so that it
@@ -56,7 +56,7 @@ export default function PhilosophySplit() {
                   Design Before Devices
                 </h4>
 
-                <p className="mt-4 leading-8 text-white/70">
+                <p className="mt-4 leading-8 text-muted">
                   We begin with lifestyle, architecture and spatial flow.
                   Equipment selection follows the vision—not the other way
                   around.
@@ -72,7 +72,7 @@ export default function PhilosophySplit() {
                   Engineering Before Installation
                 </h4>
 
-                <p className="mt-4 leading-8 text-white/70">
+                <p className="mt-4 leading-8 text-muted">
                   Every cable pathway, rack layout, network topology and
                   subsystem is designed before construction begins,
                   reducing complexity and ensuring long-term reliability.
@@ -88,7 +88,7 @@ export default function PhilosophySplit() {
                   Experience Above Everything
                 </h4>
 
-                <p className="mt-4 leading-8 text-white/70">
+                <p className="mt-4 leading-8 text-muted">
                   The homeowner should remember the experience,
                   never the technology behind it. That is the measure
                   of successful integration.

@@ -1,4 +1,29 @@
 :root {
+  /* Canonical palette: inspired by the amber in the Visio Sonics logo. */
+  --vs-background: #050505;
+  --vs-surface: #101010;
+  --vs-surface-2: #181818;
+  --vs-text: #ffffff;
+  --vs-text-secondary: #c7c7c7;
+  --vs-text-muted: #a3a3a3;
+  --vs-accent: #e18c14;
+  --vs-accent-hover: #f0a83b;
+  --vs-accent-soft: #f5d35d;
+  --vs-on-accent: #050505;
+  --vs-border: rgb(255 255 255 / 0.1);
+  --vs-border-strong: rgb(255 255 255 / 0.2);
+  --vs-success: #22c55e;
+  --vs-warning: #f59e0b;
+  --vs-danger: #ef4444;
+
+  --vs-container-narrow: 840px;
+  --vs-container: 1280px;
+  --vs-container-wide: 1440px;
+  --vs-section-space: clamp(5rem, 8vw, 8rem);
+  --vs-editorial-space: clamp(6rem, 10vw, 10rem);
+  --vs-hero-top: clamp(9rem, 14vw, 13rem);
+  --vs-radius: 1.5rem;
+
   /* Font sizes */
   --vs-text-xs: 0.75rem;
   --vs-text-sm: 0.875rem;

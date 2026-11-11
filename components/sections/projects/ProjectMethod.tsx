@@ -27,7 +27,7 @@ export default function ProjectMethod() {
                 {String(index + 1).padStart(2, "0")}. {step.title}
               </h3>
 
-              <p className="max-w-2xl leading-relaxed text-white/70">
+              <p className="max-w-2xl leading-relaxed text-muted">
                 {step.description}
               </p>
 

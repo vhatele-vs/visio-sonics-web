@@ -18,7 +18,7 @@ export default function ExperienceHero({
   return (
     <Section
       spacing="showcase"
-      className="relative overflow-hidden bg-[#050505]"
+      className="relative overflow-hidden bg-background"
     >
       <div className="relative overflow-hidden rounded-[40px]">
         <div className="relative aspect-[21/9]">

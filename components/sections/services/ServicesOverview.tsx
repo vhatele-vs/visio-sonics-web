@@ -20,7 +20,7 @@ export default function ServicesOverview() {
             {servicesOverview.paragraphs.map((paragraph) => (
               <p
                 key={paragraph}
-                className="text-lg leading-relaxed text-white/60"
+                className="text-lg leading-relaxed text-muted"
               >
                 {paragraph}
               </p>

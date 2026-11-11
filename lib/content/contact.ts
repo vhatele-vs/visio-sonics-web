@@ -56,9 +56,9 @@ export const contactMethods = {
     {
       title: "Call Us",
 
-      value: "+27 87 657 3217",
+      value: "+27 87 085 3448",
 
-      href: "tel:+27876573217",
+      href: "tel:+27870853448",
 
       description:
         "Available during office hours for project discussions and consultation enquiries.",

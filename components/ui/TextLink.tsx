@@ -17,7 +17,7 @@ export default function TextLink({
       href={href}
       className={cn(
         "text-white transition-colors duration-300",
-        "hover:text-white/70",
+        "hover:text-accent",
         className
       )}
     >

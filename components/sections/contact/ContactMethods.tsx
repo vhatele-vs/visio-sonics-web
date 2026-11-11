@@ -63,7 +63,7 @@ export default function ContactMethods() {
                 </p>
               )}
 
-              <p className="leading-relaxed text-white/70">
+              <p className="leading-relaxed text-muted">
                 {method.description}
               </p>
 

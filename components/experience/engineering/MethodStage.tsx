@@ -14,11 +14,11 @@ export default function MethodStage({
   reverse = false,
 }: MethodStageProps) {
   return (
-    <section className="relative overflow-hidden bg-[#050505]">
+    <section className="relative overflow-hidden bg-background">
       {/* Ambient architectural lighting */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.06),transparent_72%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--vs-accent)_6%,transparent),transparent_72%)]" />
 
-      <div className="relative mx-auto max-w-[1680px] px-8 py-40 md:px-14 lg:py-56 xl:px-24">
+      <div className="site-container relative py-[var(--vs-editorial-space)] ">
 
         <div
           className={[
@@ -59,7 +59,7 @@ export default function MethodStage({
               {stage.title}
             </h2>
 
-            <p className="mt-12 max-w-2xl text-lg leading-10 text-white/70">
+            <p className="mt-12 max-w-2xl text-lg leading-10 text-muted">
               {stage.description}
             </p>
           </motion.div>

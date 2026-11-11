@@ -28,8 +28,8 @@ export default function Heading({
 
   const titleSize =
     variant === "hero"
-      ? "text-6xl md:text-7xl xl:text-8xl"
-      : "text-4xl md:text-5xl xl:text-6xl";
+      ? "text-[clamp(2.5rem,6vw,5.5rem)]"
+      : "text-[clamp(2rem,4vw,3.75rem)]";
 
   const descriptionWidth =
     variant === "hero"
@@ -40,14 +40,14 @@ export default function Heading({
     <header className={cn(alignment, className)}>
 
       {eyebrow && (
-        <p className="text-xs font-medium uppercase tracking-[0.35em] text-white/45">
+        <p className="text-xs font-medium uppercase tracking-[0.25em] text-accent">
           {eyebrow}
         </p>
       )}
 
       <Title
         className={cn(
-          "mt-8 font-light leading-[0.96] tracking-tight",
+          "mt-6 font-display font-normal leading-[1.1] tracking-tight text-balance",
           titleSize
         )}
       >
@@ -57,7 +57,7 @@ export default function Heading({
       {description && (
         <p
           className={cn(
-            "mt-10 text-lg leading-relaxed text-white/68",
+            "mt-8 text-base leading-8 text-muted md:text-lg",
             descriptionWidth,
             align === "center" && "mx-auto"
           )}

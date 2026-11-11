@@ -7,10 +7,10 @@ export default function BeginConversation() {
   return (
     <section
       id="begin-conversation"
-      className="relative overflow-hidden border-t border-white/5 bg-[#050505]"
+      className="relative overflow-hidden border-t border-white/5 bg-background"
     >
       {/* Ambient glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.08),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--vs-accent)_8%,transparent),transparent_70%)]" />
 
       <div className="relative mx-auto max-w-[1680px] px-8 md:px-14 xl:px-24 py-40 lg:py-56">
 
@@ -54,7 +54,7 @@ export default function BeginConversation() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ delay: 0.15, duration: 0.9 }}
-          className="max-w-2xl text-lg leading-10 text-white/72"
+          className="max-w-2xl text-lg leading-10 text-muted"
         >
           Whether you are designing a private residence, a luxury apartment,
           boutique hospitality, or a future-ready workplace, we collaborate
@@ -75,7 +75,7 @@ export default function BeginConversation() {
         >
           <Link
             href="/contact"
-            className="inline-flex h-14 items-center justify-center rounded-full bg-[var(--vs-accent)] px-10 text-sm font-medium uppercase tracking-[0.22em] text-black transition-all duration-300 hover:scale-[1.02] hover:bg-amber-400"
+            className="inline-flex h-14 items-center justify-center rounded-full bg-[var(--vs-accent)] px-10 text-sm font-medium uppercase tracking-[0.22em] text-black transition-all duration-300 hover:scale-[1.02] hover:bg-[var(--vs-accent-hover)]"
           >
             Begin Your Project
           </Link>

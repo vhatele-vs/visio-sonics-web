@@ -32,7 +32,7 @@ export default function ServiceCategories() {
                   </h3>
                 </div>
 
-                <p className="mt-8 text-sm leading-relaxed text-white/60">
+                <p className="mt-8 text-sm leading-relaxed text-muted">
                   {service.description}
                 </p>
               </div>

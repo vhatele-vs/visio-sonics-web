@@ -30,13 +30,13 @@ export default function SolutionsPage() {
     <>
       <SolutionHero />
 
-      <main className="bg-black">
+      <div className="bg-background">
         <SolutionGrid />
 
         <WhyApproach />
 
         <ConsultationCTA />
-      </main>
+      </div>
     </>
   );
 }

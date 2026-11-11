@@ -12,11 +12,11 @@ export default function ExperienceClosing({
   description,
 }: ExperienceClosingProps) {
   return (
-    <section className="relative overflow-hidden bg-[#050505]">
+    <section className="relative overflow-hidden bg-background">
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.05),transparent_75%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--vs-accent)_5%,transparent),transparent_75%)]" />
 
-      <div className="relative mx-auto max-w-[1680px] px-8 py-40 md:px-14 lg:py-56 xl:px-24">
+      <div className="site-container relative py-[var(--vs-editorial-space)] ">
 
         <motion.div
           initial={{ opacity: 0, y: 36 }}
@@ -56,7 +56,7 @@ export default function ExperienceClosing({
               max-w-3xl
               text-lg
               leading-10
-              text-white/70
+              text-muted
             "
           >
             {description}
@@ -109,7 +109,7 @@ export default function ExperienceClosing({
           "
         >
 
-          <p className="text-sm uppercase tracking-[0.35em] text-white/40">
+          <p className="text-sm uppercase tracking-[0.35em] text-muted">
             Intelligent Living • Invisible Technology
           </p>
 

@@ -26,7 +26,7 @@ export default function AboutPhilosophy() {
                 space-y-6
                 text-lg
                 leading-relaxed
-                text-white/70
+                text-muted
               "
             >
               <p>

@@ -5,7 +5,7 @@ export default function HeaderWordmark() {
         Visio Sonics
       </span>
 
-      <span className="mt-1 text-[8px] uppercase tracking-[0.4em] text-white/50">
+      <span className="mt-1 text-[8px] uppercase tracking-[0.4em] text-muted">
         Est. 2006
       </span>
     </div>

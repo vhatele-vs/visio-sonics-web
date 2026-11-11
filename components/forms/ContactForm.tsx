@@ -87,7 +87,7 @@ export default function ContactForm() {
       </button>
 
       {status && (
-        <p className="text-white/70 text-sm">{status}</p>
+        <p className="text-muted text-sm">{status}</p>
       )}
     </form>
   );

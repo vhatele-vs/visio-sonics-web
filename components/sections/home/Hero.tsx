@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative isolate min-h-screen overflow-hidden bg-[#050505]"
+      className="relative isolate min-h-screen overflow-hidden bg-background"
     >
       {/* Background Image */}
 
@@ -25,7 +25,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-black/55" />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-[#050505]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-background" />
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.18)_65%,rgba(0,0,0,0.55)_100%)]" />
 
@@ -53,7 +53,7 @@ export default function Hero() {
 
           <div className="mt-6 h-px w-24 bg-white/10" />
 
-          <p className="mt-8 max-w-xl text-sm uppercase tracking-[0.28em] text-white/55">
+          <p className="mt-8 max-w-xl text-sm uppercase tracking-[0.28em] text-muted">
             Luxury Technology Integration House
           </p>
         </motion.div>
@@ -89,7 +89,7 @@ export default function Hero() {
             duration: 0.9,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="max-w-2xl text-lg leading-10 text-white/72"
+          className="max-w-2xl text-lg leading-10 text-muted"
         >
           We engineer intelligent environments where architecture,
           lighting, entertainment, security and automation become one
@@ -112,7 +112,7 @@ export default function Hero() {
         >
           <Link
             href="/contact"
-            className="inline-flex h-14 items-center justify-center rounded-full bg-[var(--vs-accent)] px-10 text-sm uppercase tracking-[0.2em] text-black transition-all duration-300 hover:scale-[1.02] hover:bg-amber-400"
+            className="inline-flex h-14 items-center justify-center rounded-full bg-[var(--vs-accent)] px-10 text-sm uppercase tracking-[0.2em] text-black transition-all duration-300 hover:scale-[1.02] hover:bg-[var(--vs-accent-hover)]"
           >
             Begin Your Project
           </Link>
@@ -144,7 +144,7 @@ export default function Hero() {
               Architecture
             </h2>
 
-            <p className="mt-6 max-w-sm text-base leading-8 text-white/60">
+            <p className="mt-6 max-w-sm text-base leading-8 text-muted">
               Technology designed to disappear into exceptional
               architecture.
             </p>
@@ -155,7 +155,7 @@ export default function Hero() {
               Integration
             </h2>
 
-            <p className="mt-6 max-w-sm text-base leading-8 text-white/60">
+            <p className="mt-6 max-w-sm text-base leading-8 text-muted">
               Every system working together as one intelligent living
               environment.
             </p>
@@ -166,7 +166,7 @@ export default function Hero() {
               Experience
             </h2>
 
-            <p className="mt-6 max-w-sm text-base leading-8 text-white/60">
+            <p className="mt-6 max-w-sm text-base leading-8 text-muted">
               Comfort, simplicity and confidence engineered into every
               moment of everyday life.
             </p>

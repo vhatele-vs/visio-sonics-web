@@ -1,6 +1,5 @@
 "use client";
 
-import GlassHeader from "./GlassHeader/GlassHeader";
 import Hero from "./Hero/Hero";
 
 export default function ArrivalRoom() {
@@ -12,11 +11,9 @@ export default function ArrivalRoom() {
         relative
         min-h-screen
         overflow-hidden
-        bg-[#050505]
+        bg-background
       "
     >
-      <GlassHeader />
-
       <Hero />
     </section>
   );

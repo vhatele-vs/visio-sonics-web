@@ -15,7 +15,7 @@ const navigation = [
   {
     title: "Company",
     links: [
-      { label: "About", href: "/about" }, 
+      { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -73,10 +73,10 @@ export default function Footer() {
                 <br />
 
                 <a
-                  href="tel:+27876573217"
+                  href="tel:+27870853448"
                   className="mt-2 inline-block text-sm text-[var(--vs-text-muted)] transition-colors duration-300 hover:text-[var(--vs-accent)]"
                 >
-                  +27 87 657 3217
+                  +27 87 085 3448
                 </a>
               </div>
             </div>

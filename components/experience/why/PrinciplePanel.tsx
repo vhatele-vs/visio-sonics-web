@@ -21,7 +21,7 @@ export default function PrinciplePanel({
         relative
         isolate
         overflow-hidden
-        bg-[#050505]
+        bg-background
       "
     >
 
@@ -30,22 +30,16 @@ export default function PrinciplePanel({
         className="
           absolute
           inset-0
-          bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.05),transparent_72%)]
+          bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--vs-accent)_5%,transparent),transparent_72%)]
         "
       />
 
 
       <div
-        className="
+        className="site-container
           relative
-          mx-auto
-          max-w-[1680px]
-          px-8
-          py-40
-          md:px-14
-          lg:py-56
-          xl:px-24
-        "
+          py-[var(--vs-editorial-space)]
+          "
       >
 
         <div
@@ -136,7 +130,7 @@ export default function PrinciplePanel({
                 max-w-2xl
                 text-lg
                 leading-10
-                text-white/70
+                text-muted
               "
             >
               {principle.statement}

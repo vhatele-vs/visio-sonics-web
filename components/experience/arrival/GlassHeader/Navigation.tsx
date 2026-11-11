@@ -19,7 +19,7 @@ export default function Navigation() {
             text-[11px]
             uppercase
             tracking-[0.28em]
-            text-white/70
+            text-muted
             transition-all
             duration-300
             hover:text-white

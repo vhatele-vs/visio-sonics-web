@@ -14,7 +14,7 @@ export default function AboutStory() {
           align="left"
         />
 
-        <div className="mt-10 space-y-8 text-lg leading-relaxed text-white/70">
+        <div className="mt-10 space-y-8 text-lg leading-relaxed text-muted">
           {companyStory.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}

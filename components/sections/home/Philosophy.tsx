@@ -6,7 +6,7 @@ export default function Philosophy() {
   return (
     <section
       id="philosophy"
-      className="relative overflow-hidden bg-[#050505]"
+      className="relative overflow-hidden bg-background"
     >
       {/* Spatial breathing room */}
       <div className="mx-auto max-w-[1680px] px-8 md:px-14 xl:px-24 py-40 lg:py-56">
@@ -52,7 +52,7 @@ export default function Philosophy() {
             transition={{ delay: 0.15, duration: 0.9 }}
             className="xl:col-span-5 xl:pt-8"
           >
-            <p className="max-w-xl text-lg leading-10 text-white/72">
+            <p className="max-w-xl text-lg leading-10 text-muted">
               At Visio Sonics, we believe exceptional technology is experienced,
               not displayed. Every lighting scene, every soundscape, every
               security layer and every intelligent system is engineered to
@@ -62,7 +62,7 @@ export default function Philosophy() {
 
             <div className="mt-16 h-px w-32 bg-white/10" />
 
-            <p className="mt-16 max-w-lg text-sm uppercase tracking-[0.35em] text-white/45 leading-8">
+            <p className="mt-16 max-w-lg text-sm uppercase tracking-[0.35em] text-muted leading-8">
               Invisible Technology • Architectural Precision • Human Experience
             </p>
           </motion.div>

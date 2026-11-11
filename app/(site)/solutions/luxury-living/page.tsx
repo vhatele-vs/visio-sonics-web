@@ -12,7 +12,8 @@ import { luxuryLivingFeatures } from "@/lib/content/luxury-living";
 import { luxuryLivingProject } from "@/lib/content/projects";
 
 export const metadata: Metadata = {
-  title: "Luxury Living | Visio Sonics",
+  title: "Luxury Living",
+  alternates: { canonical: "/solutions/luxury-living" },
   description:
     "Luxury smart home integration engineered around architecture, comfort and effortless living.",
 };
@@ -42,7 +43,7 @@ export default function LuxuryLivingPage() {
       />
 
       <ImageNarrative
-        image="/images/solutions/evening-home.webp"
+        image="/images/solutions/luxury-living.webp"
         imageAlt="Luxury home at dusk"
         eyebrow="Evening Atmosphere"
         title="Spaces that respond naturally."

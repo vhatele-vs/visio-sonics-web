@@ -44,7 +44,7 @@ export default function ProjectShowcase({
                 {title}
               </h2>
 
-              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-white/60">
+              <p className="mt-4 text-sm uppercase tracking-[0.25em] text-muted">
                 {location}
               </p>
 

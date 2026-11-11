@@ -33,8 +33,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${project.title} | Visio Sonics`,
+    title: project.title,
     description: project.summary,
+    alternates: { canonical: `/projects/${project.slug}` },
   };
 }
 

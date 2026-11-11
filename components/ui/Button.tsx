@@ -44,8 +44,7 @@ type ButtonProps =
 const variants = {
   primary: cn(
     "bg-[var(--vs-accent)]",
-    "text-white",
-    "shadow-[0_0_0_1px_rgba(217,119,6,0.35)]",
+    "text-[var(--vs-on-accent)]",
     "hover:bg-[var(--vs-accent-hover)]",
     "hover:-translate-y-0.5",
     "active:translate-y-0"
@@ -76,6 +75,7 @@ const baseStyles = cn(
   "items-center",
   "justify-center",
   "rounded-full",
+  "max-w-full text-center whitespace-normal",
   "font-medium",
   "uppercase",
   "tracking-[0.18em]",

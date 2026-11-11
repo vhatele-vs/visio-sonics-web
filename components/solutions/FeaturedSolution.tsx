@@ -15,7 +15,7 @@ export default function FeaturedSolution({
     <FadeUp>
       <Link
         href={solution.href}
-        className="group block overflow-hidden rounded-[36px] bg-zinc-900"
+        className="group block overflow-hidden rounded-[36px] bg-surface"
       >
         {/* existing content remains unchanged */}
       </Link>

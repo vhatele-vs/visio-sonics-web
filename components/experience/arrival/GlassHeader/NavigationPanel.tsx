@@ -70,7 +70,7 @@ export default function NavigationPanel({
               overflow-y-auto
               border-l
               border-white/10
-              bg-[#050505]
+              bg-background
               lg:max-w-xl
               xl:max-w-2xl
             "
@@ -96,7 +96,7 @@ export default function NavigationPanel({
                   text-xs
                   uppercase
                   tracking-[0.35em]
-                  text-white/50
+                  text-muted
                 "
               >
                 Navigation
@@ -176,7 +176,7 @@ export default function NavigationPanel({
                       text-xs
                       uppercase
                       tracking-[0.25em]
-                      text-white/40
+                      text-muted
                     "
                   >
                     Integrate · Engineer · Elevate
@@ -291,7 +291,7 @@ export default function NavigationPanel({
                   text-xs
                   uppercase
                   tracking-[0.28em]
-                  text-white/40
+                  text-muted
                 "
               >
                 Where Vision Meets Sound

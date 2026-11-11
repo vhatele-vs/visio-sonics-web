@@ -7,11 +7,11 @@ export default function MethodTimeline() {
   return (
     <section
       id="engineering-method"
-      className="relative overflow-hidden bg-[#050505]"
+      className="relative overflow-hidden bg-background"
     >
       {/* Editorial Chapter Header */}
 
-      <div className="mx-auto max-w-[1680px] px-8 md:px-14 xl:px-24 pt-40 lg:pt-56">
+      <div className="site-container pt-[var(--vs-editorial-space)]">
 
         <span className="text-[11px] uppercase tracking-[0.55em] text-[var(--vs-accent)]">
           ENGINEERING METHODOLOGY
@@ -25,7 +25,7 @@ export default function MethodTimeline() {
           Extraordinary Environments
         </h2>
 
-        <p className="mt-12 max-w-2xl text-lg leading-10 text-white/70">
+        <p className="mt-12 max-w-2xl text-lg leading-10 text-muted">
           Every extraordinary home begins long before the first light turns on. Behind every effortless experience is a disciplined process of planning, engineering and meticulous commissioning
         </p>
 

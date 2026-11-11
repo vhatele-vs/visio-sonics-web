@@ -12,9 +12,9 @@ const process = [
 
 export default function ProcessDiagram() {
   return (
-    <section className="relative overflow-hidden bg-[#050505]">
+    <section className="relative overflow-hidden bg-background">
 
-      <div className="mx-auto max-w-[1680px] px-8 md:px-14 xl:px-24 py-32 lg:py-44">
+      <div className="site-container py-[var(--vs-section-space)]">
 
         <motion.div
           initial={{ opacity: 0 }}

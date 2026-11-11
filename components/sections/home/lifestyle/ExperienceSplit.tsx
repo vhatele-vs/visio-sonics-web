@@ -18,7 +18,7 @@ export default function ExperienceSplit({
   imageLeft = false,
 }: ExperienceSplitProps) {
   return (
-    <Section spacing="editorial" className="bg-[#050505]">
+    <Section spacing="editorial" className="bg-background">
       <Container size="wide">
         <div className="grid items-center gap-20 lg:grid-cols-2">
           {/* Image */}
@@ -60,7 +60,7 @@ export default function ExperienceSplit({
               {experience.heading}
             </h2>
 
-            <p className="mt-8 max-w-xl text-lg leading-9 text-white/75">
+            <p className="mt-8 max-w-xl text-lg leading-9 text-muted">
               {experience.description}
             </p>
           </motion.div>

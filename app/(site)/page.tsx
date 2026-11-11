@@ -8,7 +8,7 @@ import WhyRoom from "@/components/experience/why/WhyRoom";
 import ConversationRoom from "@/components/experience/conversation/ConversationRoom";
 
 export const metadata: Metadata = {
-  title: "Visio Sonics | Luxury Technology Integration",
+  title: { absolute: "Visio Sonics | Luxury Technology Integration" },
 
   description:
     "Visio Sonics engineers intelligent environments where architecture, technology, and human experience become one seamless system.",

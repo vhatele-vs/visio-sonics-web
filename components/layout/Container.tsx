@@ -8,9 +8,9 @@ interface ContainerProps {
 }
 
 const sizes = {
-  narrow: "max-w-[840px]",
-  default: "max-w-[1280px]",
-  wide: "max-w-[1440px]",
+  narrow: "max-w-[var(--vs-container-narrow)]",
+  default: "max-w-[var(--vs-container)]",
+  wide: "max-w-[var(--vs-container-wide)]",
   full: "max-w-none",
 };
 
@@ -22,7 +22,7 @@ export default function Container({
   return (
     <div
       className={cn(
-        "mx-auto w-full px-6 sm:px-8 lg:px-12 xl:px-16",
+        "site-container",
         sizes[size],
         className
       )}

@@ -1,4 +1,5 @@
 import Container from "@/components/layout/Container";
+import Section from "@/components/layout/Section";
 import FadeUp from "@/components/motion/FadeUp";
 
 const principles = [
@@ -24,7 +25,7 @@ const principles = [
 
 export default function WhyApproach() {
   return (
-    <section className="border-t border-white/10 bg-zinc-950 py-32">
+    <Section spacing="editorial" className="border-t border-white/10 bg-background">
       <Container>
         <div className="grid gap-20 lg:grid-cols-12">
 
@@ -34,7 +35,7 @@ export default function WhyApproach() {
 
             <FadeUp>
 
-              <p className="text-xs uppercase tracking-[0.35em] text-amber-400">
+              <p className="text-xs uppercase tracking-[0.35em] text-accent">
                 Architecture Before Technology
               </p>
 
@@ -56,14 +57,14 @@ export default function WhyApproach() {
 
             <FadeUp delay={0.3}>
 
-              <p className="mt-8 max-w-xl text-lg leading-9 text-zinc-400">
+              <p className="mt-8 max-w-xl text-lg leading-9 text-muted">
                 We never begin with products.
                 We begin by understanding the architecture,
                 the people and the lifestyle the space is
                 intended to support.
               </p>
 
-              <p className="mt-8 max-w-xl text-lg leading-9 text-zinc-400">
+              <p className="mt-8 max-w-xl text-lg leading-9 text-muted">
                 The result is technology that feels invisible,
                 intuitive and enduring—enhancing every
                 experience without ever becoming the focus.
@@ -84,7 +85,7 @@ export default function WhyApproach() {
               >
                 <div className="border-t border-white/10 pt-10">
 
-                  <p className="text-sm uppercase tracking-[0.3em] text-amber-400">
+                  <p className="text-sm uppercase tracking-[0.3em] text-accent">
                     {principle.number}
                   </p>
 
@@ -92,7 +93,7 @@ export default function WhyApproach() {
                     {principle.title}
                   </h3>
 
-                  <p className="mt-6 max-w-lg leading-8 text-zinc-400">
+                  <p className="mt-6 max-w-lg leading-8 text-muted">
                     {principle.description}
                   </p>
 
@@ -104,6 +105,6 @@ export default function WhyApproach() {
 
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

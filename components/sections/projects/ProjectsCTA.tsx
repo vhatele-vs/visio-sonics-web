@@ -1,38 +1,6 @@
 import { projectsCTA } from "@/lib/content/projects";
-import { Button } from "@/components/ui";
-import {
-  Container,
-  Section,
-} from "@/components/layout";
+import CTASection from "@/components/ui/CTASection";
 
 export default function ProjectsCTA() {
-  return (
-    <Section spacing="hero">
-      <Container size="narrow">
-        <div className="text-center">
-
-          <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/50">
-            {projectsCTA.eyebrow}
-          </p>
-
-          <h2 className="text-4xl font-light leading-tight md:text-6xl">
-            {projectsCTA.title}
-          </h2>
-
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/70">
-            {projectsCTA.description}
-          </p>
-
-          <div className="mt-12 flex justify-center">
-
-            <Button href={projectsCTA.primaryButton.href}>
-              {projectsCTA.primaryButton.label}
-            </Button>
-
-          </div>
-
-        </div>
-      </Container>
-    </Section>
-  );
+  return <CTASection eyebrow={projectsCTA.eyebrow} title={projectsCTA.title} description={projectsCTA.description} primaryLabel={projectsCTA.primaryButton.label} primaryHref={projectsCTA.primaryButton.href} secondaryLabel={projectsCTA.secondaryButton.label} secondaryHref={projectsCTA.secondaryButton.href} />;
 }

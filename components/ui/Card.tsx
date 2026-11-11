@@ -17,14 +17,14 @@ export default function Card({
   ...props
 }: CardProps) {
   const styles = [
-    "rounded-3xl",
+    "rounded-[var(--vs-radius)]",
     "border border-white/10",
-    "bg-white/[0.02]",
-    "p-8",
+    "bg-surface",
+    "p-6 sm:p-8",
     "transition-all duration-300",
 
     hover
-      ? "hover:border-[var(--vs-accent)] hover:bg-white/[0.04]"
+      ? "hover:border-[var(--vs-accent)] hover:bg-surface-raised"
       : "",
 
     className,

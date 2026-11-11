@@ -20,7 +20,7 @@ export const featuredProjects = {
       title: "Luxury Residence",
       location: "Private Estate",
       image: "/images/projects/luxury-residence.webp",
-      href: "/solutions/luxury-living",
+      href: "/projects/luxury-residence",
       description:
         "A fully integrated smart residence engineered with automation, lighting, networking, security, and immersive entertainment.",
     },
@@ -30,7 +30,7 @@ export const featuredProjects = {
       title: "Executive Boardroom",
       location: "Corporate Headquarters",
       image: "/images/projects/executive-boardroom.webp",
-      href: "/projects",
+      href: "/contact",
       description:
         "A collaborative executive meeting environment featuring enterprise AV, conferencing, control, and intelligent automation.",
     },
@@ -40,7 +40,7 @@ export const featuredProjects = {
       title: "Private Cinema",
       location: "Residential",
       image: "/images/projects/private-cinema.webp",
-      href: "/projects",
+      href: "/contact",
       description:
         "A purpose-built private cinema engineered for immersive audio, reference-quality video, and exceptional comfort.",
     },
@@ -154,7 +154,7 @@ export const luxuryLivingProject = {
 
   image: "/images/projects/luxury-residence.webp",
 
-  href: "/projects",
+  href: "/projects/luxury-residence",
 
   description:
     "A fully integrated luxury residence combining intelligent lighting, climate control, security, enterprise networking, distributed audio, and private cinema into one seamless technology ecosystem.",

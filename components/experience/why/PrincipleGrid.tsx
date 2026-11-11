@@ -13,20 +13,14 @@ export default function PrincipleGrid() {
         relative
         isolate
         overflow-hidden
-        bg-[#050505]
+        bg-background
       "
     >
 
       <div
-        className="
-          mx-auto
-          max-w-[1680px]
-          px-8
-          pt-40
-          md:px-14
-          lg:pt-56
-          xl:px-24
-        "
+        className="site-container
+          pt-[var(--vs-editorial-space)]
+          "
       >
 
         <motion.div
@@ -90,7 +84,7 @@ export default function PrincipleGrid() {
               max-w-2xl
               text-lg
               leading-10
-              text-white/70
+              text-muted
             "
           >
             We measure our work not by the technology we install,

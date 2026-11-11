@@ -4,6 +4,7 @@ import { Inter, Fraunces } from "next/font/google";
 import "../globals.css";
 
 import Footer from "@/components/sections/home/Footer";
+import GlassHeader from "@/components/experience/arrival/GlassHeader/GlassHeader";
 import StructuredData from "@/components/seo/StructuredData";
 
 const siteUrl = "https://visiosonics.co.za";
@@ -11,7 +12,7 @@ const siteUrl = "https://visiosonics.co.za";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-sans",
+  variable: "--font-inter",
 });
 
 const fraunces = Fraunces({
@@ -19,7 +20,7 @@ const fraunces = Fraunces({
   display: "swap",
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
-  variable: "--font-serif",
+  variable: "--font-fraunces",
 });
 
 export const metadata: Metadata = {
@@ -131,8 +132,11 @@ export default function RootLayout({
     <html lang="en-ZA">
       <body className={`${inter.variable} ${fraunces.variable} font-sans`}>
         <StructuredData />
-
-        {children}
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[100] focus:rounded-full focus:bg-accent focus:px-6 focus:py-3 focus:text-black">
+          Skip to content
+        </a>
+        <GlassHeader />
+        <main id="main-content" tabIndex={-1}>{children}</main>
 
         <Footer />
       </body>

@@ -36,7 +36,7 @@ export default function ContactFAQ() {
                       text-xs
                       font-medium
                       tracking-[0.3em]
-                      text-white/40
+                      text-muted
                     "
                   >
                     {String(index + 1).padStart(2, "0")}
@@ -58,7 +58,7 @@ export default function ContactFAQ() {
                 <p
                   className="
                     leading-relaxed
-                    text-white/70
+                    text-muted
                   "
                 >
                   {item.answer}

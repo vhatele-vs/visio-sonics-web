@@ -11,7 +11,7 @@ export default function WhyRoom() {
         relative
         isolate
         overflow-hidden
-        bg-[#050505]
+        bg-background
       "
     >
       <PrincipleGrid />

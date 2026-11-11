@@ -1,40 +1,31 @@
-/**
- * Visio Sonics Platform v6.0
- * Brand Color Tokens
- */
-
+/** CSS custom properties in styles/tokens.css are the source of truth. */
 export const colors = {
   background: {
-    primary: "#050505",
-    secondary: "#111111",
-    elevated: "#1A1A1A",
+    primary: "var(--vs-background)",
+    secondary: "var(--vs-surface)",
+    elevated: "var(--vs-surface-2)",
   },
-
   surface: {
-    card: "#161616",
-    glass: "rgba(255,255,255,0.04)",
+    card: "var(--vs-surface)",
+    glass: "rgb(255 255 255 / 0.04)",
   },
-
   text: {
-    primary: "#FFFFFF",
-    secondary: "#C7C7C7",
-    muted: "#8A8A8A",
+    primary: "var(--vs-text)",
+    secondary: "var(--vs-text-secondary)",
+    muted: "var(--vs-text-muted)",
   },
-
   border: {
-    subtle: "rgba(255,255,255,0.08)",
-    strong: "rgba(255,255,255,0.16)",
+    subtle: "var(--vs-border)",
+    strong: "var(--vs-border-strong)",
   },
-
   brand: {
-    primary: "#F97316",
-    hover: "#FB923C",
-    accent: "#FDBA74",
+    primary: "var(--vs-accent)",
+    hover: "var(--vs-accent-hover)",
+    accent: "var(--vs-accent-soft)",
   },
-
-  success: "#22C55E",
-  warning: "#F59E0B",
-  danger: "#EF4444",
+  success: "var(--vs-success)",
+  warning: "var(--vs-warning)",
+  danger: "var(--vs-danger)",
 } as const;
 
 export type Colors = typeof colors;

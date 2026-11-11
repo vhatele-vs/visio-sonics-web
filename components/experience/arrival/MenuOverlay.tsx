@@ -32,7 +32,7 @@ export default function MenuOverlay({
             inset-0
             z-[100]
             overflow-hidden
-            bg-[#050505]/95
+            bg-background/95
             backdrop-blur-3xl
           "
         >
@@ -42,7 +42,7 @@ export default function MenuOverlay({
             className="
               absolute
               inset-0
-              bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.10),transparent_68%)]
+              bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--vs-accent)_10%,transparent),transparent_68%)]
             "
           />
 

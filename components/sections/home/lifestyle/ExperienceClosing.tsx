@@ -9,7 +9,7 @@ export default function ExperienceClosing() {
   return (
     <Section
       spacing="showcase"
-      className="border-t border-white/10 bg-[#050505]"
+      className="border-t border-white/10 bg-background"
     >
       <Container size="narrow">
         <motion.div
@@ -44,7 +44,7 @@ export default function ExperienceClosing() {
               mt-10
               text-xl
               leading-9
-              text-white/75
+              text-muted
             "
           >
             Luxury is never having to think about it.

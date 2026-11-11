@@ -10,7 +10,7 @@ export default function Logo() {
       <img
         src="/branding/visio-sonics-logo.svg"
         alt="Visio Sonics"
-        className="block h-auto w-[220px] bg-red-500 lg:w-[260px]"
+        className="block h-auto w-[220px] lg:w-[260px]"
       />
     </Link>
   );

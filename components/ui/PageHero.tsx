@@ -25,7 +25,7 @@ export default function PageHero({
   return (
     <Section
       spacing="hero"
-      className="relative overflow-hidden bg-black text-white"
+      className="relative overflow-hidden border-b border-[var(--vs-border)] bg-background text-foreground"
     >
       {image && (
         <>
@@ -34,6 +34,7 @@ export default function PageHero({
             alt={title}
             fill
             priority
+            sizes="100vw"
             className="object-cover opacity-60"
           />
 
@@ -42,8 +43,7 @@ export default function PageHero({
       )}
 
       <Container
-        size="wide"
-        className="relative z-10 flex min-h-[70vh] items-center"
+        className="relative z-10 flex min-h-[min(45vh,28rem)] items-center"
       >
         <div className="max-w-4xl">
 

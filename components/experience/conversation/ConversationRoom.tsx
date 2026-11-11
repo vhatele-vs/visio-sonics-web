@@ -35,7 +35,7 @@ export default function ConversationRoom() {
         relative
         isolate
         overflow-hidden
-        bg-[#050505]
+        bg-background
       "
     >
 
@@ -46,25 +46,19 @@ export default function ConversationRoom() {
         className="
           absolute
           inset-0
-          bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.08),transparent_75%)]
+          bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--vs-accent)_8%,transparent),transparent_75%)]
         "
       />
 
 
       <div
-        className="
+        className="site-container
           relative
-          mx-auto
           flex
           min-h-[85vh]
-          max-w-[1680px]
           items-center
-          px-8
-          py-32
-          md:px-14
-          md:py-40
-          xl:px-24
-        "
+          py-[var(--vs-editorial-space)]
+          "
       >
 
         <div className="max-w-5xl">
@@ -152,7 +146,7 @@ export default function ConversationRoom() {
               max-w-3xl
               text-base
               leading-8
-              text-white/65
+              text-muted
               md:mt-12
               md:text-lg
               md:leading-10

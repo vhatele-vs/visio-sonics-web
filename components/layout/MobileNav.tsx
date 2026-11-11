@@ -77,7 +77,7 @@ export default function MobileNav() {
         id="mobile-navigation"
         aria-hidden={!isOpen}
         className={[
-          "fixed inset-0 z-50 bg-[#050505] transition-all duration-500",
+          "fixed inset-0 z-50 bg-background transition-all duration-500",
           isOpen
             ? "visible opacity-100"
             : "invisible pointer-events-none opacity-0",

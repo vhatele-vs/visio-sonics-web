@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
                 {item.title}
               </h3>
 
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-white/60">
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">
                 {item.description}
               </p>
             </article>

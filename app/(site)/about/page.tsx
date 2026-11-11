@@ -7,7 +7,7 @@ import AboutMission from "@/components/sections/about/AboutMission";
 import AboutPhilosophy from "@/components/sections/about/AboutPhilosophy";
 
 export const metadata: Metadata = {
-  title: "About Visio Sonics",
+  title: "About",
 
   description:
     "Discover the philosophy, engineering methodology, and vision behind Visio Sonics, a luxury technology integration house engineering extraordinary environments.",

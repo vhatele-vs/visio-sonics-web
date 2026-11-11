@@ -12,7 +12,7 @@ export default function ExperienceTransition({
   statement,
 }: ExperienceTransitionProps) {
   return (
-    <section className="relative overflow-hidden bg-[#050505]">
+    <section className="relative overflow-hidden bg-background">
 
       <div className="mx-auto max-w-[1200px] px-8 py-32 md:px-14 lg:py-40 xl:px-24">
 
@@ -62,7 +62,7 @@ export default function ExperienceTransition({
               max-w-3xl
               text-lg
               leading-10
-              text-white/70
+              text-muted
             "
           >
             {statement}

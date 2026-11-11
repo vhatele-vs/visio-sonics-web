@@ -14,29 +14,24 @@ export default function WhyClosing({
   description = "It is the quiet confidence that every system, every space and every experience has been thoughtfully engineered to enrich the way people live. That is the promise behind every Visio Sonics project.",
 }: WhyClosingProps) {
   return (
-    <div className="relative overflow-hidden bg-[#050505]">
+    <div className="relative overflow-hidden bg-background">
 
       <div
         aria-hidden="true"
         className="
           absolute
           inset-0
-          bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.06),transparent_72%)]
+          bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--vs-accent)_6%,transparent),transparent_72%)]
         "
       />
 
 
       <div
-        className="
+        className="site-container
           relative
-          mx-auto
-          max-w-[1680px]
-          px-8
           py-44
-          md:px-14
           lg:py-60
-          xl:px-24
-        "
+          "
       >
 
         <motion.div
@@ -88,7 +83,7 @@ export default function WhyClosing({
               max-w-3xl
               text-lg
               leading-10
-              text-white/70
+              text-muted
             "
           >
             {description}
@@ -133,7 +128,7 @@ export default function WhyClosing({
           "
         >
 
-          <p className="text-sm uppercase tracking-[0.35em] text-white/40">
+          <p className="text-sm uppercase tracking-[0.35em] text-muted">
             Architecture • Engineering • Invisible Technology
           </p>
 

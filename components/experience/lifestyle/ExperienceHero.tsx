@@ -14,11 +14,11 @@ export default function ExperienceHero({
   description,
 }: ExperienceHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[#050505]">
+    <section className="relative overflow-hidden bg-background">
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(217,119,6,0.06),transparent_72%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,color-mix(in_srgb,var(--vs-accent)_6%,transparent),transparent_72%)]" />
 
-      <div className="relative mx-auto max-w-[1680px] px-8 py-40 md:px-14 lg:py-56 xl:px-24">
+      <div className="site-container relative py-[var(--vs-editorial-space)] ">
 
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -80,7 +80,7 @@ export default function ExperienceHero({
             max-w-2xl
             text-lg
             leading-10
-            text-white/70
+            text-muted
           "
         >
           {description}

@@ -48,7 +48,7 @@ export default function ConsultationProcess() {
                     text-xs
                     font-medium
                     tracking-[0.3em]
-                    text-white/40
+                    text-muted
                   "
                 >
                   {String(index + 1).padStart(2, "0")}
@@ -70,7 +70,7 @@ export default function ConsultationProcess() {
                 className="
                   max-w-2xl
                   leading-relaxed
-                  text-white/70
+                  text-muted
                 "
               >
                 {step.description}

@@ -59,7 +59,7 @@ export default function TrustBar() {
               max-w-3xl
               text-lg
               leading-9
-              text-white/70
+              text-muted
             "
           >
             Every project begins with architecture—not products.
@@ -98,7 +98,7 @@ export default function TrustBar() {
               Architecture First
             </p>
 
-            <p className="mt-4 text-sm leading-8 text-white/70">
+            <p className="mt-4 text-sm leading-8 text-muted">
               Every solution is designed around the architectural vision,
               ensuring technology enhances rather than dominates the space.
             </p>
@@ -116,7 +116,7 @@ export default function TrustBar() {
               Engineered Integration
             </p>
 
-            <p className="mt-4 text-sm leading-8 text-white/70">
+            <p className="mt-4 text-sm leading-8 text-muted">
               Lighting, audio, networking, security and environmental
               systems are engineered as one intelligent ecosystem.
             </p>
@@ -134,7 +134,7 @@ export default function TrustBar() {
               Future Ready
             </p>
 
-            <p className="mt-4 text-sm leading-8 text-white/70">
+            <p className="mt-4 text-sm leading-8 text-muted">
               Infrastructure planned today for tomorrow&apos;s technology,
               protecting your investment for years to come.
             </p>

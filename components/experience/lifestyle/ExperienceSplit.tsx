@@ -21,8 +21,8 @@ export default function ExperienceSplit({
   reverse = false,
 }: ExperienceSplitProps) {
   return (
-    <section className="relative overflow-hidden bg-[#050505]">
-      <div className="mx-auto max-w-[1680px] px-8 py-40 md:px-14 lg:py-56 xl:px-24">
+    <section className="relative overflow-hidden bg-background">
+      <div className="site-container py-[var(--vs-editorial-space)] ">
 
         <div
           className={[
@@ -97,7 +97,7 @@ export default function ExperienceSplit({
                 max-w-lg
                 text-lg
                 leading-10
-                text-white/70
+                text-muted
               "
             >
               {description}

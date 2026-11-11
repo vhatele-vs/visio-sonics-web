@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function MethodClosing() {
   return (
-    <section className="relative overflow-hidden bg-[#050505]">
+    <section className="relative overflow-hidden bg-background">
 
       {/* Ambient Light */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.08),transparent_72%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--vs-accent)_8%,transparent),transparent_72%)]" />
 
-      <div className="relative mx-auto max-w-[1680px] px-8 md:px-14 xl:px-24 py-40 lg:py-56">
+      <div className="site-container relative py-[var(--vs-editorial-space)]">
 
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -33,7 +33,7 @@ export default function MethodClosing() {
             installation.
           </h2>
 
-          <p className="mt-12 max-w-2xl text-lg leading-10 text-white/70">
+          <p className="mt-12 max-w-2xl text-lg leading-10 text-muted">
             Invisible technology is never accidental. It is carefully planned, patiently engineered and meticulously commissioned so architecture remains the hero and technology quietly serves the people who live within it.
           </p>
         </motion.div>

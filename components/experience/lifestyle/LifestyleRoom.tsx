@@ -14,10 +14,10 @@ export default function LifestyleRoom() {
     relative
     isolate
     overflow-hidden
-    bg-[#050505]
+    bg-background
   "
 >
-      
+
       <ExperienceHero
         eyebrow="Lifestyle"
         title="Technology becomes part of everyday living."
